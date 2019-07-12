@@ -108,7 +108,122 @@ Rank 10: 8453 -- md5=0cbfe105667c5a83b027dcfa85062f98
 ~~~
 
 
-# Analysis of each RFC
+
+# Initial observations
+
+[[TODO: Update as we refine the analysis and get deployment data.]]
+
+The initial list of results shows the distribution of delays
+between the various stages of the process:
+
+| RFC | Status | Pages | Overall | WG | IETF | IESG | RFC ED | Auth48 | Pub |
+| ---:| ----  | ----:| -----:| ---:| ---:| ---:| -----:| -----:| ---:|
+| 8411 | Info | 5 | 455 | 154 | 80 | 60 | 53 | 88 | 20 |
+| 8456 | Info | 64 | 1107 | 823 | 39 | 87 | 98 | 46 | 14 |
+| 8446 | Standard | 160 | 1576 | 1400 | 15 | 19 | 85 | 57 | 0 |
+| 8355 | Info | 13 | 1517 | 1175 | 14 | 229 | 83 | 15 | 1 |
+| 8441 | Standard | 8 | 341 | 204 | 22 | 9 | 67 | 33 | 6 |
+| 8324 | ISE | 29 | 270 | 38 | 111 | 50 | 42 | 28 | 1 |
+| 8377 | Standard | 8 | 1792 | 1630 | 11 | 10 | 39 | 102 | 0 |
+| 8498 | Info | 15 | 1061 | 935 | 47 | 12 | 49 | 16 | 2 |
+| 8479 | ISE | 8 | 414 | 233 | 0 | 144 | 31 | 5 | 1 |
+| 8453 | Info | 42 | 1162 | 1036 | 30 | 16 | 73 | 7 | 0 |
+| Average |  | 35.2 | 969.5 | 762.8 | 36.9 | 63.6 | 62 | 39.7 | 4.5 |
+
+The average delay from first draft to publication is about 2.5 years, but this
+varies widely. The average document is discussed for 2 years in the working
+group, undergoing many revisions.
+The extreme case is {{!RFC8377}}. It took 2 years for the WG to adopt the draft,
+and then another 2.5 years before the WG submitted the document for publication.
+The next longest case is {{!RFC8446}}, the definition of TLS 1.3. The WG spent
+lots of time discussing and validating the specification, conducting
+interoperability tests and studying deployments.
+
+The time spent in the AUTH48 state varies widely. In theory, this is just a final
+verification: the authors receive the document prepared by the RFC production center,
+and in theory just have to give their approval, or maybe request a last minute
+correction. The name indicates that this is expected to last just two days, but
+in average it lasts more than a month. [[TODO: ask authors of RFC 8411, 8456, 8446
+and 8377 why the AUTH48 phase took so long.]]
+
+Out of 10 randomly selected RFC, 2 were published through the "independent series".
+One is an independent opinion, the other a description of a non-IETF protocol
+format. The publication delays were significantly shorter than for IETF stream RFC.
+This seems to indicate that the Independent Series is functioning as 
+expected. The authors of these 2 RFC are regular IETF contributors, but we would
+need to analyse more than 2 samples to draw conclusions.
+
+Part of the exercise is to test whether citation counts provide a useful
+measure of the popularity of the IETF production. These citation counts
+vary widely:
+
+| RFC | Status | Scholar |
+| ---:| ----- | -----:|
+| 8411 | Info | 0 |
+| 8456 | Info | 2 |
+| 8446 | Standard | 122 |
+| 8355 | Info | 7 |
+| 8441 | Standard | 0 |
+| 8324 | ISE | 1 |
+| 8377 | Standard | 0 |
+| 8498 | Info | 0 |
+| 8479 | ISE | 0 |
+| 8453 | Info | 7 |
+
+The results indicate that {{!RFC8446}} is by far the most popular of the 10
+RFC in our sample. This is not surprising, since TLS is a key Internet Protocol.
+We need however to be a bit cautious before asserting that publications with
+a low citation count have limited impact:
+
+* some documents may well accumulate more citations over time. For example,
+  {{!RFC8377}} updates {{!RFC6455}}. There are more than 1000 citations of
+  {{!RFC6455}} on Google Scholar. We might expect that the citation count
+  of {{!RFC8377}} will increase in the coming years.
+
+* citation counts largely come from academic publications, and thus reflect
+  popularity within researchers more than popularity with network operators
+  and vendors.
+
+We should be able to assess the popularity of specifications with vendors,
+operators and designers by asking questions about deployed services and products.
+
+# Next steps
+
+The current version of this draft is very much a preliminary exercise. It
+suffers from at least two limitations:
+
+* The sample size of 10 is certainly too small
+
+* We have yet to obtain responses from authors about deployments, and also
+  explanantion of delays.
+
+We need to fix these two points in the next edition of the draft.
+
+Even with those limitations, the exercise shows some promise, and also
+shows the interest of doing more studies. For example, one of the plausible
+questions is whether the IETF impact is increasing or decreasing over time.
+We could do that by repeating the statistical sampling analysis for previous
+years, for example 2008 and 1998.
+
+# Security considerations
+
+This draft does not specify any protocol.
+
+We might want to analyze whether security issues were discovered after
+publication of specific standards.
+
+# IANA Considerations
+
+This draft does not require any IANA action.
+
+Peliminary analysis does not indicate that IANA is causing any particular
+delay in the publication process.
+
+# Acknowledgements
+
+TBD
+
+.# Appendix: Analysis of each RFC
 
 We review each of the RFC listed in {{#methodology}}, trying both to answer the known
 questions and to gather insight for further analyzes.
@@ -299,120 +414,6 @@ IANA Action, table rows added.
 Minor copy editing.
 
 7 references on Google Scholar.
-
-# Initial observations
-
-[[TODO: Update as we refine the analysis and get deployment data.]]
-
-The initial list of results shows the distribution of delays
-between the various stages of the process:
-
-| RFC | Status | Pages | Overall | WG | IETF | IESG | RFC ED | Auth48 | Pub |
-| ---:| ----  | ----:| -----:| ---:| ---:| ---:| -----:| -----:| ---:|
-| 8411 | Info | 5 | 455 | 154 | 80 | 60 | 53 | 88 | 20 |
-| 8456 | Info | 64 | 1107 | 823 | 39 | 87 | 98 | 46 | 14 |
-| 8446 | Standard | 160 | 1576 | 1400 | 15 | 19 | 85 | 57 | 0 |
-| 8355 | Info | 13 | 1517 | 1175 | 14 | 229 | 83 | 15 | 1 |
-| 8441 | Standard | 8 | 341 | 204 | 22 | 9 | 67 | 33 | 6 |
-| 8324 | ISE | 29 | 270 | 38 | 111 | 50 | 42 | 28 | 1 |
-| 8377 | Standard | 8 | 1792 | 1630 | 11 | 10 | 39 | 102 | 0 |
-| 8498 | Info | 15 | 1061 | 935 | 47 | 12 | 49 | 16 | 2 |
-| 8479 | ISE | 8 | 414 | 233 | 0 | 144 | 31 | 5 | 1 |
-| 8453 | Info | 42 | 1162 | 1036 | 30 | 16 | 73 | 7 | 0 |
-| Average |  | 35.2 | 969.5 | 762.8 | 36.9 | 63.6 | 62 | 39.7 | 4.5 |
-
-The average delay from first draft to publication is about 2.5 years, but this
-varies widely. The average document is discussed for 2 years in the working
-group, undergoing many revisions.
-The extreme case is {{!RFC8377}}. It took 2 years for the WG to adopt the draft,
-and then another 2.5 years before the WG submitted the document for publication.
-The next longest case is {{!RFC8446}}, the definition of TLS 1.3. The WG spent
-lots of time discussing and validating the specification, conducting
-interoperability tests and studying deployments.
-
-The time spent in the AUTH48 state varies widely. In theory, this is just a final
-verification: the authors receive the document prepared by the RFC production center,
-and in theory just have to give their approval, or maybe request a last minute
-correction. The name indicates that this is expected to last just two days, but
-in average it lasts more than a month. [[TODO: ask authors of RFC 8411, 8456, 8446
-and 8377 why the AUTH48 phase took so long.]]
-
-Out of 10 randomly selected RFC, 2 were published through the "independent series".
-One is an independent opinion, the other a description of a non-IETF protocol
-format. The publication delays were significantly shorter than for IETF stream RFC.
-This seems to indicate that the Independent Series is functioning as 
-expected. The authors of these 2 RFC are regular IETF contributors, but we would
-need to analyse more than 2 samples to draw conclusions.
-
-Part of the exercise is to test whether citation counts provide a useful
-measure of the popularity of the IETF production. These citation counts
-vary widely:
-
-| RFC | Status | Scholar |
-| ---:| ----- | -----:|
-| 8411 | Info | 0 |
-| 8456 | Info | 2 |
-| 8446 | Standard | 122 |
-| 8355 | Info | 7 |
-| 8441 | Standard | 0 |
-| 8324 | ISE | 1 |
-| 8377 | Standard | 0 |
-| 8498 | Info | 0 |
-| 8479 | ISE | 0 |
-| 8453 | Info | 7 |
-
-The results indicate that {{!RFC8446}} is by far the most popular of the 10
-RFC in our sample. This is not surprising, since TLS is a key Internet Protocol.
-We need however to be a bit cautious before asserting that publications with
-a low citation count have limited impact:
-
-* some documents may well accumulate more citations over time. For example,
-  {{!RFC8377}} updates {{!RFC6455}}. There are more than 1000 citations of
-  {{!RFC6455}} on Google Scholar. We might expect that the citation count
-  of {{!RFC8377}} will increase in the coming years.
-
-* citation counts largely come from academic publications, and thus reflect
-  popularity within researchers more than popularity with network operators
-  and vendors.
-
-We should be able to assess the popularity of specifications with vendors,
-operators and designers by asking questions about deployed services and products.
-
-# Next steps
-
-The current version of this draft is very much a preliminary exercise. It
-suffers from at least two limitations:
-
-* The sample size of 10 is certainly too small
-
-* We have yet to obtain responses from authors about deployments, and also
-  explanantion of delays.
-
-We need to fix these two points in the next edition of the draft.
-
-Even with those limitations, the exercise shows some promise, and also
-shows the interest of doing more studies. For example, one of the plausible
-questions is whether the IETF impact is increasing or decreasing over time.
-We could do that by repeating the statistical sampling analysis for previous
-years, for example 2008 and 1998.
-
-# Security considerations
-
-This draft does not specify any protocol.
-
-We might want to analyze whether security issues were discovered after
-publication of specific standards.
-
-# IANA Considerations
-
-This draft does not require any IANA action.
-
-Peliminary analysis does not indicate that IANA is causing any particular
-delay in the publication process.
-
-# Acknowledgements
-
-TBD
 
 {backmatter}
 
