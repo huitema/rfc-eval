@@ -307,19 +307,19 @@ Minor copy editing.
 The initial list of results shows the distribution of delays
 between the various stages of the process:
 
-RFC | Status | Pages | Overall | WG | IETF | IESG | RFC ED | Auth48 | RFC Pub
----! | !---  | ----! | -----! | --! | ---! | ---! | -----! | -----! | ------!
-8411 | Info | 5 | 455 | 154 | 80 | 60 | 53 | 88 | 20
-8456 | Info | 64 | 1107 | 823 | 39 | 87 | 98 | 46 | 14
-8446 | Standard | 160 | 1576 | 1400 | 15 | 19 | 85 | 57 | 0
-8355 | Info | 13 | 1517 | 1175 | 14 | 229 | 83 | 15 | 1
-8441 | Standard | 8 | 341 | 204 | 22 | 9 | 67 | 33 | 6
-8324 | ISE | 29 | 270 | 38 | 111 | 50 | 42 | 28 | 1
-8377 | Standard | 8 | 1792 | 1630 | 11 | 10 | 39 | 102 | 0
-8498 | Info | 15 | 1061 | 935 | 47 | 12 | 49 | 16 | 2
-8479 | ISE | 8 | 414 | 233 | 0 | 144 | 31 | 5 | 1
-8453 | Info | 42 | 1162 | 1036 | 30 | 16 | 73 | 7 | 0
-Average |  | 35.2 | 969.5 | 762.8 | 36.9 | 63.6 | 62 | 39.7 | 4.5
+| RFC | Status | Pages | Overall | WG | IETF | IESG | RFC ED | Auth48 | Pub |
+| ---:| ----  | ----:| -----:| ---:| ---:| ---:| -----:| -----:| ---:|
+| 8411 | Info | 5 | 455 | 154 | 80 | 60 | 53 | 88 | 20 |
+| 8456 | Info | 64 | 1107 | 823 | 39 | 87 | 98 | 46 | 14 |
+| 8446 | Standard | 160 | 1576 | 1400 | 15 | 19 | 85 | 57 | 0 |
+| 8355 | Info | 13 | 1517 | 1175 | 14 | 229 | 83 | 15 | 1 |
+| 8441 | Standard | 8 | 341 | 204 | 22 | 9 | 67 | 33 | 6 |
+| 8324 | ISE | 29 | 270 | 38 | 111 | 50 | 42 | 28 | 1 |
+| 8377 | Standard | 8 | 1792 | 1630 | 11 | 10 | 39 | 102 | 0 |
+| 8498 | Info | 15 | 1061 | 935 | 47 | 12 | 49 | 16 | 2 |
+| 8479 | ISE | 8 | 414 | 233 | 0 | 144 | 31 | 5 | 1 |
+| 8453 | Info | 42 | 1162 | 1036 | 30 | 16 | 73 | 7 | 0 |
+| Average |  | 35.2 | 969.5 | 762.8 | 36.9 | 63.6 | 62 | 39.7 | 4.5 |
 
 The average delay from first draft to publication is about 2.5 years, but this
 varies widely. The average document is discussed for 2 years in the working
@@ -348,18 +348,18 @@ Part of the exercise is to test whether citation counts provide a useful
 measure of the popularity of the IETF production. These citation counts
 vary widely:
 
-RFC | Status | Scholar
----! | !---- | -----!
-8411 | Info | 0
-8456 | Info | 2
-8446 | Standard | 122
-8355 | Info | 7
-8441 | Standard | 0
-8324 | ISE | 1
-8377 | Standard | 0
-8498 | Info | 0
-8479 | ISE | 0
-8453 | Info | 7
+| RFC | Status | Scholar |
+| ---:| ----- | -----:|
+| 8411 | Info | 0 |
+| 8456 | Info | 2 |
+| 8446 | Standard | 122 |
+| 8355 | Info | 7 |
+| 8441 | Standard | 0 |
+| 324 | ISE | 1 |
+| 8377 | Standard | 0 |
+| 8498 | Info | 0 |
+| 8479 | ISE | 0 |
+| 8453 | Info | 7 |
 
 The results indicate that {{!RFC8446}} is by far the most popular of the 10
 RFC in our sample. This is not surprising, since TLS is a key Internet Protocol.
