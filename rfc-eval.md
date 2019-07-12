@@ -355,7 +355,7 @@ vary widely:
 | 8446 | Standard | 122 |
 | 8355 | Info | 7 |
 | 8441 | Standard | 0 |
-| 324 | ISE | 1 |
+| 8324 | ISE | 1 |
 | 8377 | Standard | 0 |
 | 8498 | Info | 0 |
 | 8479 | ISE | 0 |
