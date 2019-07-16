@@ -1,28 +1,23 @@
-Ôªø%%%
-    Title = "RFC Evaluation Project: First Step"
-    abbrev = "RFC-Eval"
-    category = "experimental"
-    docName= "draft-huitema-rfc-eval-project"
-    ipr = "trust200902"
-    area = "Network"
-    date = 2019
-    [pi]
-    toc = "yes"
-    compact = "yes"
-    symrefs = "yes"
-    sortrefs = "yes"
-    subcompact = "no"
-    [[author]]
-    initials="C."
-    surname="Huitema"
-    fullname="Christian Huitema"
-    organization = "Private Octopus Inc."
-      [author.address]
-      email = "huitema@huitema.net"
-      [author.address.postal]
-      city = "Friday Harbor"
-      code = "WA  98250"
-      country = "U.S.A"
+%%%
+title = "RFC Evaluation Project: First Step"
+abbrev = "RFC-Eval"
+
+[seriesInfo]
+name = "Internet-Draft"
+value = "draft-huitema-rfc-eval-project-latest"
+status = "informational"
+
+[[author]]
+initials="C."
+surname="Huitema"
+fullname="Christian Huitema"
+organization = "Private Octopus Inc."
+  [author.address]
+  email = "huitema@huitema.net"
+   [author.address.postal]
+   city = "Friday Harbor"
+   code = "WA  98250"
+   country = "U.S.A"
 %%%
 
 .# Abstract
@@ -30,6 +25,7 @@ This document presents a first attempt at evaluating the production of the IETF.
 We analyze a set of randomly chosen RFC approved in 2018, looking for history
 and delays, and using Google Scholar as a proxy for the RFC popularity. The
 results are interesting, and inform further evaluation efforts.
+
 {mainmatter}
 
 # RFC Evaluation project
@@ -79,7 +75,9 @@ quality and impact is subjective. We start with two ideas:
 
 Basic production mechanisms could be evaluated by processing data from
 the IETF tracker, but subjective data requires manual assessment of results,
-which can be time consuming. Since our resources are limited, we will only
+which can be time consuming. Google Scholar also requires manual access
+because the site does not offer an open API.
+Since our resources are limited, we will only
 perform this analysis for a small sample of RFC, selected at random
 from the list of RFC approved in 2018. Specifically, we will pick
 10 RFC at random between:
@@ -90,10 +88,10 @@ from the list of RFC approved in 2018. Specifically, we will pick
 
 In order to avoid injecting personal bias in the random selecton, we use
 a random selection process similar to the Nomination Committee selection
-process defined in {{!RFC3797}}. The process is seeded with the text string
+process defined in [@!RFC3797]. The process is seeded with the text string
 "vanitas vanitatum et omnia vanitas", and the results are:
 ~~~ 
-Picking 10 numbers between 8307 and 8511,
+Picking 20 numbers between 8307 and 8511,
 using MD5(vanitas vanitatum et omnia vanitas)
 Rank 1: 8411 -- md5=daba041224a879199b698748808f917d
 Rank 2: 8456 -- md5=f5570484d91ada6a672edbdca61d808c
@@ -105,15 +103,25 @@ Rank 7: 8377 -- md5=ac16a89192c0f0727febd35aacbc1f24
 Rank 8: 8498 -- md5=bba44f2ba1ab240a1265a82ab71f7e02
 Rank 9: 8479 -- md5=1653606b0af95d529a473a8f85ffaea4
 Rank 10: 8453 -- md5=0cbfe105667c5a83b027dcfa85062f98
+Rank 11: 8429 -- md5=fa51d7738562d990926a0d199fb060b8
+Rank 12: 8312 -- md5=96d061523b1a57343356ae7a1e498ca5
+Rank 13: 8492 -- md5=1b72b746eb05f79af40ed2bd3faccbe8
+Rank 14: 8378 -- md5=645833b936d36cdcc797256518d7c483
+Rank 15: 8361 -- md5=2064622c868e410beb0d9c18d0cb522c
+Rank 16: 8472 -- md5=ca8a823072a21df011d0ea8b96a6aa47
+Rank 17: 8471 -- md5=01b293a7dd0793e6f3297f2a973cd7e3
+Rank 18: 8466 -- md5=8e411babe271557fe83bcdececc1643f
+Rank 19: 8362 -- md5=8a1ba3efd82856a12b2b35fc5237e1b7
+Rank 20: 8468 -- md5=57ae50ee0e1e0708d356d96d116dbfe1
 ~~~
 
-
-
-# Initial observations
+# Observations
 
 [[TODO: Update as we refine the analysis and get deployment data.]]
 
-The initial list of results shows the distribution of delays
+## Publication delays
+
+The following table shows the distribution of delays
 between the various stages of the process:
 
 | RFC | Status | Pages | Overall | WG | IETF | IESG | RFC ED | Auth48 | Pub |
@@ -128,30 +136,52 @@ between the various stages of the process:
 | 8498 | Info | 15 | 1061 | 935 | 47 | 12 | 49 | 16 | 2 |
 | 8479 | ISE | 8 | 414 | 233 | 0 | 144 | 31 | 5 | 1 |
 | 8453 | Info | 42 | 1162 | 1036 | 30 | 16 | 73 | 7 | 0 |
-| Average |  | 35.2 | 969.5 | 762.8 | 36.9 | 63.6 | 62 | 39.7 | 4.5 |
+| 8429 | BCP | 10 | 548 | 76 | 33 | 280 | 60 | 99 | 0 |
+| 8312 | Info | 18 | 1255 | 1113 | 16 | 0 | 96 | 30 | 0 |
+| 8492 | ISE | 40 | 2358 | 1706 | 117 | 55 | 355 | 123 | 2 |
+| 8378 | Exp | 21 | 1524 | 1446 | 15 | 12 | 42 | 9 | 0 |
+| 8361 | PS | 17 | 1612 | 1477 | 20 | 42 | 39 | 31 | 3 |
+| 8472 | PS | 8 | 1228 | 899 | 126 | 123 | 59 | 8 | 13 |
+| 8466 | PS | 158 | 771 | 538 | 21 | 103 | 84 | 22 | 3 |
+| 8362 | PS | 33 | 1871 | 1766 | 30 | 11 | 49 | 11 | 4 |
+| 8468 | Info | 15 | 1196 | 979 | 43 | 47 | 65 | 53 | 9 |
+|  | Average | 35 | 1161 | 928 | 42 | 69 | 77 | 41 | 4 |
 
-The average delay from first draft to publication is about 2.5 years, but this
-varies widely. The average document is discussed for 2 years in the working
-group, undergoing many revisions.
-The extreme case is {{!RFC8377}}. It took 2 years for the WG to adopt the draft,
-and then another 2.5 years before the WG submitted the document for publication.
-The next longest case is {{!RFC8446}}, the definition of TLS 1.3. The WG spent
-lots of time discussing and validating the specification, conducting
-interoperability tests and studying deployments.
 
-The time spent in the AUTH48 state varies widely. In theory, this is just a final
-verification: the authors receive the document prepared by the RFC production center,
-and in theory just have to give their approval, or maybe request a last minute
-correction. The name indicates that this is expected to last just two days, but
-in average it lasts more than a month. [[TODO: ask authors of RFC 8411, 8456, 8446
-and 8377 why the AUTH48 phase took so long.]]
+The average delay from first draft to publication is about 3 years, but this
+varies widely. Excluding the independent stream submissions, the average
+delay from start to finish is 3 years and 3 months, of which on average
+2 years and 8 months are spent getting consensus in the working group.
 
-Out of 10 randomly selected RFC, 2 were published through the "independent series".
-One is an independent opinion, the other a description of a non-IETF protocol
-format. The publication delays were significantly shorter than for IETF stream RFC.
+The longest delay is found for [@!RFC8492], 6.5 years from start to finish.
+This is however a very special case, a draft that was prepared for
+the TLS working group and failed to reach consensus. After that, it was
+resubmitted to the ISE, and incurred atypical production delays.
+
+## Independent Series
+
+Out of 20 randomly selected RFC, 3 were published through the "independent series".
+One is an independent opinion, another a description of a non-IETF protocol
+format, and the third was [@!RFC8492], which is a special case. Apart from
+this special case, the publication delays were significantly shorter 
+for the Independent Stream than for the IETF stream.
 This seems to indicate that the Independent Series is functioning as 
-expected. The authors of these 2 RFC are regular IETF contributors, but we would
-need to analyse more than 2 samples to draw conclusions.
+expected.
+
+The authors of these 3 RFC are regular IETF contributors. This
+pbservation motivated a secondary analysis of all the RFC
+published in the "independent" stream in 2018. There are 14 such RFC:
+8507, 8494, 8493, 8492, 8483, 8479, 8433, 8409, 8374, 8369, 8367, 8351,
+8328 and 8324. (RFC 8367 and 8369 were
+published on 1 April 2018.) We can ask whether the authors of
+these RFC are these outsiders, part of a "wider community" or are
+people who are also contributing to the IETF. The overwhelming
+response is, "insiders". Pretty much all the authors are or were
+involved in the IETF, many of them with a prominent track record. There
+are just 2 exceptions, a single RFC in which only 3 of the 5 authors are
+well associated with the IETF.
+
+## Citation Counts
 
 Part of the exercise is to test whether citation counts provide a useful
 measure of the popularity of the IETF production. These citation counts
@@ -159,26 +189,38 @@ vary widely:
 
 | RFC | Status | Scholar |
 | ---:| ----- | -----:|
-| 8411 | Info | 0 |
-| 8456 | Info | 2 |
-| 8446 | Standard | 122 |
-| 8355 | Info | 7 |
-| 8441 | Standard | 0 |
-| 8324 | ISE | 1 |
-| 8377 | Standard | 0 |
+| 8411 | Info | 2 |
+| 8456 | Info | 3 |
+| 8446 | PS | 123 |
+| 8355 | Info | 9 |
+| 8441 | PS | 0 |
+| 8324 | ISE | 2 |
+| 8377 | PS | 1 |
 | 8498 | Info | 0 |
 | 8479 | ISE | 0 |
-| 8453 | Info | 7 |
+| 8453 | Info | 8 |
+| 8429 | BCP | 1 |
+| 8312 | Info | 9 |
+| 8492 | ISE | 2 |
+| 8378 | Exp | 1 |
+| 8361 | PS | 1 |
+| 8472 | PS | 5 |
+| 8466 | PS | 2 |
+| 8362 | PS | 7 |
+| 8468 | Info | 2 |
 
-The results indicate that {{!RFC8446}} is by far the most popular of the 10
+
+The results indicate that [@!RFC8446] is by far the most popular of the 20
 RFC in our sample. This is not surprising, since TLS is a key Internet Protocol.
+Of the other publications, only 4 have 5 to 9 citations, and the others have
+three or less.
 We need however to be a bit cautious before asserting that publications with
 a low citation count have limited impact:
 
 * some documents may well accumulate more citations over time. For example,
-  {{!RFC8377}} updates {{!RFC6455}}. There are more than 1000 citations of
-  {{!RFC6455}} on Google Scholar. We might expect that the citation count
-  of {{!RFC8377}} will increase in the coming years.
+  [@!RFC8377] updates [@!RFC6455]. There are more than 1000 citations of
+  [@!RFC6455] on Google Scholar. We might expect that the citation count
+  of [@!RFC8377] will increase in the coming years.
 
 * citation counts largely come from academic publications, and thus reflect
   popularity within researchers more than popularity with network operators
@@ -187,17 +229,67 @@ a low citation count have limited impact:
 We should be able to assess the popularity of specifications with vendors,
 operators and designers by asking questions about deployed services and products.
 
+## Copy editing
+
+We can assess the amount of copy editing applied to each published RFC by
+comparing the text of the draft approved for publication and the text of the
+RFC. We do expect differences in the "boilerplate" and in the IANA section,
+but we will also see differences due to copy editing. Assessing the amount
+of copy editing is subjective, and we do it using a scale of 1 to 4:
+
+1- Minor editing
+
+2- Editing for style, such as capitalization, hyphens, that versus which,
+   and expending all acronyms at least one.
+
+3- Editing for clarity in addition to style, such as rewriting ambiguous
+   sentences and clarifying use of internal references. For Yang models,
+   that may include model corrections suggested by the verifier.
+
+4- Extensive editing.
+
+The following table shows that with about half of the RFC required
+editing for style, and the other half at least some editing for clarity.
+
+| RFC | Status | Copy Edit |
+| ---:| ----- | -----:|
+| 8411 | Info | 2 |
+| 8456 | Info | 4 |
+| 8446 | PS | 3 |
+| 8355 | Info | 2 |
+| 8441 | PS | 2 |
+| 8324 | ISE | 2 |
+| 8377 | PS | 3 |
+| 8498 | Info | 3 |
+| 8479 | ISE | 1 |
+| 8453 | Info | 2 |
+| 8429 | BCP | 2 |
+| 8312 | Info | 2 |
+| 8492 | ISE | 3 |
+| 8378 | Exp | 2 |
+| 8361 | PS | 2 |
+| 8472 | PS | 2 |
+| 8466 | PS | 3 |
+| 8362 | PS | 3 |
+| 8468 | Info | 3 |
+
+There does not seem to be any significant correlation between the level of copy editing
+and the either the RFC Editor delay or the Auth 48 delay.
+
+## AUTH48 
+
+The time spent in the AUTH48 state varies widely. In theory, this is just a final
+verification: the authors receive the document prepared by the RFC production center,
+and in theory just have to give their approval, or maybe request a last minute
+correction. The name indicates that this is expected to last just two days, but
+in average it lasts more than a month. [[TODO: ask authors of RFC 8411, 8456, 8446,
+8377, 8429, 8492 and 8468 why the AUTH48 phase took so long.]]
+
 # Next steps
 
-The current version of this draft is very much a preliminary exercise. It
-suffers from at least two limitations:
-
-* The sample size of 10 is certainly too small
-
-* We have yet to obtain responses from authors about deployments, and also
-  explanantion of delays.
-
-We need to fix these two points in the next edition of the draft.
+The current version of this draft is very much a preliminary exercise. 
+We have yet to obtain responses from authors about deployments, and also
+explanation of delays.
 
 Even with those limitations, the exercise shows some promise, and also
 shows the interest of doing more studies. For example, one of the plausible
@@ -223,14 +315,15 @@ delay in the publication process.
 
 TBD
 
-.# Appendix: Analysis of each RFC
+# Appendix: Analysis of 20 selected RFC
 
-We review each of the RFC listed in {{#methodology}}, trying both to answer the known
+We review each of the RFC listed in (#methodology), trying both to answer the known
 questions and to gather insight for further analyzes.
 
-## RFC 8411
-IANA Registration for the Cryptographic Algorithm Object Identifier Range {{!RFC8411}}:
-~~~
+## 8411
+IANA Registration for the Cryptographic Algorithm Object Identifier Range [@!RFC8411]:
+
+~~~ text
 Informational, 5 pages
 4 drafts (personal),first May 8, 2017. Published August 2018.
 Last call announced 2017/10/09
@@ -243,14 +336,14 @@ IANA action: create table
 ~~~
 The draft underwent minor copy edit before publication. 
 
-The long delay in Auth48 is probaby due to clustering with {{!RFC8410}}, which entered
+The long delay in Auth48 is probaby due to clustering with [@!RFC8410], which entered
 AUTH 48 on 06/05. The MISSREF tracker code was cleared then.
 
-There is no reference for this RFC on Google Scholar.
+2 references on Google Scholar.
 
-## RFC 8456
+## 8456
 Benchmarking Methodology for Software-Defined Networking (SDN) 
-Controller Performance {{!RFC8456}}.
+Controller Performance [@!RFC8456].
 ~~~
 Informational
 64 pages
@@ -263,15 +356,15 @@ Auth 48 complete 2018-10-16
 Published 2018-10-30
 ~~~
 The draft underwent very extensive copy editing, covering use of articles, turn of phrases, choice
-of vocabulary. The changes are enough to cause pagination differences. The ‚Äúdiff‚Äù tool marks pretty
+of vocabulary. The changes are enough to cause pagination differences. The ìdiffî tool marks pretty
 much every page as changed. Some diagrams see change in protocol elements like message names.
 
-The RFC was part of cluster with {{!RFC8455}}.
+The RFC was part of cluster with [@!RFC8455].
 
-Google Scholar shows 2 citations.
+Google Scholar shows 3 references.
 
-## RFC 8446
-The Transport Layer Security (TLS) Protocol Version 1.3 {{!RFC8446}}
+## 8446
+The Transport Layer Security (TLS) Protocol Version 1.3 [@!RFC8446]
 ~~~
 Proposed standard
 160 pages
@@ -285,13 +378,13 @@ Published 2018/08/10
 ~~~
 Copy editing includes explaining acronyms on first use, clarifying some definitions 
 standardizing punctiation and capitalization, and spelling out some numbers in text.
-This generally fall in the category of ‚Äústyle‚Äù, although some of the clarifications
+This generally fall in the category of ìstyleî, although some of the clarifications
 go into message definitions.
 
-122 citations in Google Scholar.
+123 references in Google Scholar.
 
-## RFC 8355
-Resiliency Use Cases in Source Packet Routing in Networking (SPRING) Networks {{!rfc8355}}
+## 8355
+Resiliency Use Cases in Source Packet Routing in Networking (SPRING) Networks [@!rfc8355]
 ~~~
 Informational, 13 pages.
 2 personal drafts (personal), first January 31, 2014. 13 WG drafts.
@@ -307,10 +400,10 @@ Minor set of copy edit, mostly for style.
 It appears that publication waited for availability of RFC 8354. There is no formal dependency
 between the two RFC, but they appear to have been clustered.
 
-7 references on Google Scholar.
+9 references on Google Scholar.
 
-## RFC 8441
-Bootstrapping WebSockets with HTTP/2 {{!rfc8441}}
+## 8441
+Bootstrapping WebSockets with HTTP/2 [@!rfc8441]
 ~~~
 Proposed standard, 8 pages. Updates RFC 6455.
 3 personal drafts (personal), first 10/15/2017. 8 WG drafts.
@@ -320,15 +413,15 @@ Approved 2018-06-07, draft 07
 Auth 48 2018-08-13
 Auth 48 complete 2018-09-15
 Published 2018-09-21
-IANA ‚Äì table entries
+IANA ñ table entries
 ~~~
 Minor set of copy edit, mostly for style.
 
 No references on Google Scholar. (RFC 6455 had 1000 results)
 
-## RFC 8324
+## 8324
 DNS Privacy, Authorization, Special Uses, Encoding, Characters, Matching, and Root Structure:
-Time for Another Look? {{!rfc8324}}
+Time for Another Look? [@!rfc8324]
 ~~~
 Informational, 29 pages. Independent stream.
 5 personal drafts (personal), first June 2, 2017.
@@ -341,10 +434,10 @@ Published 2018-02-27
 ~~~
 Minor copy edit, mostly for style. One whole paragraph added in conclusion.
 
-1 reference on Google Scholar.
+2 reference on Google Scholar.
 
-## RFC 8377
-Transparent Interconnection of Lots of Links (TRILL): Multi-Topology {{!rfc8377}}
+## 8377
+Transparent Interconnection of Lots of Links (TRILL): Multi-Topology [@!rfc8377]
 ~~~
 Proposed standard, 20 pages. Updates RFC 6325, 7177.
 3 personal drafts (personal), first September 3, 2013. 7 WG drafts.
@@ -358,13 +451,13 @@ IANA Table, table entries
 ~~~
 Minor set of copy edit, mostly for style, also clarity.
 
-No references on Google Scholar.
+1 reference on Google Scholar.
 
 [[TODO: Ask authors why it took so long to get the draft adopted by the WG]]
 
-## RFC 8498
+## 8498
 A P-Served-User Header Field Parameter for an Originating Call Diversion (CDIV)
-Session Case in the Session Initiation Protocol (SIP) {{!rfc8498}}.
+Session Case in the Session Initiation Protocol (SIP) [@!rfc8498].
 ~~~
 Informational, 15 pages.
 5 personal drafts (personal), first March 21, 2016. 9 WG drafts.
@@ -380,8 +473,8 @@ Copy edit for style, but also clarification of ambiguous sentences.
 
 No references on Google Scholar.
 
-## RFC 8479
-Storing Validation Parameters in PKCS#8 {{!rfc8479}}
+## 8479
+Storing Validation Parameters in PKCS#8 [@!rfc8479]
 ~~~
 Informational, 8 pages. Independent stream.
 5 personal drafts (personal), first August 8, 2017.
@@ -396,11 +489,11 @@ Very minor set of copy edit, moving some references from normative to informativ
 
 No reference on Google Scholar.
 
-## RFC 8453
-Framework for Abstraction and Control of TE Networks (ACTN) {{!rfc8453}}
+## 8453
+Framework for Abstraction and Control of TE Networks (ACTN) [@!rfc8453]
 ~~~
 Informational, 42 pages.
-3 personal drafts, first June 15, 2015. 16 WG drafts. Published Aug 2018.
+3 personal drafts, first June 15, 2015. 16 WG drafts.
 Out of WG 2018-01-26, draft 11
 Expert review requested, 2018-02-13
 Last call announced 2018-04-16, draft 13
@@ -413,7 +506,182 @@ IANA Action, table rows added.
 ~~~
 Minor copy editing.
 
+8 references on Google Scholar.
+
+## 8429
+Deprecate Triple-DES (3DES) and RC4 in Kerberos [@!rfc8429]
+~~~
+Informational, 42 pages.
+6 WG, first 5/1/2017.
+Last call announced 7/16/2017, draft 03
+IESG evaluation starts 8/18/2017, draft 04
+Approved 5/25/2018, draft 05
+Auth 48 7/24/2018
+Auth 48 complete 10/31/2018
+Published 10/31/2018
+IANA Action, table rows added.
+~~~
+Minor copy editing, for style.
+
+1 reference on Google Scholar.
+
+The document was sent back to the WG after the first last call,
+edited, and then there was a second last call. There were significant
+discussions about the process for deprecating specs and marking them obsolete at the same time.
+
+## 8312
+CUBIC for Fast Long-Distance Networks [@!rfc8312]
+~~~
+Informational, 18 pages.
+2 personal drafts, first 9/1/2014. 8 WG drafts
+Last call announced 9/18/2017, draft 06
+IESG evaluation starts 2017-11-14
+Approved 2017-10-04, draft 07
+Auth 48 2018-01-08
+Auth 48 complete 2018-02-07
+Published 2018-02-07
+IANA Action, table rows added.
+~~~
+Minor copy editing, for style.
+
+9 references on Google Scholar.
+
+Much of the delay, from 2014 to 2015, was waiting fro WG adoption. There was another
+2 years spent debating the draft in the WG.
+
+## 8492
+Secure Password Ciphersuites for Transport Layer Security (TLS) [@!rfc8492]
+~~~
+Informational, 40 pages. (Independent Stream)
+10 personal drafts, first 9/2/2012. 8 WG drafts
+ISE review started 2017-05-10, draft 01
+IETF conflict review and IESG review started 2017-09-04
+Approved 2017-10-29, draft 04
+Auth 48 10/19/2018, draft 05
+Auth 48 complete 2/19/2019
+Published 2/21/2019
+IANA Action, table rows added.
+~~~
+Minor copy editing, for style.
+
+2 references on Google Scholar.
+
+This RFC has a complex history. The first individual draft was submitted to the
+TLS working group on September 7, 2012. It progressed there, and was adopted
+by the WG after 3 revisions. There were then 8 revisions in the TLS WG,
+until the WG decided to not progress it. The draft was parked in 2013by
+the WG chairs after failing to get consensus in WG last call. The AD finally
+pulled the plug in 2016, and the draft was then resubmitted to the ISE.
+
+One year elapsed between submisson to RSE and AUTH48. Need to ask why.
+
+Four months elapsed between AUTH48 started and done. Need to ask the author why.
+
+Changes in AUTH48 include added reference to TLS 1.3, copey-editing for style,
+some added requirements, added paragraphs, change in algorithms specification,
+
+## 8378
+Signal-Free Locator/ID Separation Protocol (LISP) Multicast [@!rfc8378]
+~~~
+Experimental, 21 pages.
+5 personal drafts, first 2/28/2014. 10 WG drafts
+Last call announced 2018-02-13, draft 07
+IESG evaluation starts 2018-02-28, draft 08
+Approved 2018-03-12, draft 09
+Auth 48 2018-04-23
+Auth 48 complete 2018-05-02
+Published 2018-05-02
+~~~
+Minor copy editing, for style.
+
+1 reference on Google Scholar.
+
+## 8361
+Transparent Interconnection of Lots of Links (TRILL):
+Centralized Replication for Active-Active Broadcast,
+Unknown Unicast, and Multicast (BUM) Traffic [@!rfc8361]
+~~~
+Proposed Standard, 17 pages.
+3 personal drafts, first 11/12/2013. 14 WG drafts
+Last call announced 2017-11-28, draft 10
+IESG evaluation starts 2017-12-18, draft 11
+Approved 2018-01-29, draft 13
+Auth 48 2018-09-17
+Auth 48 complete 4/9/2018
+Published 2018-10-08
+~~~
+Minor copy editing, for style.
+
+1 reference on Google Scholar.
+
+## 8472
+Transport Layer Security (TLS) Extension for Token Binding Protocol Negotiation [@!rfc8361]
+~~~
+Proposed Standard, 8 pages.
+1 personal drafts, first 5/29/2015. 15 WG drafts
+Last call announced 2017-11-13, draft 10
+IESG evaluation starts 2018-03-19
+Approved 2018-07-20, draft 14
+Auth 48 2018-09-25
+Auth 48 complete 4/9/2018
+Published 2018-04-12
+~~~
+Minor copy editing, for style, with the addition of a reference to TLS 1.3.
+
+5 references on Google Scholar.
+
+## 8466
+A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service Delivery [@!rfc8466]
+~~~
+Proposed Standard, 158 pages.
+5 personal drafts, first 9/1/2016. 11 WG drafts
+Last call announced 2018-02-21, draft 07
+IESG evaluation starts 2018-03-14, draft 08
+Approved 2018-06-25, draft 10
+Auth 48 2018-09-17
+Auth 48 complete 2018-10-09
+Published 2018-10-12
+~~~
+Copy editing for style and clarity, with also corrections to the yang model.
+
+2 references on Google Scholar.
+
+## 8362
+OSPFv3 Link State Advertisement (LSA) Extensibility [@!rfc8362]
+~~~
+Proposed Standard, 33 pages.
+4 personal drafts, first February 17, 2013. 24 WG drafts
+Last call announced 2017-12-19, draft 19
+IESG evaluation starts 2018-01-18, draft 20
+Approved 2018-01-29, draft 23
+Auth 48 2018-03-19
+Auth 48 complete 2018-03-30
+Published 2018-04-03
+~~~
+Copy editing for style and clarity.
+
 7 references on Google Scholar.
+
+First submitted as a personal draft in the IPv6 WG, then moved to the OSPF WG.
+
+## 8468
+IPv4, IPv6, and IPv4-IPv6 Coexistence: Updates for the IP
+Performance Metrics (IPPM) Framework [@!rfc8468]
+~~~
+Informational, 15 pages.
+3 personal drafts, first August 6, 2015. 7 WG drafts
+Last call announced 2018-04-11, draft 04
+IESG evaluation starts 2018-05-24, draft 05
+Approved 2018-07-10, draft 06
+Auth 48 2018-09-13
+Auth 48 complete 2018-11-05
+Published 2018-11-14
+~~~
+Copy editing for style and clarity.
+
+2 references on Google Scholar.
+
+First submitted as a personal draft in the IPv6 WG, then moved to the OSPF WG.
 
 {backmatter}
 
