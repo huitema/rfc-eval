@@ -125,36 +125,56 @@ Rank 20: 8468 -- md5=57ae50ee0e1e0708d356d96d116dbfe1
 
 # Observations
 
-[[TODO: Update as we refine the analysis and get deployment data.]]
+We examine the 20 RFC in the sample, measuring various characteristics such
+as delay and citation counts, in an attempt to identify patterns in the
+IETF processes.
 
 ## Publication delays
 
-The following table shows the distribution of delays
-between the various stages of the process:
+We look at the distribution of delays between the submission of the first
+draft and the publication of the RFC. We break out the total delay in three
+components:
 
-| RFC | Status | Pages | Overall | WG | IETF | IESG | RFC ED | Auth48 | Pub |
-| ---:| ----  | ----:| -----:| ---:| ---:| ---:| -----:| -----:| ---:|
-| 8411 | Info | 5 | 455 | 154 | 80 | 60 | 53 | 88 | 20 |
-| 8456 | Info | 64 | 1107 | 823 | 39 | 87 | 98 | 46 | 14 |
-| 8446 | Standard | 160 | 1576 | 1400 | 15 | 19 | 85 | 57 | 0 |
-| 8355 | Info | 13 | 1517 | 1175 | 14 | 229 | 83 | 15 | 1 |
-| 8441 | Standard | 8 | 341 | 204 | 22 | 9 | 67 | 33 | 6 |
-| 8324 | ISE | 29 | 270 | 38 | 111 | 50 | 42 | 28 | 1 |
-| 8377 | Standard | 8 | 1792 | 1630 | 11 | 10 | 39 | 102 | 0 |
-| 8498 | Info | 15 | 1061 | 935 | 47 | 12 | 49 | 16 | 2 |
-| 8479 | ISE | 8 | 414 | 233 | 0 | 144 | 31 | 5 | 1 |
-| 8453 | Info | 42 | 1162 | 1036 | 30 | 16 | 73 | 7 | 0 |
-| 8429 | BCP | 10 | 548 | 76 | 33 | 280 | 60 | 99 | 0 |
-| 8312 | Info | 18 | 1255 | 1113 | 16 | 0 | 96 | 30 | 0 |
-| 8492 | ISE | 40 | 2358 | 1706 | 117 | 55 | 355 | 123 | 2 |
-| 8378 | Exp | 21 | 1524 | 1446 | 15 | 12 | 42 | 9 | 0 |
-| 8361 | PS | 17 | 1612 | 1477 | 20 | 42 | 39 | 31 | 3 |
-| 8472 | PS | 8 | 1228 | 899 | 126 | 123 | 59 | 8 | 13 |
-| 8466 | PS | 158 | 771 | 538 | 21 | 103 | 84 | 22 | 3 |
-| 8362 | PS | 33 | 1871 | 1766 | 30 | 11 | 49 | 11 | 4 |
-| 8468 | Info | 15 | 1196 | 979 | 43 | 47 | 65 | 53 | 9 |
-|  | Average | 35 | 1161 | 928 | 42 | 69 | 77 | 41 | 4 |
+* The working group delay, from the first draft to the start of the IETF
+  last call;
 
+* The IETF delay, which lasts from the beginning of the IETF last call to
+  the approval by the IESG, including the reviews by
+  various directorates;
+
+* The RFC production, from approval by the IESG to publication, including
+  the Auth48 reviews.
+
+For submissions to the independent stream, we don't have a working group.
+We consider instead the progression of the individual draft until the
+adoption by the ISE as the equivalent of the "working group" period, 
+and the delay from adoption by the ISE until submission to the RFC Editor
+as the equivalent of the IETF delay. The following table
+shows the delays for the 20 RFC in the sample:
+
+| RFC | Status | Pages | Overall | WG | IETF | Edit |
+| ---:| ----  | ----:| -----:| ---:| ---:| ---:|
+| 8411 | Info | 5 | 455 | 154 | 140 | 161 |
+| 8456 | Info | 64 | 1107 | 823 | 126 | 158 |
+| 8446 | PS | 160 | 1576 | 1400 | 34 | 142 |
+| 8355 | Info | 13 | 1517 | 1175 | 243 | 99 |
+| 8441 | PS | 8 | 341 | 204 | 31 | 106 |
+| 8324 | ISE | 29 | 270 | 38 | 161 | 71 |
+| 8377 | PS | 8 | 1792 | 1630 | 21 | 141 |
+| 8498 | Info | 15 | 1061 | 935 | 59 | 67 |
+| 8479 | ISE | 8 | 414 | 233 | 144 | 37 |
+| 8453 | Info | 42 | 1162 | 1036 | 46 | 80 |
+| 8429 | BCP | 10 | 548 | 76 | 313 | 159 |
+| 8312 | Info | 18 | 1255 | 1113 | 16 | 126 |
+| 8492 | ISE | 40 | 2358 | 1706 | 172 | 480 |
+| 8378 | Exp | 21 | 1524 | 1446 | 27 | 51 |
+| 8361 | PS | 17 | 1612 | 1477 | 62 | 73 |
+| 8472 | PS | 8 | 1228 | 899 | 249 | 80 |
+| 8466 | PS | 158 | 771 | 538 | 124 | 109 |
+| 8362 | PS | 33 | 1871 | 1766 | 41 | 64 |
+| 8468 | Info | 15 | 1196 | 979 | 90 | 127 |
+| ---:| ----  | ----:| -----:| ---:| ---:| ---:|
+| | average | 35 | 1161 | 928 | 110 | 123 |
 
 The average delay from first draft to publication is about 3 years, but this
 varies widely. Excluding the independent stream submissions, the average
@@ -166,11 +186,14 @@ This is however a very special case, a draft that was prepared for
 the TLS working group and failed to reach consensus. After that, it was
 resubmitted to the ISE, and incurred atypical production delays.
 
+On average, we see that 80% of the delay is incurred in WG processing,
+10% in IETF review, and 10% for edition and publication.
+
 ## Independent Series
 
 Out of 20 randomly selected RFC, 3 were published through the "independent series".
 One is an independent opinion, another a description of a non-IETF protocol
-format, and the third was [@!RFC8492], which is a special case. Apart from
+format, and the third was {{?RFC8492}}, which is a special case. Apart from
 this special case, the publication delays were significantly shorter 
 for the Independent Stream than for the IETF stream.
 This seems to indicate that the Independent Series is functioning as 
@@ -237,6 +260,95 @@ a low citation count have limited impact:
 We should be able to assess the popularity of specifications with vendors,
 operators and designers by asking questions about deployed services and products.
 
+
+## Preparation and Publication delays
+
+The preparation and publication delays include three components: 
+
+* the delay from submission to the RFC Editor to beginning of Auth48, during 
+  which the document is prepared;
+
+* the AUTH48 delay, during which authors review and eventually approve the
+  changes proposed by the editors;
+
+* the publication delay, from final agreement by authors and editors to
+  actual publication.
+
+The breakdown of the publication delays for each RFC is shown in the
+following table.
+
+| RFC | Status | Pages | RFC edit | Auth 48 | RFC Pub | Edit(total) |
+| ---:| ----- | -----:| -----:| -----:| -----:| -----:|
+| 8411 | Info | 5 | 53 | 88 | 20 | 161 |
+| 8456 | Info | 64 | 98 | 46 | 14 | 158 |
+| 8446 | PS | 160 | 85 | 57 | 0 | 142 |
+| 8355 | Info | 13 | 83 | 15 | 1 | 99 |
+| 8441 | PS | 8 | 67 | 33 | 6 | 106 |
+| 8324 | ISE | 29 | 42 | 28 | 1 | 71 |
+| 8377 | PS | 8 | 39 | 102 | 0 | 141 |
+| 8498 | Info | 15 | 49 | 16 | 2 | 67 |
+| 8479 | ISE | 8 | 31 | 5 | 1 | 37 |
+| 8453 | Info | 42 | 73 | 7 | 0 | 80 |
+| 8429 | BCP | 10 | 60 | 99 | 0 | 159 |
+| 8312 | Info | 18 | 96 | 30 | 0 | 126 |
+| 8492 | ISE | 40 | 355 | 123 | 2 | 480 |
+| 8378 | Exp | 21 | 42 | 9 | 0 | 51 |
+| 8361 | PS | 17 | 39 | 31 | 3 | 73 |
+| 8472 | PS | 8 | 59 | 8 | 13 | 80 |
+| 8466 | PS | 158 | 84 | 22 | 3 | 109 |
+| 8362 | PS | 33 | 49 | 11 | 4 | 64 |
+| 8468 | Info | 15 | 65 | 53 | 9 | 127 |
+|  | Average |  | 77.3 | 41.2 | 4.2 | 122.7 |
+|-8492  | Average |  | 62 | 37 | 4 | 103 |
+
+On average, the total delay appears to be a bit more than four month, but the
+average is skewed by the extreme values encountered for {{?RFC8492}}. If we
+exclude that RFC from the computations, the average delay drops to a just a bit
+more than 3 months: about 2 months for the preparation, a bit more than one
+month for the Auth48 phase, and 4 days for the publishing. 
+
+Of course, these delays vary from RFC to RFC. To try explain the causes of the
+delay, we compute the correlation factor between the observed delays and 4
+plausible explanation factors:
+
+* The number of pages in the document,
+* The amount of copy edit, as discussed in (#copy-editing),
+* Whether or not an IANA action was required.
+
+We find the following values:
+
+| Correlation | RFC edit | Auth 48 | Edit(total) |
+| ----- | -----:| -----:| -----:| -----:|
+| Nb pages | 0.50 | -0.04 | 0.21 |
+| Copy-Edit | 0.42 | 0.24 | 0.45 |
+| IANA | -0.13 | 0.26 | 0.15 |
+
+None of these indicate strong correlations. The greater number of pages will
+tend to increase the preparation delay, but it does not appear to impact the
+Auth48 delay at all. The amount of copy editing also tend to increase the
+the preparation delay somewhat and the Auth48 delay a little. The presence or
+absence of IANA action has very ittle correlation with the delays.
+
+We also observe that the Auth48 delay varies much more than the preparation
+delay, with a standard deviation of 20 days for Auth48 versus 10 days for
+the preparation delay. In theory, Auth48 is just a final
+verification: the authors receive the document prepared by the RFC production center,
+and just have to give their approval, or maybe request a last minute
+correction. The name indicates that this is expected to last just two days, but
+in average it lasts more than a month.
+
+There are a few RFC for which the Auth48 delay was much longer than a month:
+RFC 8411, 8456, 8446, 8377, 8429, 8492 and 8468. We asked the authors
+of these RFC why the AUTH48 phase took so long, and we got
+two explanations:
+
+1- Some RFC have multiple authors in multiple time zones. This slows down
+   the coordination required for approving changes.
+
+2- Some authors found some of the proposed changes unnecessary or
+   undesirable, and asked that they be reversed. This required long
+   exchanges between authors and editors.
+
 ## Copy editing
 
 We can assess the amount of copy editing applied to each published RFC by
@@ -281,23 +393,17 @@ editing for style, and the other half at least some editing for clarity.
 | 8362 | PS | 3 |
 | 8468 | Info | 3 |
 
-There does not seem to be any significant correlation between the level of copy editing
-and the either the RFC Editor delay or the Auth 48 delay.
-
-## AUTH48 
-
-The time spent in the AUTH48 state varies widely. In theory, this is just a final
-verification: the authors receive the document prepared by the RFC production center,
-and in theory just have to give their approval, or maybe request a last minute
-correction. The name indicates that this is expected to last just two days, but
-in average it lasts more than a month. [[TODO: ask authors of RFC 8411, 8456, 8446,
-8377, 8429, 8492 and 8468 why the AUTH48 phase took so long.]]
+We should note that this method of assessment does not take into account
+the number of changes proposed by the editors and eventually rejected
+by the authors, since these changes are not present in either the
+final draft or the published RFC. It might be possible to get
+an evaluation of these "phantom changes" from the RFC Production Center.
 
 # Next steps
 
-The current version of this draft is very much a preliminary exercise. 
-We have yet to obtain responses from authors about deployments, and also
-explanation of delays.
+This draft is not complete. We have obtained feedback from some authors
+but not all, and we are still awaiting more data from authors about deployments
+and delays. We should also get a review from the RFC Production Center.
 
 Even with those limitations, the exercise shows some promise, and also
 shows the interest of doing more studies. For example, one of the plausible
