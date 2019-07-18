@@ -79,6 +79,12 @@ quality and impact is subjective. We start with two ideas:
 2- Ask the RFC authors whether the specifications resulted in the
    deployment of products or services
 
+When accessing Google Scholar, we search for quoted strings of the
+form "RFC xxxx". This is an arbitrary choice, we could for example 
+have chosen to search for "RFCxxx" or a combination of the two forms.
+We retained the simpler alternative, because we don't believe that
+picking one or the other would introduce a significant bias.
+
 Basic production mechanisms could be evaluated by processing data from
 the IETF tracker, but subjective data requires manual assessment of results,
 which can be time consuming. Google Scholar also requires manual access
@@ -120,6 +126,71 @@ Rank 17: 8471 -- md5=01b293a7dd0793e6f3297f2a973cd7e3
 Rank 18: 8466 -- md5=8e411babe271557fe83bcdececc1643f
 Rank 19: 8362 -- md5=8a1ba3efd82856a12b2b35fc5237e1b7
 Rank 20: 8468 -- md5=57ae50ee0e1e0708d356d96d116dbfe1
+~~~
+
+When evaluating delays and impact, we will compare the year 2018 to 2008 and
+1998, 10 and 20 years ago. To drive this comparison, we pick 20 RFC at random
+among those published in 2008, and another 20 among those published in 1998.
+We use the same nomcom-like methodology.
+
+For 2008, we picking random RFC numbers between RFC 5134
+(January 2008) and RFC 5405 (December 2008), using the sentence "sed fugit interea
+fugit irreparabile tempus" as a seed. We actually list here 21 numbers, because
+the random draw place RFC 5315 in 20th position, but that RFC was never issued.
+We replace it by RFC 5301, which came in 21st position.
+
+~~~
+Picking 21 numbers between 5134 and 5405,
+using MD5(sed fugit interea fugit irreparabile tempus)
+Rank 1: 5227 -- md5=61e5b3cd97fda4e75450e93df0744b6d
+Rank 2: 5174 -- md5=eed49542394e9d392bcd756ee0f5beed
+Rank 3: 5172 -- md5=72055ca953d6a8ee0d60a9fca0b8d738
+Rank 4: 5354 -- md5=7a00ef15897479d1d15255159f6d8674
+Rank 5: 5195 -- md5=54813be7bb56f48a05af8c894799b51f
+Rank 6: 5236 -- md5=153263bbd8c0349501b75a33f3d66f6c
+Rank 7: 5348 -- md5=b2d19aa9c1250ef2ddf169045f6e99d7
+Rank 8: 5281 -- md5=1c3e61643d46d1da4ba16f0fd7a0aff5
+Rank 9: 5186 -- md5=5e87001b830183b1a9427d479a7b0e42
+Rank 10: 5326 -- md5=024347839f83d8082549c08bdfa1b43e
+Rank 11: 5277 -- md5=049a83016ab08552841c59400480cd9d
+Rank 12: 5373 -- md5=a1ce374aaebdacca2e7d6eeff039d970
+Rank 13: 5404 -- md5=fb0d6b582a27ce34175e39de33598556
+Rank 14: 5329 -- md5=df043ef1f9d42ba12a03a84434d26ead
+Rank 15: 5283 -- md5=c40d3f966bc7800d6508d3d82df2371d
+Rank 16: 5358 -- md5=6fea5bdb26b19e68befd409a09cb335d
+Rank 17: 5142 -- md5=a8844b73287781762e6548fc6f533508
+Rank 18: 5271 -- md5=c19eb02984265ecfe4ca076f2c160cfa
+Rank 19: 5349 -- md5=33d756f81bf6e40ff344cf6ccaf29f13
+Rank 20: 5315 -- md5=d4c30875f88328d72c9f78def2d1dde5
+Rank 21: 5301 -- md5=3356419e5560901f0d31309b39d14a80
+~~~
+
+For 1998 we picking random RFC numbers between RFC 2257
+(January 1998) and RFC 2479 (December 1998), using the sentence
+"pulvis et umbra sumus" as a seed.
+
+~~~
+Picking 20 numbers between 2257 and 2479, using MD5(pulvis et umbra sumus)
+Rank 1: 2431 -- md5=6eba444bb3349339fcde7e2be726f0f0
+Rank 2: 2381 -- md5=0ce53f69f1a49a49309054af1e9a1d42
+Rank 3: 2387 -- md5=53726e77ffeed903d244155d28e30f10
+Rank 4: 2348 -- md5=69fcab2d2085555bac9eb0e0f4346523
+Rank 5: 2391 -- md5=93358a26a7fce9fa9d61a31cdfdb87b7
+Rank 6: 2267 -- md5=652dcab91bd9d5c58f98bdab21b23d80
+Rank 7: 2312 -- md5=2505b0bed4af0a00ee663891c6f294d8
+Rank 8: 2448 -- md5=6ede4b0dfa935f6ca656a5104b8dc5d0
+Rank 9: 2374 -- md5=5312bfe5a9ca45563eb0bf35510d8daa
+Rank 10: 2398 -- md5=7748a6deec3860898678f992b0b22792
+Rank 11: 2283 -- md5=d73ff67466eb42d971a0e134b9284f83
+Rank 12: 2382 -- md5=de1f667ac3e4c64aa529872e08823dff
+Rank 13: 2289 -- md5=37773c2569dc25fdd0ab400ea401d5c7
+Rank 14: 2282 -- md5=6b3df671a0a0becf9e42d203b59acd08
+Rank 15: 2404 -- md5=e1b6819e5355924f456eb79f93beb8fd
+Rank 16: 2449 -- md5=4f057df7c226efea773e7013c9c62081
+Rank 17: 2317 -- md5=40eee3b536abe4afdb8834a0650c0a04
+Rank 18: 2394 -- md5=044f09c53fc9fd1c50fe6bd0c39318e1
+Rank 19: 2297 -- md5=78ee7e128436c969c80900fef80c075c
+Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
 ~~~
 
 
@@ -188,6 +259,45 @@ resubmitted to the ISE, and incurred atypical production delays.
 
 On average, we see that 80% of the delay is incurred in WG processing,
 10% in IETF review, and 10% for edition and publication.
+We can compare these delays to those observed 10 years ago and 20 years
+ago:
+
+RFC (2008) | Status | Pages | Delay || RFC (1998) | Status | Pages | Delay
+ ----- | ----- | -----:| -----:|| -----| ----- | -----: | -----:|
+5326 | Exp | 54 | 1584 || 2289 | PS | 25 | 396
+5348 | PS | 58 | 823 || 2267 | Info | 10 | unknown
+5281 | Info | 51 | 1308 || 2317 | BCP | 10 | 485
+5354 | Exp | 23 | 2315 || 2404 | PS | 7 | 488
+5227 | PS | 21 | 2434 || 2374 | PS | 12 | 289
+5329 | PS | 12 | 1980 || 2449 | PS | 19 | 273
+5277 | PS | 35 | 912 || 2283 | PS | 9 | 153
+5236 | ISE | 26 | 1947 || 2394 | Info | 6 | 365
+5358 | BCP | 7 | 884 || 2348 | DS | 5 | 699
+5271 | Info | 22 | 1066 || 2382 | Info | 30 | 396
+5195 | PS | 10 | 974 || 2297 | ISE | 109 | 28
+5283 | PS | 12 | 1096 || 2381 | PS | 43 | 699
+5186 | Info | 6 | 2253 || 2312 | Info | 20 | 365
+5142 | PS | 13 | 1005 || 2387 | PS | 10 | 122
+5373 | PS | 24 | 1249 || 2398 | Info | 15 | 396
+5404 | PS | 27 | 214 || 2391 | PS | 10 | 122
+5172 | PS | 7 | 305 || 2431 | PS | 10 | 457
+5349 | Info | 10 | 1096 || 2282 | Info | 14 | 215
+5301 | PS | 6 | 396 || 2323 | ISE | 5 | unknown
+5174 | Info | 8 | 427 || 2448 | ISE | 7 | 92
+
+We can compare the median delay, and the delays observed by the fastest and
+slowest quartiles in the three years:
+
+Year | Fastest 25% | Median | Slowest 25%
+---- | ----:| ----:|----:
+2018 | 604 | 1179 | 1522
+2008 | 869 | 1081 | 1675
+1998 | 169 | 365 | 442
+
+The IETF takes three to four times more times to produce an RFC in 2018
+than it did in 1998, but about the sametime as it did in 1998.
+
+
 
 ## Independent Series
 
@@ -245,6 +355,39 @@ The results indicate that {{?RFC8446}} is by far the most popular of the 20
 RFC in our sample. This is not surprising, since TLS is a key Internet Protocol.
 Of the other publications, only 4 have 5 to 9 citations, and the others have
 three or less.
+
+In order to get a baseline, we can look at the number of references for the
+RFC published in 2008 and 1998. However, we need totake time into account.
+Documents published a long time ago are expected to have accrued more references.
+We try to address this by looking at three counts for each document: the
+overall number of references over the document's lifetime, the number of
+references obtained in the year following publication, and the number of
+references observed since 2018: 
+
+RFC (2008) | Overall | 08 to 09 | >2018 |  | RFC (1998) | Overall | 98 to 99 | >2018
+---- | ----:| ----:| ----:| -- | ---- | ----:| ----:| ----:| 
+5326 | 234 | 27 | 26 |  | 2289 | 369 | 13 | 14
+5348 | 364 | 34 | 13 |  | 2267 | 607 | 13 | 7
+5281 | 182 | 27 | 12 |  | 2317 | 81 | 9 | 6
+5354 | 30 | 15 | 7 |  | 2404 | 446 | 20 | 5
+5227 | 81 | 9 | 7 |  | 2374 | 280 | 18 | 4
+5329 | 57 | 11 | 5 |  | 2449 | 54 | 6 | 3
+5277 | 85 | 10 | 5 |  | 2283 | 240 | 25 | 1
+5236 | 48 | 8 | 4 |  | 2394 | 69 | 4 | 1
+5358 | 45 | 6 | 3 |  | 2348 | 27 | 2 | 1
+5271 | 16 | 3 | 3 |  | 2382 | 89 | 30 | 0
+5195 | 21 | 12 | 1 |  | 2297 | 68 | 21 | 0
+5283 | 26 | 5 | 1 |  | 2381 | 86 | 20 | 0
+5186 | 13 | 4 | 1 |  | 2312 | 115 | 18 | 0
+5142 | 42 | 14 | 0 |  | 2387 | 292 | 8 | 0
+5373 | 16 | 4 | 0 |  | 2398 | 72 | 7 | 0
+5404 | 12 | 3 | 0 |  | 2391 | 110 | 5 | 0
+5172 | 11 | 2 | 0 |  | 2431 | 25 | 4 | 0
+5349 | 11 | 1 | 0 |  | 2282 | 12 | 3 | 0
+5301 | 11 | 3 | 0 |  | 2323 | 12 | 1 | 0
+5174 | 1 | 1 | 0 |  | 2448 | 5 | 1 | 0
+
+
 We need however to be a bit cautious before asserting that publications with
 a low citation count have limited impact:
 
@@ -835,71 +978,6 @@ Copy editing for style and clarity.
 2 references on Google Scholar.
 
 First submitted as a personal draft in the IPv6 WG, then moved to the OSPF WG.
-
-# Test of time
-
-We consider 20 RFC published in 2008, by picking random numbers between RFC 5134
-(January 2008) and RFC 5405 (December 2008). We use the same randomization
-method described in (#methodology), seeded with the sentence "sed fugit interea
-fugit irreparabile tempus".
-
-~~~
-Picking 20 numbers between 5134 and 5405,
-using MD5(sed fugit interea fugit irreparabile tempus)
-Rank 1: 5227 -- md5=61e5b3cd97fda4e75450e93df0744b6d
-Rank 2: 5174 -- md5=eed49542394e9d392bcd756ee0f5beed
-Rank 3: 5172 -- md5=72055ca953d6a8ee0d60a9fca0b8d738
-Rank 4: 5354 -- md5=7a00ef15897479d1d15255159f6d8674
-Rank 5: 5195 -- md5=54813be7bb56f48a05af8c894799b51f
-Rank 6: 5236 -- md5=153263bbd8c0349501b75a33f3d66f6c
-Rank 7: 5348 -- md5=b2d19aa9c1250ef2ddf169045f6e99d7
-Rank 8: 5281 -- md5=1c3e61643d46d1da4ba16f0fd7a0aff5
-Rank 9: 5186 -- md5=5e87001b830183b1a9427d479a7b0e42
-Rank 10: 5326 -- md5=024347839f83d8082549c08bdfa1b43e
-Rank 11: 5277 -- md5=049a83016ab08552841c59400480cd9d
-Rank 12: 5373 -- md5=a1ce374aaebdacca2e7d6eeff039d970
-Rank 13: 5404 -- md5=fb0d6b582a27ce34175e39de33598556
-Rank 14: 5329 -- md5=df043ef1f9d42ba12a03a84434d26ead
-Rank 15: 5283 -- md5=c40d3f966bc7800d6508d3d82df2371d
-Rank 16: 5358 -- md5=6fea5bdb26b19e68befd409a09cb335d
-Rank 17: 5142 -- md5=a8844b73287781762e6548fc6f533508
-Rank 18: 5271 -- md5=c19eb02984265ecfe4ca076f2c160cfa
-Rank 19: 5349 -- md5=33d756f81bf6e40ff344cf6ccaf29f13
-Rank 20: 5315 -- md5=d4c30875f88328d72c9f78def2d1dde5
-Rank 21: 5301 -- md5=3356419e5560901f0d31309b39d14a80
-~~~
-
-The random draw place RFC 5315 in 20th position, but that RFC was never issued.
-We replace it by RFC 5301, which came in 21st position.
-
-We also pick 20 RFC published in 1998 by picking random numbers between RFC 2257
-(January 1998) and RFC 2479 (December 1998). We use the same randomization
-method described in (#methodology), seeded with the sentence "pulvis et umbra sumus".
-
-~~~
-Picking 20 numbers between 2257 and 2479, using MD5(pulvis et umbra sumus)
-Rank 1: 2431 -- md5=6eba444bb3349339fcde7e2be726f0f0
-Rank 2: 2381 -- md5=0ce53f69f1a49a49309054af1e9a1d42
-Rank 3: 2387 -- md5=53726e77ffeed903d244155d28e30f10
-Rank 4: 2348 -- md5=69fcab2d2085555bac9eb0e0f4346523
-Rank 5: 2391 -- md5=93358a26a7fce9fa9d61a31cdfdb87b7
-Rank 6: 2267 -- md5=652dcab91bd9d5c58f98bdab21b23d80
-Rank 7: 2312 -- md5=2505b0bed4af0a00ee663891c6f294d8
-Rank 8: 2448 -- md5=6ede4b0dfa935f6ca656a5104b8dc5d0
-Rank 9: 2374 -- md5=5312bfe5a9ca45563eb0bf35510d8daa
-Rank 10: 2398 -- md5=7748a6deec3860898678f992b0b22792
-Rank 11: 2283 -- md5=d73ff67466eb42d971a0e134b9284f83
-Rank 12: 2382 -- md5=de1f667ac3e4c64aa529872e08823dff
-Rank 13: 2289 -- md5=37773c2569dc25fdd0ab400ea401d5c7
-Rank 14: 2282 -- md5=6b3df671a0a0becf9e42d203b59acd08
-Rank 15: 2404 -- md5=e1b6819e5355924f456eb79f93beb8fd
-Rank 16: 2449 -- md5=4f057df7c226efea773e7013c9c62081
-Rank 17: 2317 -- md5=40eee3b536abe4afdb8834a0650c0a04
-Rank 18: 2394 -- md5=044f09c53fc9fd1c50fe6bd0c39318e1
-Rank 19: 2297 -- md5=78ee7e128436c969c80900fef80c075c
-Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
-~~~
-
 
 
 --- back
