@@ -4,8 +4,8 @@
 
 Network Working Group                                         C. Huitema
 Internet-Draft                                      Private Octopus Inc.
-Intended status: Informational                             July 18, 2019
-Expires: January 19, 2020
+Intended status: Informational                             July 19, 2019
+Expires: January 20, 2020
 
 
                   RFC Evaluation Project - First Step
@@ -34,7 +34,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 19, 2020.
+   This Internet-Draft will expire on January 20, 2020.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Huitema                 Expires January 19, 2020                [Page 1]
+Huitema                 Expires January 20, 2020                [Page 1]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -62,38 +62,38 @@ Table of Contents
 
    1.  RFC Evaluation project  . . . . . . . . . . . . . . . . . . .   2
    2.  Methodology . . . . . . . . . . . . . . . . . . . . . . . . .   3
-   3.  Observations  . . . . . . . . . . . . . . . . . . . . . . . .   6
-     3.1.  Publication delays  . . . . . . . . . . . . . . . . . . .   6
-     3.2.  Independent Series  . . . . . . . . . . . . . . . . . . .  10
-     3.3.  Citation Counts . . . . . . . . . . . . . . . . . . . . .  10
-     3.4.  Preparation and Publication delays  . . . . . . . . . . .  14
-     3.5.  Copy editing  . . . . . . . . . . . . . . . . . . . . . .  17
-   4.  Next steps  . . . . . . . . . . . . . . . . . . . . . . . . .  19
-   5.  Security considerations . . . . . . . . . . . . . . . . . . .  19
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  19
-   7.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  19
-   8.  Appendix: Analysis of 20 selected RFC . . . . . . . . . . . .  19
-     8.1.  8411  . . . . . . . . . . . . . . . . . . . . . . . . . .  19
-     8.2.  8456  . . . . . . . . . . . . . . . . . . . . . . . . . .  20
-     8.3.  8446  . . . . . . . . . . . . . . . . . . . . . . . . . .  20
-     8.4.  8355  . . . . . . . . . . . . . . . . . . . . . . . . . .  21
-     8.5.  8441  . . . . . . . . . . . . . . . . . . . . . . . . . .  21
-     8.6.  8324  . . . . . . . . . . . . . . . . . . . . . . . . . .  22
-     8.7.  8377  . . . . . . . . . . . . . . . . . . . . . . . . . .  22
-     8.8.  8498  . . . . . . . . . . . . . . . . . . . . . . . . . .  23
-     8.9.  8479  . . . . . . . . . . . . . . . . . . . . . . . . . .  23
-     8.10. 8453  . . . . . . . . . . . . . . . . . . . . . . . . . .  24
-     8.11. 8429  . . . . . . . . . . . . . . . . . . . . . . . . . .  24
-     8.12. 8312  . . . . . . . . . . . . . . . . . . . . . . . . . .  24
-     8.13. 8492  . . . . . . . . . . . . . . . . . . . . . . . . . .  25
-     8.14. 8378  . . . . . . . . . . . . . . . . . . . . . . . . . .  26
-     8.15. 8361  . . . . . . . . . . . . . . . . . . . . . . . . . .  26
-     8.16. 8472  . . . . . . . . . . . . . . . . . . . . . . . . . .  26
-     8.17. 8466  . . . . . . . . . . . . . . . . . . . . . . . . . .  27
-     8.18. 8362  . . . . . . . . . . . . . . . . . . . . . . . . . .  27
-     8.19. 8468  . . . . . . . . . . . . . . . . . . . . . . . . . .  28
-   9.  Informative References  . . . . . . . . . . . . . . . . . . .  28
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  31
+   3.  Analysis of 20 selected RFC . . . . . . . . . . . . . . . . .   6
+     3.1.  8411  . . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     3.2.  8456  . . . . . . . . . . . . . . . . . . . . . . . . . .   7
+     3.3.  8446  . . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     3.4.  8355  . . . . . . . . . . . . . . . . . . . . . . . . . .   9
+     3.5.  8441  . . . . . . . . . . . . . . . . . . . . . . . . . .   9
+     3.6.  8324  . . . . . . . . . . . . . . . . . . . . . . . . . .  10
+     3.7.  8377  . . . . . . . . . . . . . . . . . . . . . . . . . .  10
+     3.8.  8498  . . . . . . . . . . . . . . . . . . . . . . . . . .  11
+     3.9.  8479  . . . . . . . . . . . . . . . . . . . . . . . . . .  11
+     3.10. 8453  . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+     3.11. 8429  . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+     3.12. 8312  . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+     3.13. 8492  . . . . . . . . . . . . . . . . . . . . . . . . . .  13
+     3.14. 8378  . . . . . . . . . . . . . . . . . . . . . . . . . .  14
+     3.15. 8361  . . . . . . . . . . . . . . . . . . . . . . . . . .  14
+     3.16. 8472  . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+     3.17. 8466  . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+     3.18. 8362  . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+     3.19. 8468  . . . . . . . . . . . . . . . . . . . . . . . . . .  16
+   4.  Observations  . . . . . . . . . . . . . . . . . . . . . . . .  17
+     4.1.  Publication delays  . . . . . . . . . . . . . . . . . . .  17
+     4.2.  Citation Counts . . . . . . . . . . . . . . . . . . . . .  21
+     4.3.  Preparation and Publication delays  . . . . . . . . . . .  26
+     4.4.  Copy editing  . . . . . . . . . . . . . . . . . . . . . .  29
+     4.5.  Independent Series  . . . . . . . . . . . . . . . . . . .  31
+   5.  Next steps  . . . . . . . . . . . . . . . . . . . . . . . . .  31
+   6.  Security considerations . . . . . . . . . . . . . . . . . . .  31
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  31
+   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  32
+   9.  Informative References  . . . . . . . . . . . . . . . . . . .  32
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  34
 
 1.  RFC Evaluation project
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Huitema                 Expires January 19, 2020                [Page 2]
+Huitema                 Expires January 20, 2020                [Page 2]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -165,7 +165,7 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020                [Page 3]
+Huitema                 Expires January 20, 2020                [Page 3]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -221,7 +221,7 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020                [Page 4]
+Huitema                 Expires January 20, 2020                [Page 4]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -277,40 +277,634 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020                [Page 5]
+Huitema                 Expires January 20, 2020                [Page 5]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
 
-Picking 20 numbers between 2257 and 2479, using MD5(pulvis et umbra sumus)
-Rank 1: 2431 -- md5=6eba444bb3349339fcde7e2be726f0f0
-Rank 2: 2381 -- md5=0ce53f69f1a49a49309054af1e9a1d42
-Rank 3: 2387 -- md5=53726e77ffeed903d244155d28e30f10
-Rank 4: 2348 -- md5=69fcab2d2085555bac9eb0e0f4346523
-Rank 5: 2391 -- md5=93358a26a7fce9fa9d61a31cdfdb87b7
-Rank 6: 2267 -- md5=652dcab91bd9d5c58f98bdab21b23d80
-Rank 7: 2312 -- md5=2505b0bed4af0a00ee663891c6f294d8
-Rank 8: 2448 -- md5=6ede4b0dfa935f6ca656a5104b8dc5d0
-Rank 9: 2374 -- md5=5312bfe5a9ca45563eb0bf35510d8daa
-Rank 10: 2398 -- md5=7748a6deec3860898678f992b0b22792
-Rank 11: 2283 -- md5=d73ff67466eb42d971a0e134b9284f83
-Rank 12: 2382 -- md5=de1f667ac3e4c64aa529872e08823dff
-Rank 13: 2289 -- md5=37773c2569dc25fdd0ab400ea401d5c7
-Rank 14: 2282 -- md5=6b3df671a0a0becf9e42d203b59acd08
-Rank 15: 2404 -- md5=e1b6819e5355924f456eb79f93beb8fd
-Rank 16: 2449 -- md5=4f057df7c226efea773e7013c9c62081
-Rank 17: 2317 -- md5=40eee3b536abe4afdb8834a0650c0a04
-Rank 18: 2394 -- md5=044f09c53fc9fd1c50fe6bd0c39318e1
-Rank 19: 2297 -- md5=78ee7e128436c969c80900fef80c075c
-Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
+   Picking 20 numbers between 2257 and 2479,
+   using MD5(pulvis et umbra sumus)
+   Rank 1: 2431 -- md5=6eba444bb3349339fcde7e2be726f0f0
+   Rank 2: 2381 -- md5=0ce53f69f1a49a49309054af1e9a1d42
+   Rank 3: 2387 -- md5=53726e77ffeed903d244155d28e30f10
+   Rank 4: 2348 -- md5=69fcab2d2085555bac9eb0e0f4346523
+   Rank 5: 2391 -- md5=93358a26a7fce9fa9d61a31cdfdb87b7
+   Rank 6: 2267 -- md5=652dcab91bd9d5c58f98bdab21b23d80
+   Rank 7: 2312 -- md5=2505b0bed4af0a00ee663891c6f294d8
+   Rank 8: 2448 -- md5=6ede4b0dfa935f6ca656a5104b8dc5d0
+   Rank 9: 2374 -- md5=5312bfe5a9ca45563eb0bf35510d8daa
+   Rank 10: 2398 -- md5=7748a6deec3860898678f992b0b22792
+   Rank 11: 2283 -- md5=d73ff67466eb42d971a0e134b9284f83
+   Rank 12: 2382 -- md5=de1f667ac3e4c64aa529872e08823dff
+   Rank 13: 2289 -- md5=37773c2569dc25fdd0ab400ea401d5c7
+   Rank 14: 2282 -- md5=6b3df671a0a0becf9e42d203b59acd08
+   Rank 15: 2404 -- md5=e1b6819e5355924f456eb79f93beb8fd
+   Rank 16: 2449 -- md5=4f057df7c226efea773e7013c9c62081
+   Rank 17: 2317 -- md5=40eee3b536abe4afdb8834a0650c0a04
+   Rank 18: 2394 -- md5=044f09c53fc9fd1c50fe6bd0c39318e1
+   Rank 19: 2297 -- md5=78ee7e128436c969c80900fef80c075c
+   Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
 
-3.  Observations
+3.  Analysis of 20 selected RFC
+
+   We review each of the RFC listed in (#methodology) for the year 2018,
+   trying both to answer the known questions and to gather insight for
+   further analyzes.  In many case, the analysis of the data is
+   complemented by direct feedback from the RFC authors.
+
+3.1.  8411
+
+   IANA Registration for the Cryptographic Algorithm Object Identifier
+   Range [RFC8411]:
+
+   Informational, 5 pages
+   4 drafts (personal),first May 8, 2017. Published August 2018.
+   Last call announced 2017/10/09
+   IESG evaluation starts 2017/12/28
+   Approved 2018/02/26, draft 03
+   Auth 48 2018/04/20
+   Auth 48 complete 2018/07/17
+   Published 2018/08/06
+   IANA action: create table
+
+   The draft underwent minor copy edit before publication.
+
+
+
+
+
+Huitema                 Expires January 20, 2020                [Page 6]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   The long delay in Auth48 is probaby due to clustering with [RFC8410],
+   which entered AUTH 48 on 06/05.  The MISSREF tracker code was cleared
+   then.
+
+   2 references on Google Scholar.
+
+3.2.  8456
+
+   Benchmarking Methodology for Software-Defined Networking (SDN)
+   Controller Performance [RFC8456]:
+
+   Informational, 64 pages
+   2 personal drafts, 9 WG drafts, first in March 2015
+   Last call announced 2018-01-19
+   IESG evaluation starts 2018-02-27
+   IESG approved 2018-05-25
+   Auth 48 2018-08-31
+   Auth 48 complete 2018-10-16
+   Published 2018-10-30
+
+   The draft underwent very extensive copy editing, covering use of
+   articles, turn of phrases, choice of vocabulary.  The changes are
+   enough to cause pagination differences.  The "diff" tool marks pretty
+   much every page as changed.  Some diagrams see change in protocol
+   elements like message names.
+
+   BMWG often takes a bit of time, and I believe that our experience
+   mirrors a typical one for this WG.  We had multiple authors in
+   multiple time zones, which slowed down the AUTH process with the RPC,
+   not abnormally linger, but a bit longer than my previous draft for
+   another RFC.  Finally, BMWG publishes informational RFCs centered
+   around benchmarking; I don't work for a test equipment manufacturer
+   and can't comment on whether or not they've "implemented" a test
+   suite around this, however, my previous employers SQA department used
+   this when testing internal products for production.
+
+   The RFC was part of cluster with [RFC8455].
+
+   Google Scholar shows 3 references.
+
+   I'm one of the coauthors for this RFC.  We have implemented the
+   methodologies in RFC 8456 as part of our product SDN PktBlaster.
+   Please refer the below link for more information.
+   http://www.veryxtech.com/product/solutions/sdn-software-defined-
+   networking/network-emulation-and-benchmarking/
+
+   Also we had performed benchmarking tests with various SDN controllers
+   using SDN PktBlaster.  Sharing below the URLs of sample reports for
+
+
+
+Huitema                 Expires January 20, 2020                [Page 7]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   reference.  http://www.veryxtech.com/blogs/opendaylight-odl-
+   performance-report/ http://www.veryxtech.com/blogs/pktblaster-sdn-
+   sample-test-report/
+
+   Please let us know for any additional information.
+
+3.3.  8446
+
+   The Transport Layer Security (TLS) Protocol Version 1.3 [RFC8446], as
+   the title indicates, defines the new version of the TLS protocol.
+   From the datatracker, we extract the following:
+
+   Proposed standard
+   160 pages
+   29 WG drafts first April 17, 2014.
+   Last call announced 2018/02/15
+   IESG evaluation starts 2018/03/02
+   Approved 2018/03/21, draft 28
+   Auth 48 2018/06/14
+   Auth 48 complete 2018/08/10
+   Published 2018/08/10
+
+   The RFC was a major effort in the IETF.  Working group members
+   developed and tested several implementations.  Researchers analyzed
+   the specifications and performed to formal verification.  Deployment
+   tests outlined issues that caused extra work when the specification
+   was almost ready.  These complexity largely explains the time spent
+   in the working group.
+
+   Comparing the final draft to the published version, we find
+   relatively light copy editing.  It includes explaining acronyms on
+   first use, clarifying some definitions standardizing punctiation and
+   capitalization, and spelling out some numbers in text.  This
+   generally fall in the category of "style", although some of the
+   clarifications go into message definitions.  However, that simple
+   analysis does not explain why the Auth48 phase took almost two
+   months.
+
+   According to the author, the main reason was a requirement to have
+   author and AD review each proposed change, down to any single comma.
+   The concern there was that any change in a complex specification
+   might affect a protocol that was extensively reviewed in the working
+   group.  The author asked the RFC editors to back away a number of
+   edits that he considered spurious.  This took a long time, partly
+   because it was very hard to distinguish the edits that were editorial
+   from those that were typesetting.
+
+
+
+
+
+Huitema                 Expires January 20, 2020                [Page 8]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   The RFC has 123 references in Google Scholar.  There are 21
+   implementations listed in the Wiki of the TLS 1.3 project.  It has
+   been deployed on major browsers.
+
+3.4.  8355
+
+   Resiliency Use Cases in Source Packet Routing in Networking (SPRING)
+   Networks [RFC8355] is an informational RFC.  It originated from a use
+   case informational draft that was mostly used for the BOF creating
+   the WG, and then to drive initial work/evolutions from the WG.
+
+   Informational, 13 pages.
+   2 personal drafts (personal), first January 31, 2014. 13 WG drafts.
+   Last call announced 2017-04-20
+   IESG evaluation starts 2017-05-04, draft 09
+   Approved 2017-12-19, draft 12
+   Auth 48 2018-03-12
+   Auth 48 complete 2018-03-27
+   Published 2018-03-28
+
+   According to the author, the delays reflect the relative lack of
+   priority of this work in the WG.  Once the WG was created, other work
+   was higher priority than working on the use case.
+
+   Minor set of copy edit, mostly for style.
+
+   9 references on Google Scholar.  No implementation of the RFC itself,
+   but the technology behind it such as Segment Routing (architecture
+   RFC 8402, TI-LFA draft-ietf-rtgwg-segment-routing-ti-lfa) is widely
+   implemented and deployment is ongoing.  Even if this specific RFC was
+   incurred significant delay, the authors think that the technology was
+   implemented and deployed rather quickly.
+
+3.5.  8441
+
+   Bootstrapping WebSockets with HTTP/2 [RFC8441]
+
+   Proposed standard, 8 pages. Updates RFC 6455.
+   3 personal drafts (personal), first 10/15/2017. 8 WG drafts.
+   Last call announced 2018-05-07, draft 05
+   IESG evaluation starts 2018-05-29, draft 06
+   Approved 2018-06-07, draft 07
+   Auth 48 2018-08-13
+   Auth 48 complete 2018-09-15
+   Published 2018-09-21
+   IANA Action: table entries
+
+   Minor set of copy edit, mostly for style.
+
+
+
+Huitema                 Expires January 20, 2020                [Page 9]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   No references on Google Scholar.  (RFC 6455 had 1000 results)
+
+3.6.  8324
+
+   DNS Privacy, Authorization, Special Uses, Encoding, Characters,
+   Matching, and Root Structure: Time for Another Look?  [RFC8324].
+   This is an opinion piece on DNS development, published on the
+   Independent Stream.
+
+   Informational, 29 pages. Independent stream.
+   5 personal drafts (personal), first June 2, 2017.
+   ISE review started 2017-07-10, draft 03
+   IETF conflict review and IESG review started 2017-10-29
+   Approved 2017-12-18, draft 04
+   Auth 48 2018-01-29, draft 05
+   Auth 48 complete 2018-02-26
+   Published 2018-02-27
+
+   This RFC took only 9 months from first draft to publication, which is
+   the shortest in the 2018 sample set.  In part, this is because the
+   text was privately circulated and reviewed before the first draft was
+   published.
+
+   Comparing the final draft and the published version shows only minor
+   copy edit, mostly for style.  According to the author, because this
+   is because he knows how to write in RFC Style with the result that
+   his documents often need a minimum of editing.  He also makes sure
+   that the document on which the Production Center starts working
+   already has changes discussed and approved during Last Call and IESG
+   review incorporated rather than expecting the Production Center to
+   operate off of notes about changed to be made.
+
+   2 references on Google Scholar.
+
+3.7.  8377
+
+   Transparent Interconnection of Lots of Links (TRILL): Multi-Topology
+   [RFC8377]
+
+   Proposed standard, 20 pages. Updates RFC 6325, 7177.
+   3 personal drafts (personal), first September 3, 2013. 7 WG drafts.
+   Last call announced 2018-02-19, draft 05
+   IESG evaluation starts 2018-03-02, draft 06
+   Approved 2018-03-12, draft 05
+   Auth 48 2018-04-20, draft 06
+   Auth 48 complete 2018-07-31
+   Published 2018-07-31
+   IANA Table, table entries
+
+
+
+Huitema                 Expires January 20, 2020               [Page 10]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   Minor set of copy edit, mostly for style, also clarity.
+
+   1 reference on Google Scholar.
+
+   TODO: Ask authors why it took so long to get the draft adopted by the
+   WG
+
+3.8.  8498
+
+   A P-Served-User Header Field Parameter for an Originating Call
+   Diversion (CDIV) Session Case in the Session Initiation Protocol
+   (SIP) [RFC8498].
+
+   Informational, 15 pages.
+   5 personal drafts (personal), first March 21, 2016. 9 WG drafts.
+   Last call announced 2018-10-12, draft 05
+   IESG evaluation starts 2018-11-28, draft 07
+   Approved 2018-12-10, draft 08
+   Auth 48 2019-01-28
+   Auth 48 complete 2019-02-13
+   Published 2019-02-15
+   IANA Action, table rows added.
+
+   Copy edit for style, but also clarification of ambiguous sentences.
+
+   No references on Google Scholar.
+
+3.9.  8479
+
+   Storing Validation Parameters in PKCS#8 [RFC8479]
+
+   Informational, 8 pages. Independent stream.
+   5 personal drafts (personal), first August 8, 2017.
+   ISE review started 2018-03-29, draft 02
+   IETF conflict review and IESG review started 2018-03-29
+   Approved 2018-08-20, draft 03
+   Auth 48 2018-09-20, draft 04
+   Auth 48 complete 2018-09-25
+   Published 2018-09-26
+
+   Very minor set of copy edit, moving some references from normative to
+   informative.
+
+   No reference on Google Scholar.
+
+
+
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 11]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+3.10.  8453
+
+   Framework for Abstraction and Control of TE Networks (ACTN) [RFC8453]
+
+   Informational, 42 pages.
+   3 personal drafts, first June 15, 2015. 16 WG drafts.
+   Out of WG 2018-01-26, draft 11
+   Expert review requested, 2018-02-13
+   Last call announced 2018-04-16, draft 13
+   IESG evaluation starts 2018-05-16, draft 14
+   Approved 2018-06-01, draft 15
+   Auth 48 2018-08-13
+   Auth 48 complete 2018-08-20
+   Published 2018-08-20
+   IANA Action, table rows added.
+
+   Minor copy editing.
+
+   8 references on Google Scholar.
+
+3.11.  8429
+
+   Deprecate Triple-DES (3DES) and RC4 in Kerberos [RFC8429]
+
+   Informational, 42 pages.
+   6 WG, first 5/1/2017.
+   Last call announced 7/16/2017, draft 03
+   IESG evaluation starts 8/18/2017, draft 04
+   Approved 5/25/2018, draft 05
+   Auth 48 7/24/2018
+   Auth 48 complete 10/31/2018
+   Published 10/31/2018
+   IANA Action, table rows added.
+
+   Minor copy editing, for style.
+
+   1 reference on Google Scholar.
+
+   The document was sent back to the WG after the first last call,
+   edited, and then there was a second last call.  There were
+   significant discussions about the process for deprecating specs and
+   marking them obsolete at the same time.
+
+3.12.  8312
+
+   CUBIC for Fast Long-Distance Networks [RFC8312]
+
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 12]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   Informational, 18 pages.
+   2 personal drafts, first 9/1/2014. 8 WG drafts
+   Last call announced 9/18/2017, draft 06
+   IESG evaluation starts 2017-11-14
+   Approved 2017-10-04, draft 07
+   Auth 48 2018-01-08
+   Auth 48 complete 2018-02-07
+   Published 2018-02-07
+   IANA Action, table rows added.
+
+   Minor copy editing, for style.
+
+   9 references on Google Scholar.
+
+   Much of the delay, from 2014 to 2015, was waiting fro WG adoption.
+   There was another 2 years spent debating the draft in the WG.
+
+3.13.  8492
+
+   Secure Password Ciphersuites for Transport Layer Security (TLS)
+   [RFC8492]
+
+   Informational, 40 pages. (Independent Stream)
+   10 personal drafts, first 9/2/2012. 8 WG drafts
+   ISE review started 2017-05-10, draft 01
+   IETF conflict review and IESG review started 2017-09-04
+   Approved 2017-10-29, draft 04
+   Auth 48 10/19/2018, draft 05
+   Auth 48 complete 2/19/2019
+   Published 2/21/2019
+   IANA Action, table rows added.
+
+   This RFC has a complex history.  The first individual draft was
+   submitted to the TLS working group on September 7, 2012.  It
+   progressed there, and was adopted by the WG after 3 revisions.  There
+   were then 8 revisions in the TLS WG, until the WG decided to not
+   progress it.  The draft was parked in 2013 by the WG chairs after
+   failing to get consensus in WG last call.  The AD finally pulled the
+   plug in 2016, and the draft was then resubmitted to the ISE.
+
+   At that point, the author was busy and was treating this RFC with a
+   low priority because, in his words, it would not be a "real RFC".
+   There were problems with the draft that only came up late.  It was
+   written back before TLS1.3 existed and the author had to add TLS1.3
+   support onto it late in the process.  He also got a very late comment
+   while in AUTH48 that caused some rewrite.  Finally, there was some
+   IANA issue with the extension registry where a similar extension was
+   added by someone else.  The draft was changed to just use it.
+
+
+
+Huitema                 Expires January 20, 2020               [Page 13]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   Changes in AUTH48 include added reference to TLS 1.3, copy-editing
+   for style, some added requirements, added paragraphs, and changes in
+   algorithms specification.
+
+   2 references on Google Scholar.  Only the author implemented the
+   specification.
+
+3.14.  8378
+
+   Signal-Free Locator/ID Separation Protocol (LISP) Multicast [RFC8378]
+   is an experimental RFC, defining how to implement Multicast in the
+   LISP architecture.
+
+   Experimental, 21 pages.
+   5 personal drafts, first 2/28/2014. 10 WG drafts
+   Last call announced 2018-02-13, draft 07
+   IESG evaluation starts 2018-02-28, draft 08
+   Approved 2018-03-12, draft 09
+   Auth 48 2018-04-23
+   Auth 48 complete 2018-05-02
+   Published 2018-05-02
+
+   Preparing the RFC took more than 4 years.  According to the authors,
+   they were not aggressive pushing it and just let the working group
+   process decide to pace it.  They also did implementations during that
+   time.
+
+   Minor copy editing, for style.
+
+   1 reference on Google Scholar.  The RFC was implemented by
+   lispers.net and cisco, and was used in doing IPv6 multicast over IPv4
+   unicast/multicast at the Olympics for NBC in PyeungChang.  The plan
+   is to work on a proposedstandard once the experiment concludes.
+
+3.15.  8361
+
+   Transparent Interconnection of Lots of Links (TRILL): Centralized
+   Replication for Active-Active Broadcast, Unknown Unicast, and
+   Multicast (BUM) Traffic [RFC8361]
+
+   Proposed Standard, 17 pages.
+   3 personal drafts, first 11/12/2013. 14 WG drafts
+   Last call announced 2017-11-28, draft 10
+   IESG evaluation starts 2017-12-18, draft 11
+   Approved 2018-01-29, draft 13
+   Auth 48 2018-09-17
+   Auth 48 complete 4/9/2018
+   Published 2018-10-08
+
+
+
+Huitema                 Expires January 20, 2020               [Page 14]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   Minor copy editing, for style.
+
+   1 reference on Google Scholar.
+
+3.16.  8472
+
+   Transport Layer Security (TLS) Extension for Token Binding Protocol
+   Negotiation [RFC8361]
+
+   Proposed Standard, 8 pages.
+   1 personal drafts, first 5/29/2015. 15 WG drafts
+   Last call announced 2017-11-13, draft 10
+   IESG evaluation starts 2018-03-19
+   Approved 2018-07-20, draft 14
+   Auth 48 2018-09-25
+   Auth 48 complete 4/9/2018
+   Published 2018-04-12
+
+   Minor copy editing, for style, with the addition of a reference to
+   TLS 1.3.
+
+   5 references on Google Scholar.
+
+3.17.  8466
+
+   A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service
+   Delivery [RFC8466]
+
+   Proposed Standard, 158 pages.
+   5 personal drafts, first 9/1/2016. 11 WG drafts
+   Last call announced 2018-02-21, draft 07
+   IESG evaluation starts 2018-03-14, draft 08
+   Approved 2018-06-25, draft 10
+   Auth 48 2018-09-17
+   Auth 48 complete 2018-10-09
+   Published 2018-10-12
+
+   Copy editing for style and clarity, with also corrections to the yang
+   model.
+
+   2 references on Google Scholar.
+
+3.18.  8362
+
+   OSPFv3 Link State Advertisement (LSA) Extensibility [RFC8362] is a
+   major extension to the OSPF protocol.  It makes OSPFv3 fully
+   extensible.
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 15]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+   Proposed Standard, 33 pages.
+   4 personal drafts, first February 17, 2013. 24 WG drafts
+   Last call announced 2017-12-19, draft 19
+   IESG evaluation starts 2018-01-18, draft 20
+   Approved 2018-01-29, draft 23
+   Auth 48 2018-03-19
+   Auth 48 complete 2018-03-30
+   Published 2018-04-03
+
+   The specification was first submitted as a personal draft in the IPv6
+   WG, then moved to the OSPF WG.  The long delay of producing this RFC
+   is due to the complexity of the problem, and the need to wait for
+   implementations.  It is a very important change to OSPF that makes
+   OSPFv3 fully extensible.  Since it was a non-backward compatible
+   change, the developers started out with some very complex migration
+   scenarios but ended up with either legacy or extended OSPFv3 LSAs
+   within an OSPFv3 routing domain.  The initial attempts to have a
+   hybrid mode of operation with both legacy and extended LSAs also
+   delayed implementation due to the complexity.
+
+   Copy editing for style and clarity.
+
+   7 references on Google Scholar.  It either was or will be implemented
+   by all the router vendors.
+
+3.19.  8468
+
+   IPv4, IPv6, and IPv4-IPv6 Coexistence: Updates for the IP Performance
+   Metrics (IPPM) Framework [rfc8468]
+
+   Informational, 15 pages.
+   3 personal drafts, first August 6, 2015. 7 WG drafts
+   Last call announced 2018-04-11, draft 04
+   IESG evaluation starts 2018-05-24, draft 05
+   Approved 2018-07-10, draft 06
+   Auth 48 2018-09-13
+   Auth 48 complete 2018-11-05
+   Published 2018-11-14
+
+   Copy editing for style and clarity.
+
+   2 references on Google Scholar.
+
+   First submitted as a personal draft in the IPv6 WG, then moved to the
+   OSPF WG.
+
+
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 16]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
+
+4.  Observations
 
    We examine the 20 RFC in the sample, measuring various
    characteristics such as delay and citation counts, in an attempt to
    identify patterns in the IETF processes.
 
-3.1.  Publication delays
+4.1.  Publication delays
 
    We look at the distribution of delays between the submission of the
    first draft and the publication of the RFC.  We break out the total
@@ -330,16 +924,35 @@ Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
    group.  We consider instead the progression of the individual draft
    until the adoption by the ISE as the equivalent of the "working
    group" period, and the delay from adoption by the ISE until
+   submission to the RFC Editor as the equivalent of the IETF delay.
+   The following table shows the delays for the 20 RFC in the sample:
 
 
 
-Huitema                 Expires January 19, 2020                [Page 6]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 17]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
-
-   submission to the RFC Editor as the equivalent of the IETF delay.
-   The following table shows the delays for the 20 RFC in the sample:
 
          +------+---------+-------+---------+------+------+------+
          |  RFC | Status  | Pages | Overall |   WG | IETF | Edit |
@@ -385,18 +998,18 @@ Internet-Draft                  RFC-Eval                       July 2019
          |      | average |    35 |    1161 |  928 |  110 |  123 |
          +------+---------+-------+---------+------+------+------+
 
+   The average delay from first draft to publication is about 3 years,
+   but this varies widely.  Excluding the independent stream
+   submissions, the average delay from start to finish is 3 years and 3
 
 
 
 
-Huitema                 Expires January 19, 2020                [Page 7]
+Huitema                 Expires January 20, 2020               [Page 18]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
 
-   The average delay from first draft to publication is about 3 years,
-   but this varies widely.  Excluding the independent stream
-   submissions, the average delay from start to finish is 3 years and 3
    months, of which on average 2 years and 8 months are spent getting
    consensus in the working group.
 
@@ -445,7 +1058,10 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020                [Page 8]
+
+
+
+Huitema                 Expires January 20, 2020               [Page 19]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -501,7 +1117,7 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020                [Page 9]
+Huitema                 Expires January 20, 2020               [Page 20]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -519,29 +1135,16 @@ Internet-Draft                  RFC-Eval                       July 2019
    The IETF takes three to four times more times to produce an RFC in
    2018 than it did in 1998, but about the sametime as it did in 1998.
 
-3.2.  Independent Series
+   The increased delay does not mean increased work per RFC.  The number
+   of RFC published per year remained between 200 and 300 all those
+   years, and the number of participants is not greater now than in
+   1998.  If we estimated the "level of attention" by dividing the
+   number of participants by the number of RFC produced, we would see a
+   number that remains stable.  People are probably not working much
+   more on each RFC now than they were 20 years ago, but the same amount
+   of work is stretched over a much longer period.
 
-   Out of 20 randomly selected RFC, 3 were published through the
-   "independent series".  One is an independent opinion, another a
-   description of a non-IETF protocol format, and the third was
-   [RFC8492], which is a special case.  Apart from this special case,
-   the publication delays were significantly shorter for the Independent
-   Stream than for the IETF stream.  This seems to indicate that the
-   Independent Series is functioning as expected.
-
-   The authors of these 3 RFC are regular IETF contributors.  This
-   pbservation motivated a secondary analysis of all the RFC published
-   in the "independent" stream in 2018.  There are 14 such RFC: 8507,
-   8494, 8493, 8492, 8483, 8479, 8433, 8409, 8374, 8369, 8367, 8351,
-   8328 and 8324.  (RFC 8367 and 8369 were published on 1 April 2018.)
-   We can ask whether the authors of these RFC are these outsiders, part
-   of a "wider community" or are people who are also contributing to the
-   IETF.  The overwhelming response is, "insiders".  Pretty much all the
-   authors are or were involved in the IETF, many of them with a
-   prominent track record.  There are just 2 exceptions, a single RFC in
-   which only 3 of the 5 authors are well associated with the IETF.
-
-3.3.  Citation Counts
+4.2.  Citation Counts
 
    Part of the exercise is to test whether citation counts provide a
    useful measure of the popularity of the IETF production.  These
@@ -557,7 +1160,20 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020               [Page 10]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 21]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -613,7 +1229,7 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020               [Page 11]
+Huitema                 Expires January 20, 2020               [Page 22]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -669,7 +1285,7 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020               [Page 12]
+Huitema                 Expires January 20, 2020               [Page 23]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -720,20 +1336,71 @@ Internet-Draft                  RFC-Eval                       July 2019
   | 5174   |       1 |  1 |     0 |   | 2448   |       5 |   1 |     0 |
   +--------+---------+----+-------+---+--------+---------+-----+-------+
 
-   We need however to be a bit cautious before asserting that
-   publications with a low citation count have limited impact:
 
 
 
-Huitema                 Expires January 19, 2020               [Page 13]
+
+
+Huitema                 Expires January 20, 2020               [Page 24]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
+
+   We can compare the median number of references, and the numbers of
+   references for the least and most popular quartiles in the three
+   years:
+
+     +----------------------------+-----------+--------+------------+
+     | References                 | Lower 25% | Median | Higher 25% |
+     +----------------------------+-----------+--------+------------+
+     | RFC (2018)                 |         1 |      2 |          6 |
+     |                            |           |        |            |
+     | RFC (2008)                 |        12 |     26 |         57 |
+     |                            |           |        |            |
+     | RFC (2008), until 2009     |         3 |      6 |         12 |
+     |                            |           |        |            |
+     | RFC (2008), 2018 and after |         0 |      1 |          5 |
+     |                            |           |        |            |
+     | RFC (1998)                 |        47 |     84 |        250 |
+     |                            |           |        |            |
+     | RFC (1998), until 1999     |         4 |      9 |         19 |
+     |                            |           |        |            |
+     | RFC (1998), 2018 and after |         0 |      0 |          3 |
+     +----------------------------+-----------+--------+------------+
+
+   The total numbers shows a decreasing number of references over time.
+   This can be explain to some degree by the passage of time.  If we
+   restrict the analysis to the number of references accrued in the year
+   of publishing and the year after that, we still see decreasing
+   numbers.  For example, the top quartile of RFC published in 1998 had
+   at least 19 references by the end of 1999, while the top quartile of
+   RFC published in 2008 only had at least 12 references, which is twice
+   the corresponding number for the RFC of 2018.
+
+   We also see that the number of references to RFC fades over time.
+   Only the most popular of the RFC produced in 1998 are still
+   referenced in 2019.  The overall popularity of the RFC series benefit
+   from a history of publishing relevant documents, but over time the
+   references to historic documents will decrease and the overall
+   popularity will depend on more recent documents.
+
+   We need however to be a bit cautious before asserting that
+   publications with a low citation count have limited impact:
 
    o  some documents may well accumulate more citations over time.  For
       example, [RFC8377] updates [RFC6455].  There are more than 1000
       citations of [RFC6455] on Google Scholar.  We might expect that
       the citation count of [RFC8377] will increase in the coming years.
+
+
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 25]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
 
    o  citation counts largely come from academic publications, and thus
       reflect popularity within researchers more than popularity with
@@ -743,7 +1410,7 @@ Internet-Draft                  RFC-Eval                       July 2019
    vendors, operators and designers by asking questions about deployed
    services and products.
 
-3.4.  Preparation and Publication delays
+4.3.  Preparation and Publication delays
 
    The preparation and publication delays include three components:
 
@@ -781,7 +1448,12 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020               [Page 14]
+
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 26]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -837,7 +1509,7 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020               [Page 15]
+Huitema                 Expires January 20, 2020               [Page 27]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -893,7 +1565,7 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020               [Page 16]
+Huitema                 Expires January 20, 2020               [Page 28]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -908,7 +1580,7 @@ Internet-Draft                  RFC-Eval                       July 2019
    undesirable, and asked that they be reversed.  This required long
    exchanges between authors and editors.
 
-3.5.  Copy editing
+4.4.  Copy editing
 
    We can assess the amount of copy editing applied to each published
    RFC by comparing the text of the draft approved for publication and
@@ -949,7 +1621,7 @@ Internet-Draft                  RFC-Eval                       July 2019
 
 
 
-Huitema                 Expires January 19, 2020               [Page 17]
+Huitema                 Expires January 20, 2020               [Page 29]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
@@ -996,21 +1668,43 @@ Internet-Draft                  RFC-Eval                       July 2019
                        | 8468 | Info   |         3 |
                        +------+--------+-----------+
 
-   We should note that this method of assessment does not take into
-   account the number of changes proposed by the editors and eventually
-   rejected by the authors, since these changes are not present in
-   either the final draft or the published RFC.  It might be possible to
-   get an evaluation of these "phantom changes" from the RFC Production
-   Center.
+   This method of assessment does not take into account the number of
+   changes proposed by the editors and eventually rejected by the
+   authors, since these changes are not present in either the final
+   draft or the published RFC.  It might be possible to get an
+   evaluation of these "phantom changes" from the RFC Production Center.
 
 
 
-Huitema                 Expires January 19, 2020               [Page 18]
+
+Huitema                 Expires January 20, 2020               [Page 30]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
 
-4.  Next steps
+4.5.  Independent Series
+
+   Out of 20 randomly selected RFC, 3 were published through the
+   "independent series".  One is an independent opinion, another a
+   description of a non-IETF protocol format, and the third was
+   [RFC8492], which is a special case.  Apart from this special case,
+   the publication delays were significantly shorter for the Independent
+   Stream than for the IETF stream.  This seems to indicate that the
+   Independent Series is functioning as expected.
+
+   The authors of these 3 RFC are regular IETF contributors.  This
+   pbservation motivated a secondary analysis of all the RFC published
+   in the "independent" stream in 2018.  There are 14 such RFC: 8507,
+   8494, 8493, 8492, 8483, 8479, 8433, 8409, 8374, 8369, 8367, 8351,
+   8328 and 8324.  (RFC 8367 and 8369 were published on 1 April 2018.)
+   We can ask whether the authors of these RFC are these outsiders, part
+   of a "wider community" or are people who are also contributing to the
+   IETF.  The overwhelming response is, "insiders".  Pretty much all the
+   authors are or were involved in the IETF, many of them with a
+   prominent track record.  There are just 2 exceptions, a single RFC in
+   which only 3 of the 5 authors are well associated with the IETF.
+
+5.  Next steps
 
    This draft is not complete.  We have obtained feedback from some
    authors but not all, and we are still awaiting more data from authors
@@ -1023,522 +1717,35 @@ Internet-Draft                  RFC-Eval                       July 2019
    decreasing over time.  We could do that by repeating the statistical
    sampling analysis for previous years, for example 2008 and 1998.
 
-5.  Security considerations
+6.  Security considerations
 
    This draft does not specify any protocol.
 
    We might want to analyze whether security issues were discovered
    after publication of specific standards.
 
-6.  IANA Considerations
+7.  IANA Considerations
 
    This draft does not require any IANA action.
 
    Peliminary analysis does not indicate that IANA is causing any
    particular delay in the publication process.
 
-7.  Acknowledgements
-
-   TBD
-
-8.  Appendix: Analysis of 20 selected RFC
-
-   We review each of the RFC listed in (#methodology), trying both to
-   answer the known questions and to gather insight for further
-   analyzes.
-
-8.1.  8411
-
-   IANA Registration for the Cryptographic Algorithm Object Identifier
-   Range [RFC8411]:
 
 
-
-
-
-
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 19]
+Huitema                 Expires January 20, 2020               [Page 31]
 
 Internet-Draft                  RFC-Eval                       July 2019
 
 
-   Informational, 5 pages
-   4 drafts (personal),first May 8, 2017. Published August 2018.
-   Last call announced 2017/10/09
-   IESG evaluation starts 2017/12/28
-   Approved 2018/02/26, draft 03
-   Auth 48 2018/04/20
-   Auth 48 complete 2018/07/17
-   Published 2018/08/06
-   IANA action: create table
+8.  Acknowledgements
 
-   The draft underwent minor copy edit before publication.
+   Many thanks to the authors of the selected RFC who were willing to
+   provide feedback on the process:
 
-   The long delay in Auth48 is probaby due to clustering with [RFC8410],
-   which entered AUTH 48 on 06/05.  The MISSREF tracker code was cleared
-   then.
-
-   2 references on Google Scholar.
-
-8.2.  8456
-
-   Benchmarking Methodology for Software-Defined Networking (SDN)
-   Controller Performance [RFC8456]:
-
-   Informational, 64 pages
-   2 personal drafts, 9 WG drafts, first in March 2015
-   Last call announced 2018-01-19
-   IESG evaluation starts 2018-02-27
-   IESG approved 2018-05-25
-   Auth 48 2018-08-31
-   Auth 48 complete 2018-10-16
-   Published 2018-10-30
-
-   The draft underwent very extensive copy editing, covering use of
-   articles, turn of phrases, choice of vocabulary.  The changes are
-   enough to cause pagination differences.  The "diff" tool marks pretty
-   much every page as changed.  Some diagrams see change in protocol
-   elements like message names.
-
-   The RFC was part of cluster with [RFC8455].
-
-   Google Scholar shows 3 references.
-
-8.3.  8446
-
-   The Transport Layer Security (TLS) Protocol Version 1.3 [RFC8446]
-
-
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 20]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
-   Proposed standard
-   160 pages
-   29 WG drafts first April 17, 2014.
-   Last call announced 2018/02/15
-   IESG evaluation starts 2018/03/02
-   Approved 2018/03/21, draft 28
-   Auth 48 2018/06/14
-   Auth 48 complete 2018/08/10
-   Published 2018/08/10
-
-   Copy editing includes explaining acronyms on first use, clarifying
-   some definitions standardizing punctiation and capitalization, and
-   spelling out some numbers in text.  This generally fall in the
-   category of "style", although some of the clarifications go into
-   message definitions.
-
-   123 references in Google Scholar.
-
-8.4.  8355
-
-   Resiliency Use Cases in Source Packet Routing in Networking (SPRING)
-   Networks [RFC8355]
-
-   Informational, 13 pages.
-   2 personal drafts (personal), first January 31, 2014. 13 WG drafts.
-   Last call announced 2017-04-20
-   IESG evaluation starts 2017-05-04, draft 09
-   Approved 2017-12-19, draft 12
-   Auth 48 2018-03-12
-   Auth 48 complete 2018-03-27
-   Published 2018-03-28
-
-   Minor set of copy edit, mostly for style.
-
-   It appears that publication waited for availability of RFC 8354.
-   There is no formal dependency between the two RFC, but they appear to
-   have been clustered.
-
-   9 references on Google Scholar.
-
-8.5.  8441
-
-   Bootstrapping WebSockets with HTTP/2 [RFC8441]
-
-
-
-
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 21]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
-   Proposed standard, 8 pages. Updates RFC 6455.
-   3 personal drafts (personal), first 10/15/2017. 8 WG drafts.
-   Last call announced 2018-05-07, draft 05
-   IESG evaluation starts 2018-05-29, draft 06
-   Approved 2018-06-07, draft 07
-   Auth 48 2018-08-13
-   Auth 48 complete 2018-09-15
-   Published 2018-09-21
-   IANA Action: table entries
-
-   Minor set of copy edit, mostly for style.
-
-   No references on Google Scholar.  (RFC 6455 had 1000 results)
-
-8.6.  8324
-
-   DNS Privacy, Authorization, Special Uses, Encoding, Characters,
-   Matching, and Root Structure: Time for Another Look?  [RFC8324]
-
-   Informational, 29 pages. Independent stream.
-   5 personal drafts (personal), first June 2, 2017.
-   ISE review started 2017-07-10, draft 03
-   IETF conflict review and IESG review started 2017-10-29
-   Approved 2017-12-18, draft 04
-   Auth 48 2018-01-29, draft 05
-   Auth 48 complete 2018-02-26
-   Published 2018-02-27
-
-   Minor copy edit, mostly for style.  One whole paragraph added in
-   conclusion.
-
-   2 reference on Google Scholar.
-
-8.7.  8377
-
-   Transparent Interconnection of Lots of Links (TRILL): Multi-Topology
-   [RFC8377]
-
-   Proposed standard, 20 pages. Updates RFC 6325, 7177.
-   3 personal drafts (personal), first September 3, 2013. 7 WG drafts.
-   Last call announced 2018-02-19, draft 05
-   IESG evaluation starts 2018-03-02, draft 06
-   Approved 2018-03-12, draft 05
-   Auth 48 2018-04-20, draft 06
-   Auth 48 complete 2018-07-31
-   Published 2018-07-31
-   IANA Table, table entries
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 22]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
-   Minor set of copy edit, mostly for style, also clarity.
-
-   1 reference on Google Scholar.
-
-   [[TODO: Ask authors why it took so long to get the draft adopted by
-   the WG]]
-
-8.8.  8498
-
-   A P-Served-User Header Field Parameter for an Originating Call
-   Diversion (CDIV) Session Case in the Session Initiation Protocol
-   (SIP) [RFC8498].
-
-   Informational, 15 pages.
-   5 personal drafts (personal), first March 21, 2016. 9 WG drafts.
-   Last call announced 2018-10-12, draft 05
-   IESG evaluation starts 2018-11-28, draft 07
-   Approved 2018-12-10, draft 08
-   Auth 48 2019-01-28
-   Auth 48 complete 2019-02-13
-   Published 2019-02-15
-   IANA Action, table rows added.
-
-   Copy edit for style, but also clarification of ambiguous sentences.
-
-   No references on Google Scholar.
-
-8.9.  8479
-
-   Storing Validation Parameters in PKCS#8 [RFC8479]
-
-   Informational, 8 pages. Independent stream.
-   5 personal drafts (personal), first August 8, 2017.
-   ISE review started 2018-03-29, draft 02
-   IETF conflict review and IESG review started 2018-03-29
-   Approved 2018-08-20, draft 03
-   Auth 48 2018-09-20, draft 04
-   Auth 48 complete 2018-09-25
-   Published 2018-09-26
-
-   Very minor set of copy edit, moving some references from normative to
-   informative.
-
-   No reference on Google Scholar.
-
-
-
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 23]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
-8.10.  8453
-
-   Framework for Abstraction and Control of TE Networks (ACTN) [RFC8453]
-
-   Informational, 42 pages.
-   3 personal drafts, first June 15, 2015. 16 WG drafts.
-   Out of WG 2018-01-26, draft 11
-   Expert review requested, 2018-02-13
-   Last call announced 2018-04-16, draft 13
-   IESG evaluation starts 2018-05-16, draft 14
-   Approved 2018-06-01, draft 15
-   Auth 48 2018-08-13
-   Auth 48 complete 2018-08-20
-   Published 2018-08-20
-   IANA Action, table rows added.
-
-   Minor copy editing.
-
-   8 references on Google Scholar.
-
-8.11.  8429
-
-   Deprecate Triple-DES (3DES) and RC4 in Kerberos [RFC8429]
-
-   Informational, 42 pages.
-   6 WG, first 5/1/2017.
-   Last call announced 7/16/2017, draft 03
-   IESG evaluation starts 8/18/2017, draft 04
-   Approved 5/25/2018, draft 05
-   Auth 48 7/24/2018
-   Auth 48 complete 10/31/2018
-   Published 10/31/2018
-   IANA Action, table rows added.
-
-   Minor copy editing, for style.
-
-   1 reference on Google Scholar.
-
-   The document was sent back to the WG after the first last call,
-   edited, and then there was a second last call.  There were
-   significant discussions about the process for deprecating specs and
-   marking them obsolete at the same time.
-
-8.12.  8312
-
-   CUBIC for Fast Long-Distance Networks [RFC8312]
-
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 24]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
-   Informational, 18 pages.
-   2 personal drafts, first 9/1/2014. 8 WG drafts
-   Last call announced 9/18/2017, draft 06
-   IESG evaluation starts 2017-11-14
-   Approved 2017-10-04, draft 07
-   Auth 48 2018-01-08
-   Auth 48 complete 2018-02-07
-   Published 2018-02-07
-   IANA Action, table rows added.
-
-   Minor copy editing, for style.
-
-   9 references on Google Scholar.
-
-   Much of the delay, from 2014 to 2015, was waiting fro WG adoption.
-   There was another 2 years spent debating the draft in the WG.
-
-8.13.  8492
-
-   Secure Password Ciphersuites for Transport Layer Security (TLS)
-   [RFC8492]
-
-   Informational, 40 pages. (Independent Stream)
-   10 personal drafts, first 9/2/2012. 8 WG drafts
-   ISE review started 2017-05-10, draft 01
-   IETF conflict review and IESG review started 2017-09-04
-   Approved 2017-10-29, draft 04
-   Auth 48 10/19/2018, draft 05
-   Auth 48 complete 2/19/2019
-   Published 2/21/2019
-   IANA Action, table rows added.
-
-   Minor copy editing, for style.
-
-   2 references on Google Scholar.
-
-   This RFC has a complex history.  The first individual draft was
-   submitted to the TLS working group on September 7, 2012.  It
-   progressed there, and was adopted by the WG after 3 revisions.  There
-   were then 8 revisions in the TLS WG, until the WG decided to not
-   progress it.  The draft was parked in 2013by the WG chairs after
-   failing to get consensus in WG last call.  The AD finally pulled the
-   plug in 2016, and the draft was then resubmitted to the ISE.
-
-   One year elapsed between submisson to RSE and AUTH48.  Need to ask
-   why.
-
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 25]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
-   Four months elapsed between AUTH48 started and done.  Need to ask the
-   author why.
-
-   Changes in AUTH48 include added reference to TLS 1.3, copey-editing
-   for style, some added requirements, added paragraphs, change in
-   algorithms specification,
-
-8.14.  8378
-
-   Signal-Free Locator/ID Separation Protocol (LISP) Multicast [RFC8378]
-
-   Experimental, 21 pages.
-   5 personal drafts, first 2/28/2014. 10 WG drafts
-   Last call announced 2018-02-13, draft 07
-   IESG evaluation starts 2018-02-28, draft 08
-   Approved 2018-03-12, draft 09
-   Auth 48 2018-04-23
-   Auth 48 complete 2018-05-02
-   Published 2018-05-02
-
-   Minor copy editing, for style.
-
-   1 reference on Google Scholar.
-
-8.15.  8361
-
-   Transparent Interconnection of Lots of Links (TRILL): Centralized
-   Replication for Active-Active Broadcast, Unknown Unicast, and
-   Multicast (BUM) Traffic [RFC8361]
-
-   Proposed Standard, 17 pages.
-   3 personal drafts, first 11/12/2013. 14 WG drafts
-   Last call announced 2017-11-28, draft 10
-   IESG evaluation starts 2017-12-18, draft 11
-   Approved 2018-01-29, draft 13
-   Auth 48 2018-09-17
-   Auth 48 complete 4/9/2018
-   Published 2018-10-08
-
-   Minor copy editing, for style.
-
-   1 reference on Google Scholar.
-
-8.16.  8472
-
-   Transport Layer Security (TLS) Extension for Token Binding Protocol
-   Negotiation [RFC8361]
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 26]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
-   Proposed Standard, 8 pages.
-   1 personal drafts, first 5/29/2015. 15 WG drafts
-   Last call announced 2017-11-13, draft 10
-   IESG evaluation starts 2018-03-19
-   Approved 2018-07-20, draft 14
-   Auth 48 2018-09-25
-   Auth 48 complete 4/9/2018
-   Published 2018-04-12
-
-   Minor copy editing, for style, with the addition of a reference to
-   TLS 1.3.
-
-   5 references on Google Scholar.
-
-8.17.  8466
-
-   A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service
-   Delivery [RFC8466]
-
-   Proposed Standard, 158 pages.
-   5 personal drafts, first 9/1/2016. 11 WG drafts
-   Last call announced 2018-02-21, draft 07
-   IESG evaluation starts 2018-03-14, draft 08
-   Approved 2018-06-25, draft 10
-   Auth 48 2018-09-17
-   Auth 48 complete 2018-10-09
-   Published 2018-10-12
-
-   Copy editing for style and clarity, with also corrections to the yang
-   model.
-
-   2 references on Google Scholar.
-
-8.18.  8362
-
-   OSPFv3 Link State Advertisement (LSA) Extensibility [RFC8362]
-
-   Proposed Standard, 33 pages.
-   4 personal drafts, first February 17, 2013. 24 WG drafts
-   Last call announced 2017-12-19, draft 19
-   IESG evaluation starts 2018-01-18, draft 20
-   Approved 2018-01-29, draft 23
-   Auth 48 2018-03-19
-   Auth 48 complete 2018-03-30
-   Published 2018-04-03
-
-   Copy editing for style and clarity.
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 27]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
-   7 references on Google Scholar.
-
-   First submitted as a personal draft in the IPv6 WG, then moved to the
-   OSPF WG.
-
-8.19.  8468
-
-   IPv4, IPv6, and IPv4-IPv6 Coexistence: Updates for the IP Performance
-   Metrics (IPPM) Framework [rfc8468]
-
-   Informational, 15 pages.
-   3 personal drafts, first August 6, 2015. 7 WG drafts
-   Last call announced 2018-04-11, draft 04
-   IESG evaluation starts 2018-05-24, draft 05
-   Approved 2018-07-10, draft 06
-   Auth 48 2018-09-13
-   Auth 48 complete 2018-11-05
-   Published 2018-11-14
-
-   Copy editing for style and clarity.
-
-   2 references on Google Scholar.
-
-   First submitted as a personal draft in the IPv6 WG, then moved to the
-   OSPF WG.
+   Sarah Banks, Bruno Decraene, Dino Farinacci, Dan Harkins, John
+   Klensin, Acee Lindem, Victor Moreno, Eric Rescorla, Bhuvaneswaran
+   Vengainathan,
 
 9.  Informative References
 
@@ -1561,15 +1768,6 @@ Internet-Draft                  RFC-Eval                       July 2019
               for Another Look?", RFC 8324, DOI 10.17487/RFC8324,
               February 2018, <https://www.rfc-editor.org/info/rfc8324>.
 
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 28]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
    [RFC8355]  Filsfils, C., Ed., Previdi, S., Ed., Decraene, B., and R.
               Shakir, "Resiliency Use Cases in Source Packet Routing in
               Networking (SPRING) Networks", RFC 8355,
@@ -1587,6 +1785,14 @@ Internet-Draft                  RFC-Eval                       July 2019
               F. Baker, "OSPFv3 Link State Advertisement (LSA)
               Extensibility", RFC 8362, DOI 10.17487/RFC8362, April
               2018, <https://www.rfc-editor.org/info/rfc8362>.
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 32]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
 
    [RFC8377]  Eastlake 3rd, D., Zhang, M., and A. Banerjee, "Transparent
               Interconnection of Lots of Links (TRILL): Multi-Topology",
@@ -1617,15 +1823,6 @@ Internet-Draft                  RFC-Eval                       July 2019
               RFC 8441, DOI 10.17487/RFC8441, September 2018,
               <https://www.rfc-editor.org/info/rfc8441>.
 
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 29]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/info/rfc8446>.
@@ -1640,6 +1837,18 @@ Internet-Draft                  RFC-Eval                       July 2019
               Defined Networking (SDN) Controller Performance",
               RFC 8455, DOI 10.17487/RFC8455, October 2018,
               <https://www.rfc-editor.org/info/rfc8455>.
+
+
+
+
+
+
+
+
+Huitema                 Expires January 20, 2020               [Page 33]
+
+Internet-Draft                  RFC-Eval                       July 2019
+
 
    [RFC8456]  Bhuvaneswaran, V., Basil, A., Tassinari, M., Manral, V.,
               and S. Banks, "Benchmarking Methodology for Software-
@@ -1673,15 +1882,6 @@ Internet-Draft                  RFC-Eval                       July 2019
               DOI 10.17487/RFC8498, February 2019,
               <https://www.rfc-editor.org/info/rfc8498>.
 
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 30]
-
-Internet-Draft                  RFC-Eval                       July 2019
-
-
 Author's Address
 
    Christian Huitema
@@ -1701,36 +1901,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Huitema                 Expires January 19, 2020               [Page 31]
+Huitema                 Expires January 20, 2020               [Page 34]
