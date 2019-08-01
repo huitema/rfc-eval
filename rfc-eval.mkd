@@ -1,7 +1,7 @@
 ---
 title: RFC Evaluation Project - First Step
 abbrev: RFC-Eval
-docname: draft-huitema-rfc-eval-project-latest
+docname: draft-huitema-rfc-eval-project-00
 category: info
 date: 2019
 
@@ -198,7 +198,7 @@ Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
 
 We review each of the RFC listed in (#methodology) for the year 2018, trying 
 both to answer the known questions and to gather insight for further analyzes.
-In many case, the analysis of the data is complemented by direct feedback
+In many cases, the analysis of the data is complemented by direct feedback
 from the RFC authors.
 
 ## 8411
@@ -242,25 +242,15 @@ The draft underwent very extensive copy editing, covering use of articles, turn 
 of vocabulary. The changes are enough to cause pagination differences. The "diff" tool marks pretty
 much every page as changed. Some diagrams see change in protocol elements like message names.
 
-BMWG often takes a bit of time, and I believe that our experience mirrors a typical one for this WG.
-We had multiple authors in multiple time zones, which slowed down the AUTH process with the RPC,
-not abnormally linger, but a bit longer than my previous draft for another RFC. Finally, BMWG publishes
-informational RFCs centered around benchmarking; I don't work for a test equipment manufacturer and can't
-comment on whether or not they've "implemented" a test suite around this, however, my previous employers
-SQA department used this when testing internal products for production. 
+According to the author, the experience of producing this draft mirrors a typical one in the
+Benchmarking Methodologies Working Group (BMWG).There were multiple authors in multiple time
+zones, which slowed down the AUTH process somewhat, although the Auth48 delay of 46 is only
+a bit longer than the average draft.
 
 The RFC was part of cluster with {{?RFC8455}}.
 
-Google Scholar shows 3 references.
-
-I'm one of the coauthors for this RFC. We have implemented the methodologies in RFC 8456 as part of our product SDN PktBlaster. Please refer the below link for more information.
-http://www.veryxtech.com/product/solutions/sdn-software-defined-networking/network-emulation-and-benchmarking/
-
-Also we had performed benchmarking tests with various SDN controllers  using SDN PktBlaster. Sharing below the URLs of sample reports for reference.
-http://www.veryxtech.com/blogs/opendaylight-odl-performance-report/
-http://www.veryxtech.com/blogs/pktblaster-sdn-sample-test-report/
-
-Please let us know for any additional information.
+Google Scholar shows 3 references.  BMWG publishes informational RFCs centered around benchmarking,
+and the methodologies in RFC 8456 have been implemented in benchmarking products.
 
 ## 8446
 The Transport Layer Security (TLS) Protocol Version 1.3 {{?RFC8446}}, as the title
@@ -318,7 +308,8 @@ Auth 48 complete 2018-03-27
 Published 2018-03-28
 ~~~
 
-According to the author, the delays reflect the relative lack of priority of this work in the WG. Once the
+According to the author, the delays reflect the relative lack of priority of this work in the WG. One of
+the authors actually mentions "blockage by a minority of politically-savvy persons." Once the
 WG was created, other work was higher priority than working on the use case.
 
 Minor set of copy edit, mostly for style.
@@ -343,9 +334,22 @@ Published 2018-09-21
 IANA Action: table entries
 ~~~
 
-Minor set of copy edit, mostly for style.
+This RFC defines the support of WebSockets in HTTP/2, which is different
+from the mechanism defined for HTTP/1.1 in {{?RFC6455}}. The process was
+relatively straightforward, involving the usual type of discussions, some
+on details and some on important points.
 
-No references on Google Scholar. (RFC 6455 had 1000 results)
+Comparing final draft and published RFC shows a minor set of copy edit,
+mostly for style. However, the author recalls a painful process. The RFC
+includes many charts and graphs that were very difficult to format
+correctly in the author's production process that involve conversions
+from markdown to XML, and then from XML to text. The author had to
+get substantial help from the RFC editor.
+
+No references on Google Scholar. (RFC 6455 had over 1000 results)
+
+There are several implementations, including Firefox and Chrome,
+making RFC 8441 a very successful standard.
 
 ## 8324
 DNS Privacy, Authorization, Special Uses, Encoding, Characters, Matching, and Root Structure:
@@ -365,7 +369,9 @@ Published 2018-02-27
 
 This RFC took only 9 months from first draft to publication, which is the shortest in
 the 2018 sample set. In part, this is because the text was privately circulated
-and reviewed before the first draft was published.
+and reviewed before the first draft was published. The nature of the document is
+another reason for the short delay. It is an opinion piece, and does not require
+the same type of consensus building and reviews than a protocol specification.
 
 Comparing the final draft and the published version shows only minor copy edit, mostly
 for style. According to the author, because this is because he knows how to write in RFC
@@ -397,7 +403,7 @@ Minor set of copy edit, mostly for style, also clarity.
 
 1 reference on Google Scholar.
 
-TODO: Ask authors why it took so long to get the draft adopted by the WG
+
 
 ## 8498
 A P-Served-User Header Field Parameter for an Originating Call Diversion (CDIV)
@@ -433,9 +439,20 @@ Auth 48 complete 2018-09-25
 Published 2018-09-26
 ~~~
 
+The goal of the draft was to document what the
+gnutls implementation was using for storing provably generated RSA keys.
+This is a short RFC that was published relatively quickly, although
+discussion between the author, the Independent Series Editor and the
+IESG lasted several months. The IESG actually asked the ISE
+to not publish this document, because "it extends an IETF protocol in
+a way that requires IETF review and should therefore not be published
+without IETF review and IESG approval. The ISE overruled that advice.
+
 Very minor set of copy edit, moving some references from normative to informative.
 
 No reference on Google Scholar.
+
+The author is not aware of other implementations than gnutls relying on this RFC.
 
 ## 8453
 Framework for Abstraction and Control of TE Networks (ACTN) {{?RFC8453}}
@@ -473,13 +490,29 @@ Published 10/31/2018
 IANA Action, table rows added.
 ~~~
 
+This RFC recommends to deprecate two encryption algorithms that are now considered
+obsolete and possibly broken. The document was sent back to the WG after the first last call,
+edited, and then there was a second last call. The delay from first draft to working group
+last call was relatively short, but thenumber may be misleading. The initial draft was a
+replacement of a similar draft in the KITTEN working group, which stagnated for some time
+before the VURDLE working group took up the work. 
+The deprecation of RC4 was somewhat contentious, but the WG had already debated this
+prior to the production of this draft, and the draft was not delayed by this debate.
+
+Most of the 280 days between IETF LC and IESG approval was
+because the IESG had to talk about whether this document should obsolete or
+move to historic RFC 4757, and no one was really actively pushing that
+discussion for a while.
+
+The 99 days in AUTH48 are mostly because one of the authors was a sitting AD, and those
+duties ended up taking precedence over reviewing this document.
+
 Minor copy editing, for style.
 
 1 reference on Google Scholar.
 
-The document was sent back to the WG after the first last call,
-edited, and then there was a second last call. There were significant
-discussions about the process for deprecating specs and marking them obsolete at the same time.
+The implementation of the draft would be the actual removal of support for 3DES and RC4
+in major implementations. This is happening, but very slowly.
 
 ## 8312
 CUBIC for Fast Long-Distance Networks {{?RFC8312}}
@@ -500,8 +533,17 @@ Minor copy editing, for style.
 
 9 references on Google Scholar.
 
-Much of the delay, from 2014 to 2015, was waiting fro WG adoption. There was another
-2 years spent debating the draft in the WG.
+The TCP congestion control algorithm Cubic was defined first in 2005, was implemented
+in Linux soon after, and was implemented in major OSes after that. After some debates
+from 2015 to 2015, the TCPM working group adopted the draft, with a goal of
+documenting Cubic in the RFc series. According to the authors, this was not
+a high priority effort, as Cubic was already implemented in multiple OSes
+and documented in research papers. At some point, only one of the authors
+was actively working on the draft. Ths may explain why another two years was spent
+progressing the draft after adoption by the WG.
+
+The RFC publication may or may not have triggered further implementations. On
+the other hand, several OSes picked up bug fixes from the draft and the RFC.
 
 ## 8492
 Secure Password Ciphersuites for Transport Layer Security (TLS) {{?RFC8492}}
@@ -582,12 +624,17 @@ Auth 48 complete 4/9/2018
 Published 2018-10-08
 ~~~
 
+According to the authors, the long delays in producing this RFC was
+due to a slow uptake of the technology in the industry.
+
 Minor copy editing, for style.
 
 1 reference on Google Scholar.
 
+There was at least 1 partial implementation.
+
 ## 8472
-Transport Layer Security (TLS) Extension for Token Binding Protocol Negotiation {{?RFC8361}}
+Transport Layer Security (TLS) Extension for Token Binding Protocol Negotiation {{?RFC8472}}
 
 ~~~
 Proposed Standard, 8 pages.
@@ -595,14 +642,22 @@ Proposed Standard, 8 pages.
 Last call announced 2017-11-13, draft 10
 IESG evaluation starts 2018-03-19
 Approved 2018-07-20, draft 14
-Auth 48 2018-09-25
-Auth 48 complete 4/9/2018
-Published 2018-04-12
+Auth 48 2018-09-17
+Auth 48 complete 2018-09-25
+Published 2018-10-08
 ~~~
+
+This is a pretty simple document, but it took over 3 years from individual draft to RFC. According to
+the authors,the biggest setbacks occurred at the start: it took a while to find a home for this draft.
+It was presented in the TLS WG (because it's a TLS extension) and UTA WG (because it has to do with
+applications using TLS). Then the ADs determined that a new WG was needed, so the authors had to work
+through the WG creation process, including running a BOF.
 
 Minor copy editing, for style, with the addition of a reference to TLS 1.3.
 
 5 references on Google Scholar.
+
+Perhaps partially due to the delays, some of the implementers lost interest in supporting this RFC.
 
 ## 8466
 A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service Delivery {{?RFC8466}}
@@ -652,7 +707,7 @@ Copy editing for style and clarity.
 
 ## 8468
 IPv4, IPv6, and IPv4-IPv6 Coexistence: Updates for the IP
-Performance Metrics (IPPM) Framework {{?rfc8468}}
+Performance Metrics (IPPM) Framework {{?rfc8468}}.
 
 ~~~
 Informational, 15 pages.
@@ -665,12 +720,49 @@ Auth 48 complete 2018-11-05
 Published 2018-11-14
 ~~~
 
-Copy editing for style and clarity.
+RFC8468 was somehow special in that
+there was not a technical reason/interest that triggered it, but
+rather a formal requirement.
+While writing RFC7312 the IP Performance
+Metrics working group (IPPM) realized that RFC 2330, the IP Performance
+Metrics Framework supported IPv4 only
+and explicitly excluded support for IPv6. Nevertheless, people used
+the metrics that were defined on top of RFC 2330 (and, therefore, IPv4
+only) for IPv6, too. Although the IPPM WG agreed that the work was needed, the
+interest of IPPM attendees in progressing (and reading/reviewing) the
+IPv6 draft was limited. Resolving the IPv6 technical part was
+straight-forward, but subsequently some people asked for a broader scope
+(topics like header compression, 6lo, etc.) and it took some time to
+figure out and later on convince people that these topics are out of scope.
+The group also had to resolve contentious topics, for example how to
+measure the processing of IPv6 extension headers, which is sometimes non-standard.
 
-2 references on Google Scholar.
+The Auth48 delay for this draft was longer than average. According to the authors,
+the main reasons include:
 
-First submitted as a personal draft in the IPv6 WG, then moved to the OSPF WG.
+- Work-load and travel caused by busy-work-periods of all co-authors
 
+- Time zone difference between co-authors and editor (at least US,
+Europe, India, not considering travel)
+
+- Editor proposing and committing some unacceptable modifications that
+needed to be reverted
+
+- Lengthy discussions on a new document title (required high effort and
+took a long time, in particular reaching consensus between co-authors
+and editor was time-consuming and involved the AD)
+
+- Editor correctly identifying some nits (obsoleted personal websites of
+co-authors) and co-authors attempting to fix them.
+
+The differences between the final draft and the publish RFC show copy editing for style
+and clarity, but do not account for the back and forth between authors and editors
+mentioned by the authors.
+
+2 references on Google Scholar. In contrast, RFC 2330 has more than 3000 references,
+including over 70 that are more recent than RFC 8468.
+The authors believe that many of these references include IPv6 work that should formally
+reference RFC 8468 in addition to RFC 2330, but do not.
 
 # Observations
 
@@ -740,28 +832,51 @@ On average, we see that 80% of the delay is incurred in WG processing,
 We can compare these delays to those observed 10 years ago and 20 years
 ago:
 
-RFC (2008) | Status | Pages | Delay || RFC (1998) | Status | Pages | Delay
- ----- | ----- | -----:| -----:|| -----| ----- | -----: | -----:|
-5326 | Exp | 54 | 1584 || 2289 | PS | 25 | 396
-5348 | PS | 58 | 823 || 2267 | Info | 10 | unknown
-5281 | Info | 51 | 1308 || 2317 | BCP | 10 | 485
-5354 | Exp | 23 | 2315 || 2404 | PS | 7 | 488
-5227 | PS | 21 | 2434 || 2374 | PS | 12 | 289
-5329 | PS | 12 | 1980 || 2449 | PS | 19 | 273
-5277 | PS | 35 | 912 || 2283 | PS | 9 | 153
-5236 | ISE | 26 | 1947 || 2394 | Info | 6 | 365
-5358 | BCP | 7 | 884 || 2348 | DS | 5 | 699
-5271 | Info | 22 | 1066 || 2382 | Info | 30 | 396
-5195 | PS | 10 | 974 || 2297 | ISE | 109 | 28
-5283 | PS | 12 | 1096 || 2381 | PS | 43 | 699
-5186 | Info | 6 | 2253 || 2312 | Info | 20 | 365
-5142 | PS | 13 | 1005 || 2387 | PS | 10 | 122
-5373 | PS | 24 | 1249 || 2398 | Info | 15 | 396
-5404 | PS | 27 | 214 || 2391 | PS | 10 | 122
-5172 | PS | 7 | 305 || 2431 | PS | 10 | 457
-5349 | Info | 10 | 1096 || 2282 | Info | 14 | 215
-5301 | PS | 6 | 396 || 2323 | ISE | 5 | unknown
-5174 | Info | 8 | 427 || 2448 | ISE | 7 | 92
+RFC (2008) | Status | Pages | Delay 
+ ----- | ----- | -----:| -----:
+5326 | Exp | 54 | 1584 
+5348 | PS | 58 | 823 
+5281 | Info | 51 | 1308 
+5354 | Exp | 23 | 2315 
+5227 | PS | 21 | 2434 
+5329 | PS | 12 | 1980 
+5277 | PS | 35 | 912 
+5236 | ISE | 26 | 1947 
+5358 | BCP | 7 | 884 
+5271 | Info | 22 | 1066 
+5195 | PS | 10 | 974 
+5283 | PS | 12 | 1096 
+5186 | Info | 6 | 2253 
+5142 | PS | 13 | 1005 
+5373 | PS | 24 | 1249 
+5404 | PS | 27 | 214 
+5172 | PS | 7 | 305 
+5349 | Info | 10 | 1096 
+5301 | PS | 6 | 396 
+5174 | Info | 8 | 427 
+
+RFC (1998) | Status | Pages | Delay
+ -----| ----- | -----: | -----:|
+ 2289 | PS | 25 | 396
+ 2267 | Info | 10 | unknown
+ 2317 | BCP | 10 | 485
+ 2404 | PS | 7 | 488
+ 2374 | PS | 12 | 289
+ 2449 | PS | 19 | 273
+ 2283 | PS | 9 | 153
+ 2394 | Info | 6 | 365
+ 2348 | DS | 5 | 699
+ 2382 | Info | 30 | 396
+ 2297 | ISE | 109 | 28
+ 2381 | PS | 43 | 699
+ 2312 | Info | 20 | 365
+ 2387 | PS | 10 | 122
+ 2398 | Info | 15 | 396
+ 2391 | PS | 10 | 122
+ 2431 | PS | 10 | 457
+ 2282 | Info | 14 | 215
+ 2323 | ISE | 5 | unknown
+ 2448 | ISE | 7 | 92
 
 We can compare the median delay, and the delays observed by the fastest and
 slowest quartiles in the three years:
@@ -826,28 +941,51 @@ overall number of references over the document's lifetime, the number of
 references obtained in the year following publication, and the number of
 references observed since 2018: 
 
-RFC (2008) | Overall | 08 to 09 | >2018 |  | RFC (1998) | Overall | 98 to 99 | >2018
----- | ----:| ----:| ----:| -- | ---- | ----:| ----:| ----:| 
-5326 | 234 | 27 | 26 |  | 2289 | 369 | 13 | 14
-5348 | 364 | 34 | 13 |  | 2267 | 607 | 13 | 7
-5281 | 182 | 27 | 12 |  | 2317 | 81 | 9 | 6
-5354 | 30 | 15 | 7 |  | 2404 | 446 | 20 | 5
-5227 | 81 | 9 | 7 |  | 2374 | 280 | 18 | 4
-5329 | 57 | 11 | 5 |  | 2449 | 54 | 6 | 3
-5277 | 85 | 10 | 5 |  | 2283 | 240 | 25 | 1
-5236 | 48 | 8 | 4 |  | 2394 | 69 | 4 | 1
-5358 | 45 | 6 | 3 |  | 2348 | 27 | 2 | 1
-5271 | 16 | 3 | 3 |  | 2382 | 89 | 30 | 0
-5195 | 21 | 12 | 1 |  | 2297 | 68 | 21 | 0
-5283 | 26 | 5 | 1 |  | 2381 | 86 | 20 | 0
-5186 | 13 | 4 | 1 |  | 2312 | 115 | 18 | 0
-5142 | 42 | 14 | 0 |  | 2387 | 292 | 8 | 0
-5373 | 16 | 4 | 0 |  | 2398 | 72 | 7 | 0
-5404 | 12 | 3 | 0 |  | 2391 | 110 | 5 | 0
-5172 | 11 | 2 | 0 |  | 2431 | 25 | 4 | 0
-5349 | 11 | 1 | 0 |  | 2282 | 12 | 3 | 0
-5301 | 11 | 3 | 0 |  | 2323 | 12 | 1 | 0
-5174 | 1 | 1 | 0 |  | 2448 | 5 | 1 | 0
+RFC (2008) | Overall | 08 to 09 | >2018 
+---- | ----:| ----:| ----:
+5326 | 234 | 27 | 26 
+5348 | 364 | 34 | 13 
+5281 | 182 | 27 | 12 
+5354 | 30 | 15 | 7 
+5227 | 81 | 9 | 7 
+5329 | 57 | 11 | 5 
+5277 | 85 | 10 | 5 
+5236 | 48 | 8 | 4 
+5358 | 45 | 6 | 3 
+5271 | 16 | 3 | 3 
+5195 | 21 | 12 | 1 
+5283 | 26 | 5 | 1 
+5186 | 13 | 4 | 1 
+5142 | 42 | 14 | 0 
+5373 | 16 | 4 | 0 
+5404 | 12 | 3 | 0 
+5172 | 11 | 2 | 0 
+5349 | 11 | 1 | 0 
+5301 | 11 | 3 | 0 
+5174 | 1 | 1 | 0 
+
+RFC (1998) | Overall | 98 to 99 | >2018
+ ---- | ----:| ----:| ----:| 
+ 2289 | 369 | 13 | 14
+ 2267 | 607 | 13 | 7
+ 2317 | 81 | 9 | 6
+ 2404 | 446 | 20 | 5
+ 2374 | 280 | 18 | 4
+ 2449 | 54 | 6 | 3
+ 2283 | 240 | 25 | 1
+ 2394 | 69 | 4 | 1
+ 2348 | 27 | 2 | 1
+ 2382 | 89 | 30 | 0
+ 2297 | 68 | 21 | 0
+ 2381 | 86 | 20 | 0
+ 2312 | 115 | 18 | 0
+ 2387 | 292 | 8 | 0
+ 2398 | 72 | 7 | 0
+ 2391 | 110 | 5 | 0
+ 2431 | 25 | 4 | 0
+ 2282 | 12 | 3 | 0
+ 2323 | 12 | 1 | 0
+ 2448 | 5 | 1 | 0
 
 We can compare the median number of references, and the numbers of references
 for the least and most popular quartiles in the three years:
@@ -970,10 +1108,30 @@ and just have to give their approval, or maybe request a last minute
 correction. The name indicates that this is expected to last just two days, but
 in average it lasts more than a month.
 
-There are a few RFC for which the Auth48 delay was much longer than a month:
-RFC 8411, 8456, 8446, 8377, 8429, 8492 and 8468. We asked the authors
-of these RFC why the AUTH48 phase took so long, and we got
-two explanations:
+We tested a variety of hypotheses that might explain the duration of AUTH48
+by computing the correlation coefficients between various properties of the RFC
+and the production delays. The results are listed in the following table:
+
+Correlation | RFC production | Auth 48 | RFC Edit(total)
+ :----- | ----:| ----:| ----:
+Nb pages | 0.5 | -0.04 | 0.21
+Copy-Edit | 0.42 | 0.24 | 0.45
+IANA action requested | -0.13 | 0.26 | 0.15
+Nb drafts | 0.19 | -0.3 | -0.17
+Nb Authors | 0.4 | -0.04 | 0.16
+WG delay | 0.03 | -0.16 | -0.15
+
+The results show that there is no simple answer. The number of pages, the
+required amount of copy editing and to a very small extent the number of drafts
+can help predict the production delay, but there is no obvious predictor for
+the Auth 48 delay. In particular, there is no numerical evidence that the
+number of authors influences the Auth48 delay, or that authors who have spent
+a long time working on the document in the working group somehow spend
+even longer to answer questions during Auth48 -- if anything, the numerical
+results point in the opposite direction.
+
+After asking the authors of the RFC in the sample why the AUTH48 phase took
+a long time, and we got three explanations:
 
 1- Some RFC have multiple authors in multiple time zones. This slows down
    the coordination required for approving changes.
@@ -981,6 +1139,11 @@ two explanations:
 2- Some authors found some of the proposed changes unnecessary or
    undesirable, and asked that they be reversed. This required long
    exchanges between authors and editors.
+
+3- Some authors were not giving high priority to AUTH48 responses.
+
+As mentioned above, we were not able to verify these hypotheses by looking at
+the data.
 
 ## Copy editing
 
@@ -1055,12 +1218,12 @@ involved in the IETF, many of them with a prominent track record. There
 are just 2 exceptions, a single RFC in which only 3 of the 5 authors are
 well associated with the IETF.
 
-
 # Next steps
 
-This draft is not complete. We have obtained feedback from some authors
-but not all, and we are still awaiting more data from authors about deployments
-and delays. We should also get a review from the RFC Production Center.
+This draft is not really complete. We have obtained feedback from many authors
+but not all. We should also get a review from the RFC Production Center. We may
+want to find a better way of looking at citations than simple queries on
+Google Scholar.
 
 Even with those limitations, the exercise shows some promise, and also
 shows the interest of doing more studies. For example, one of the plausible
@@ -1086,16 +1249,31 @@ delay in the publication process.
 
 Many thanks to the authors of the selected RFC who were willing to
 provide feedback on the process:
-
+Michael Ackermann,
+Zafar Ali,
 Sarah Banks,
 Bruno Decraene,
+Lars Eggert,
+Nalini Elkins,
+Joachim Fabini,
 Dino Farinacci,
+Clarence Filsfils,
+Sujay Gupta,
 Dan Harkins,
+Vinayak Hegde,
+Benjamin Kaduk,
 John Klensin,
 Acee Lindem,
+Nikos Mavrogiannopoulos,
+Patrick McManus,
 Victor Moreno,
+Al Morton,
+Andrei Popov,
 Eric Rescorla,
+Michiko Short,
 Bhuvaneswaran Vengainathan,
+Lao Weiguo, and
+Li Yizhou.
 
 
 
