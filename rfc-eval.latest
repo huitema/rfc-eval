@@ -76,7 +76,7 @@ Table of Contents
      3.11. 8429  . . . . . . . . . . . . . . . . . . . . . . . . . .  12
      3.12. 8312  . . . . . . . . . . . . . . . . . . . . . . . . . .  13
      3.13. 8492  . . . . . . . . . . . . . . . . . . . . . . . . . .  14
-     3.14. 8378  . . . . . . . . . . . . . . . . . . . . . . . . . .  14
+     3.14. 8378  . . . . . . . . . . . . . . . . . . . . . . . . . .  15
      3.15. 8361  . . . . . . . . . . . . . . . . . . . . . . . . . .  15
      3.16. 8472  . . . . . . . . . . . . . . . . . . . . . . . . . .  16
      3.17. 8466  . . . . . . . . . . . . . . . . . . . . . . . . . .  16
@@ -84,15 +84,15 @@ Table of Contents
      3.19. 8468  . . . . . . . . . . . . . . . . . . . . . . . . . .  17
    4.  Observations  . . . . . . . . . . . . . . . . . . . . . . . .  19
      4.1.  Publication delays  . . . . . . . . . . . . . . . . . . .  19
-     4.2.  Citation Counts . . . . . . . . . . . . . . . . . . . . .  24
-     4.3.  Preparation and Publication delays  . . . . . . . . . . .  30
-     4.4.  Copy editing  . . . . . . . . . . . . . . . . . . . . . .  34
-     4.5.  Independent Series  . . . . . . . . . . . . . . . . . . .  36
+     4.2.  Preparation and Publication delays  . . . . . . . . . . .  24
+     4.3.  Copy editing  . . . . . . . . . . . . . . . . . . . . . .  28
+     4.4.  Independent Series  . . . . . . . . . . . . . . . . . . .  30
+     4.5.  Citation Counts . . . . . . . . . . . . . . . . . . . . .  30
    5.  Next steps  . . . . . . . . . . . . . . . . . . . . . . . . .  36
    6.  Security considerations . . . . . . . . . . . . . . . . . . .  36
    7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  36
-   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  37
-   9.  Informative References  . . . . . . . . . . . . . . . . . . .  37
+   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  36
+   9.  Informative References  . . . . . . . . . . . . . . . . . . .  36
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  39
 
 1.  RFC Evaluation project
@@ -420,15 +420,20 @@ Internet-Draft                  RFC-Eval                     August 2019
    analysis does not explain why the Auth48 phase took almost two
    months.
 
-   According to the author the copy editing took a long time because
-   author and AD thoroughly reviewed each proposed edit, accepting some
-   and rejecting some.  The concern there was that any change in a
-   complex specification might affect a protocol that was extensively
-   reviewed in the working group.
+   This document's Auth48 process was part of the "Github experiment",
+   which tried to use github pull requests to track the AUTH48 changes
+   and review comments.  The RPC staff had to learn using Github for
+   that process, and this required more work than the usual RFC.  Author
+   and AD thoroughly reviewed each proposed edit, accepting some and
+   rejecting some.  The concern there was that any change in a complex
+   specification might affect a protocol that was extensively reviewed
+   in the working group, but of course these reviews added time to the
+   Aouth48 delays.
 
    The RFC has 123 references in Google Scholar.  There are 21
    implementations listed in the Wiki of the TLS 1.3 project.  It has
-   been deployed on major browsers.
+   been deployed on major browsers, and is already used in a large
+   fraction of TLS connections.
 
 3.4.  8355
 
@@ -436,11 +441,6 @@ Internet-Draft                  RFC-Eval                     August 2019
    Networks [RFC8355] is an informational RFC.  It originated from a use
    case informational draft that was mostly used for the BOF creating
    the WG, and then to drive initial work/evolutions from the WG.
-
-
-
-
-
 
 
 
@@ -603,13 +603,13 @@ Internet-Draft                  RFC-Eval                     August 2019
    was using for storing provably generated RSA keys.  This is a short
    RFC that was published relatively quickly, although discussion
    between the author, the Independent Series Editor and the IESG lasted
-   several months.  The IESG actually asked the ISE to not publish this
-   document, because "it extends an IETF protocol in a way that requires
-   IETF review and should therefore not be published without IETF review
-   and IESG approval.  The ISE overruled that advice.
+   several months.  In the initial conflict review, Tthe IESG asked the
+   ISE to not publish this document before IETF working groups had an
+   opportunity to pick up the work.  The author met that requirement by
+   a presentation to the SECDISPATCH WG in IETF 102.  Since no WG was
+   interested in pickup the work, the document progressed on the
+   Independent Stream.
 
-   Very minor set of copy edit, moving some references from normative to
-   informative.
 
 
 
@@ -617,6 +617,9 @@ Huitema                 Expires February 2, 2020               [Page 11]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
+
+   Very minor set of copy edit, moving some references from normative to
+   informative.
 
    No reference on Google Scholar.
 
@@ -647,8 +650,8 @@ Internet-Draft                  RFC-Eval                     August 2019
 
    Deprecate Triple-DES (3DES) and RC4 in Kerberos [RFC8429]
 
-   Informational, 42 pages.
-   6 WG, first 5/1/2017.
+   BCP, 10 pages.
+   6 WG drafts, first 5/1/2017.
    Last call announced 7/16/2017, draft 03
    IESG evaluation starts 8/18/2017, draft 04
    Approved 5/25/2018, draft 05
@@ -661,11 +664,8 @@ Internet-Draft                  RFC-Eval                     August 2019
    now considered obsolete and possibly broken.  The document was sent
    back to the WG after the first last call, edited, and then there was
    a second last call.  The delay from first draft to working group last
-   call was relatively short, but thenumber may be misleading.  The
+   call was relatively short, but the number may be misleading.  The
    initial draft was a replacement of a similar draft in the KITTEN
-   working group, which stagnated for some time before the VURDLE
-   working group took up the work.  The deprecation of RC4 was somewhat
-   contentious, but the WG had already debated this prior to the
 
 
 
@@ -674,6 +674,9 @@ Huitema                 Expires February 2, 2020               [Page 12]
 Internet-Draft                  RFC-Eval                     August 2019
 
 
+   working group, which stagnated for some time before the CURDLE
+   working group took up the work.  The deprecation of RC4 was somewhat
+   contentious, but the WG had already debated this prior to the
    production of this draft, and the draft was not delayed by this
    debate.
 
@@ -719,9 +722,6 @@ Internet-Draft                  RFC-Eval                     August 2019
    the RFc series.  According to the authors, this was not a high
    priority effort, as Cubic was already implemented in multiple OSes
    and documented in research papers.  At some point, only one of the
-   authors was actively working on the draft.  Ths may explain why
-   another two years was spent progressing the draft after adoption by
-   the WG.
 
 
 
@@ -729,6 +729,10 @@ Huitema                 Expires February 2, 2020               [Page 13]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
+
+   authors was actively working on the draft.  Ths may explain why
+   another two years was spent progressing the draft after adoption by
+   the WG.
 
    The RFC publication may or may not have triggered further
    implementations.  On the other hand, several OSes picked up bug fixes
@@ -759,12 +763,14 @@ Internet-Draft                  RFC-Eval                     August 2019
 
    At that point, the author was busy and was treating this RFC with a
    low priority because, in his words, it would not be a "real RFC".
-   There were problems with the draft that only came up late.  It was
-   written back before TLS1.3 existed and the author had to add TLS1.3
-   support onto it late in the process.  He also got a very late comment
-   while in AUTH48 that caused some rewrite.  Finally, there was some
-   IANA issue with the extension registry where a similar extension was
-   added by someone else.  The draft was changed to just use it.
+   There were problems with the draft that only came up late.  In
+   particular, it had to wait for a change in registry policy that only
+   came about with the publication of TLS 1.3, which caused the draft to
+   only be published after RFC 8446, and also required adding references
+   to TLS 1.3.  The author also got a very late comment while in AUTH48
+   that caused some rewrite.  Finally, there was some IANA issue with
+   the extension registry where a similar extension was added by someone
+   else.  The draft was changed to just use it.
 
    Changes in AUTH48 include added reference to TLS 1.3, copy-editing
    for style, some added requirements, added paragraphs, and changes in
@@ -773,18 +779,18 @@ Internet-Draft                  RFC-Eval                     August 2019
    2 references on Google Scholar.  Only the author implemented the
    specification.
 
-3.14.  8378
-
-   Signal-Free Locator/ID Separation Protocol (LISP) Multicast [RFC8378]
-   is an experimental RFC, defining how to implement Multicast in the
-   LISP architecture.
-
 
 
 Huitema                 Expires February 2, 2020               [Page 14]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
+
+3.14.  8378
+
+   Signal-Free Locator/ID Separation Protocol (LISP) Multicast [RFC8378]
+   is an experimental RFC, defining how to implement Multicast in the
+   LISP architecture.
 
    Experimental, 21 pages.
    5 personal drafts, first 2/28/2014. 10 WG drafts
@@ -829,18 +835,14 @@ Internet-Draft                  RFC-Eval                     August 2019
 
    1 reference on Google Scholar.
 
-   There was at least 1 partial implementation.
-
-
-
-
-
 
 
 Huitema                 Expires February 2, 2020               [Page 15]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
+
+   There was at least 1 partial implementation.
 
 3.16.  8472
 
@@ -887,8 +889,6 @@ Internet-Draft                  RFC-Eval                     August 2019
    Auth 48 complete 2018-10-09
    Published 2018-10-12
 
-   Copy editing for style and clarity, with also corrections to the yang
-   model.
 
 
 
@@ -897,6 +897,9 @@ Huitema                 Expires February 2, 2020               [Page 16]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
+
+   Copy editing for style and clarity, with also corrections to the yang
+   model.
 
    2 references on Google Scholar.
 
@@ -936,14 +939,11 @@ Internet-Draft                  RFC-Eval                     August 2019
    IPv4, IPv6, and IPv4-IPv6 Coexistence: Updates for the IP Performance
    Metrics (IPPM) Framework [rfc8468].
 
-   Informational, 15 pages.
-   3 personal drafts, first August 6, 2015. 7 WG drafts
-   Last call announced 2018-04-11, draft 04
-   IESG evaluation starts 2018-05-24, draft 05
-   Approved 2018-07-10, draft 06
-   Auth 48 2018-09-13
-   Auth 48 complete 2018-11-05
-   Published 2018-11-14
+
+
+
+
+
 
 
 
@@ -953,6 +953,15 @@ Huitema                 Expires February 2, 2020               [Page 17]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
+
+   Informational, 15 pages.
+   3 personal drafts, first August 6, 2015. 7 WG drafts
+   Last call announced 2018-04-11, draft 04
+   IESG evaluation starts 2018-05-24, draft 05
+   Approved 2018-07-10, draft 06
+   Auth 48 2018-09-13
+   Auth 48 complete 2018-11-05
+   Published 2018-11-14
 
    RFC8468 was somehow special in that there was not a technical reason/
    interest that triggered it, but rather a formal requirement.  While
@@ -993,15 +1002,6 @@ Internet-Draft                  RFC-Eval                     August 2019
    editing for style and clarity, but do not account for the back and
    forth between authors and editors mentioned by the authors.
 
-   2 references on Google Scholar.  In contrast, RFC 2330 has more than
-   3000 references, including over 70 that are more recent than RFC
-   8468.  The authors believe that many of these references include IPv6
-   work that should formally reference RFC 8468 in addition to RFC 2330,
-   but do not.
-
-
-
-
 
 
 
@@ -1009,6 +1009,12 @@ Huitema                 Expires February 2, 2020               [Page 18]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
+
+   2 references on Google Scholar.  In contrast, RFC 2330 has more than
+   3000 references, including over 70 that are more recent than RFC
+   8468.  The authors believe that many of these references include IPv6
+   work that should formally reference RFC 8468 in addition to RFC 2330,
+   but do not.
 
 4.  Observations
 
@@ -1038,12 +1044,6 @@ Internet-Draft                  RFC-Eval                     August 2019
    group" period, and the delay from adoption by the ISE until
    submission to the RFC Editor as the equivalent of the IETF delay.
    The following table shows the delays for the 20 RFC in the sample:
-
-
-
-
-
-
 
 
 
@@ -1312,325 +1312,7 @@ Internet-Draft                  RFC-Eval                     August 2019
    more on each RFC now than they were 20 years ago, but the same amount
    of work is stretched over a much longer period.
 
-4.2.  Citation Counts
-
-   Part of the exercise is to test whether citation counts provide a
-   useful measure of the popularity of the IETF production.  These
-   citation counts vary widely:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Huitema                 Expires February 2, 2020               [Page 24]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
-
-                        +------+--------+---------+
-                        |  RFC | Status | Scholar |
-                        +------+--------+---------+
-                        | 8411 | Info   |       2 |
-                        |      |        |         |
-                        | 8456 | Info   |       3 |
-                        |      |        |         |
-                        | 8446 | PS     |     123 |
-                        |      |        |         |
-                        | 8355 | Info   |       9 |
-                        |      |        |         |
-                        | 8441 | PS     |       0 |
-                        |      |        |         |
-                        | 8324 | ISE    |       2 |
-                        |      |        |         |
-                        | 8377 | PS     |       1 |
-                        |      |        |         |
-                        | 8498 | Info   |       0 |
-                        |      |        |         |
-                        | 8479 | ISE    |       0 |
-                        |      |        |         |
-                        | 8453 | Info   |       8 |
-                        |      |        |         |
-                        | 8429 | BCP    |       1 |
-                        |      |        |         |
-                        | 8312 | Info   |       9 |
-                        |      |        |         |
-                        | 8492 | ISE    |       2 |
-                        |      |        |         |
-                        | 8378 | Exp    |       1 |
-                        |      |        |         |
-                        | 8361 | PS     |       1 |
-                        |      |        |         |
-                        | 8472 | PS     |       5 |
-                        |      |        |         |
-                        | 8466 | PS     |       2 |
-                        |      |        |         |
-                        | 8362 | PS     |       7 |
-                        |      |        |         |
-                        | 8468 | Info   |       2 |
-                        +------+--------+---------+
-
-   The results indicate that [RFC8446] is by far the most popular of the
-   20 RFC in our sample.  This is not surprising, since TLS is a key
-   Internet Protocol.  Of the other publications, only 4 have 5 to 9
-   citations, and the others have three or less.
-
-
-
-
-
-Huitema                 Expires February 2, 2020               [Page 25]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
-
-   In order to get a baseline, we can look at the number of references
-   for the RFC published in 2008 and 1998.  However, we need totake time
-   into account.  Documents published a long time ago are expected to
-   have accrued more references.  We try to address this by looking at
-   three counts for each document: the overall number of references over
-   the document's lifetime, the number of references obtained in the
-   year following publication, and the number of references observed
-   since 2018:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Huitema                 Expires February 2, 2020               [Page 26]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
-
-                +------------+---------+----------+-------+
-                | RFC (2008) | Overall | 08 to 09 | >2018 |
-                +------------+---------+----------+-------+
-                | 5326       |     234 |       27 |    26 |
-                |            |         |          |       |
-                | 5348       |     364 |       34 |    13 |
-                |            |         |          |       |
-                | 5281       |     182 |       27 |    12 |
-                |            |         |          |       |
-                | 5354       |      30 |       15 |     7 |
-                |            |         |          |       |
-                | 5227       |      81 |        9 |     7 |
-                |            |         |          |       |
-                | 5329       |      57 |       11 |     5 |
-                |            |         |          |       |
-                | 5277       |      85 |       10 |     5 |
-                |            |         |          |       |
-                | 5236       |      48 |        8 |     4 |
-                |            |         |          |       |
-                | 5358       |      45 |        6 |     3 |
-                |            |         |          |       |
-                | 5271       |      16 |        3 |     3 |
-                |            |         |          |       |
-                | 5195       |      21 |       12 |     1 |
-                |            |         |          |       |
-                | 5283       |      26 |        5 |     1 |
-                |            |         |          |       |
-                | 5186       |      13 |        4 |     1 |
-                |            |         |          |       |
-                | 5142       |      42 |       14 |     0 |
-                |            |         |          |       |
-                | 5373       |      16 |        4 |     0 |
-                |            |         |          |       |
-                | 5404       |      12 |        3 |     0 |
-                |            |         |          |       |
-                | 5172       |      11 |        2 |     0 |
-                |            |         |          |       |
-                | 5349       |      11 |        1 |     0 |
-                |            |         |          |       |
-                | 5301       |      11 |        3 |     0 |
-                |            |         |          |       |
-                | 5174       |       1 |        1 |     0 |
-                +------------+---------+----------+-------+
-
-
-
-
-
-
-
-
-Huitema                 Expires February 2, 2020               [Page 27]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
-
-                +------------+---------+----------+-------+
-                | RFC (1998) | Overall | 98 to 99 | >2018 |
-                +------------+---------+----------+-------+
-                | 2289       |     369 |       13 |    14 |
-                |            |         |          |       |
-                | 2267       |     607 |       13 |     7 |
-                |            |         |          |       |
-                | 2317       |      81 |        9 |     6 |
-                |            |         |          |       |
-                | 2404       |     446 |       20 |     5 |
-                |            |         |          |       |
-                | 2374       |     280 |       18 |     4 |
-                |            |         |          |       |
-                | 2449       |      54 |        6 |     3 |
-                |            |         |          |       |
-                | 2283       |     240 |       25 |     1 |
-                |            |         |          |       |
-                | 2394       |      69 |        4 |     1 |
-                |            |         |          |       |
-                | 2348       |      27 |        2 |     1 |
-                |            |         |          |       |
-                | 2382       |      89 |       30 |     0 |
-                |            |         |          |       |
-                | 2297       |      68 |       21 |     0 |
-                |            |         |          |       |
-                | 2381       |      86 |       20 |     0 |
-                |            |         |          |       |
-                | 2312       |     115 |       18 |     0 |
-                |            |         |          |       |
-                | 2387       |     292 |        8 |     0 |
-                |            |         |          |       |
-                | 2398       |      72 |        7 |     0 |
-                |            |         |          |       |
-                | 2391       |     110 |        5 |     0 |
-                |            |         |          |       |
-                | 2431       |      25 |        4 |     0 |
-                |            |         |          |       |
-                | 2282       |      12 |        3 |     0 |
-                |            |         |          |       |
-                | 2323       |      12 |        1 |     0 |
-                |            |         |          |       |
-                | 2448       |       5 |        1 |     0 |
-                +------------+---------+----------+-------+
-
-   We can compare the median number of references, and the numbers of
-   references for the least and most popular quartiles in the three
-   years:
-
-
-
-
-Huitema                 Expires February 2, 2020               [Page 28]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
-
-     +----------------------------+-----------+--------+------------+
-     | References                 | Lower 25% | Median | Higher 25% |
-     +----------------------------+-----------+--------+------------+
-     | RFC (2018)                 |         1 |      2 |          6 |
-     |                            |           |        |            |
-     | RFC (2008)                 |        12 |     26 |         57 |
-     |                            |           |        |            |
-     | RFC (2008), until 2009     |         3 |      6 |         12 |
-     |                            |           |        |            |
-     | RFC (2008), 2018 and after |         0 |      1 |          5 |
-     |                            |           |        |            |
-     | RFC (1998)                 |        47 |     84 |        250 |
-     |                            |           |        |            |
-     | RFC (1998), until 1999     |         4 |      9 |         19 |
-     |                            |           |        |            |
-     | RFC (1998), 2018 and after |         0 |      0 |          3 |
-     +----------------------------+-----------+--------+------------+
-
-   The total numbers shows a decreasing number of references over time.
-   This can be explain to some degree by the passage of time.  If we
-   restrict the analysis to the number of references accrued in the year
-   of publishing and the year after that, we still see decreasing
-   numbers.  For example, the top quartile of RFC published in 1998 had
-   at least 19 references by the end of 1999, while the top quartile of
-   RFC published in 2008 only had at least 12 references, which is twice
-   the corresponding number for the RFC of 2018.
-
-   We also see that the number of references to RFC fades over time.
-   Only the most popular of the RFC produced in 1998 are still
-   referenced in 2019.  The overall popularity of the RFC series benefit
-   from a history of publishing relevant documents, but over time the
-   references to historic documents will decrease and the overall
-   popularity will depend on more recent documents.
-
-   We need however to be a bit cautious before asserting that
-   publications with a low citation count have limited impact:
-
-   o  some documents may well accumulate more citations over time.  For
-      example, [RFC8377] updates [RFC6455].  There are more than 1000
-      citations of [RFC6455] on Google Scholar.  We might expect that
-      the citation count of [RFC8377] will increase in the coming years.
-
-   o  citation counts largely come from academic publications, and thus
-      reflect popularity within researchers more than popularity with
-      network operators and vendors.
-
-
-
-
-
-
-Huitema                 Expires February 2, 2020               [Page 29]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
-
-   We should be able to assess the popularity of specifications with
-   vendors, operators and designers by asking questions about deployed
-   services and products.
-
-4.3.  Preparation and Publication delays
+4.2.  Preparation and Publication delays
 
    The preparation and publication delays include three components:
 
@@ -1659,25 +1341,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Huitema                 Expires February 2, 2020               [Page 30]
+Huitema                 Expires February 2, 2020               [Page 24]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1733,7 +1397,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 2, 2020               [Page 31]
+Huitema                 Expires February 2, 2020               [Page 25]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1789,7 +1453,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 2, 2020               [Page 32]
+Huitema                 Expires February 2, 2020               [Page 26]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1845,12 +1509,12 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 2, 2020               [Page 33]
+Huitema                 Expires February 2, 2020               [Page 27]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
 
-4.4.  Copy editing
+4.3.  Copy editing
 
    We can assess the amount of copy editing applied to each published
    RFC by comparing the text of the draft approved for publication and
@@ -1901,7 +1565,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 2, 2020               [Page 34]
+Huitema                 Expires February 2, 2020               [Page 28]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1957,12 +1621,12 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 2, 2020               [Page 35]
+Huitema                 Expires February 2, 2020               [Page 29]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
 
-4.5.  Independent Series
+4.4.  Independent Series
 
    Out of 20 randomly selected RFC, 3 were published through the
    "independent series".  One is an independent opinion, another a
@@ -1984,18 +1648,335 @@ Internet-Draft                  RFC-Eval                     August 2019
    prominent track record.  There are just 2 exceptions, a single RFC in
    which only 3 of the 5 authors are well associated with the IETF.
 
+4.5.  Citation Counts
+
+   Part of the exercise is to test whether citation counts provide a
+   useful measure of the popularity of the IETF production.  These
+   citation counts vary widely:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 30]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
+
+                        +------+--------+---------+
+                        |  RFC | Status | Scholar |
+                        +------+--------+---------+
+                        | 8411 | Info   |       2 |
+                        |      |        |         |
+                        | 8456 | Info   |       3 |
+                        |      |        |         |
+                        | 8446 | PS     |     123 |
+                        |      |        |         |
+                        | 8355 | Info   |       9 |
+                        |      |        |         |
+                        | 8441 | PS     |       0 |
+                        |      |        |         |
+                        | 8324 | ISE    |       2 |
+                        |      |        |         |
+                        | 8377 | PS     |       1 |
+                        |      |        |         |
+                        | 8498 | Info   |       0 |
+                        |      |        |         |
+                        | 8479 | ISE    |       0 |
+                        |      |        |         |
+                        | 8453 | Info   |       8 |
+                        |      |        |         |
+                        | 8429 | BCP    |       1 |
+                        |      |        |         |
+                        | 8312 | Info   |       9 |
+                        |      |        |         |
+                        | 8492 | ISE    |       2 |
+                        |      |        |         |
+                        | 8378 | Exp    |       1 |
+                        |      |        |         |
+                        | 8361 | PS     |       1 |
+                        |      |        |         |
+                        | 8472 | PS     |       5 |
+                        |      |        |         |
+                        | 8466 | PS     |       2 |
+                        |      |        |         |
+                        | 8362 | PS     |       7 |
+                        |      |        |         |
+                        | 8468 | Info   |       2 |
+                        +------+--------+---------+
+
+   The results indicate that [RFC8446] is by far the most popular of the
+   20 RFC in our sample.  This is not surprising, since TLS is a key
+   Internet Protocol.  Of the other publications, only 4 have 5 to 9
+   citations, and the others have three or less.
+
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 31]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
+
+   In order to get a baseline, we can look at the number of references
+   for the RFC published in 2008 and 1998.  However, we need totake time
+   into account.  Documents published a long time ago are expected to
+   have accrued more references.  We try to address this by looking at
+   three counts for each document: the overall number of references over
+   the document's lifetime, the number of references obtained in the
+   year following publication, and the number of references observed
+   since 2018:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 32]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
+
+                +------------+---------+----------+-------+
+                | RFC (2008) | Overall | 08 to 09 | >2018 |
+                +------------+---------+----------+-------+
+                | 5326       |     234 |       27 |    26 |
+                |            |         |          |       |
+                | 5348       |     364 |       34 |    13 |
+                |            |         |          |       |
+                | 5281       |     182 |       27 |    12 |
+                |            |         |          |       |
+                | 5354       |      30 |       15 |     7 |
+                |            |         |          |       |
+                | 5227       |      81 |        9 |     7 |
+                |            |         |          |       |
+                | 5329       |      57 |       11 |     5 |
+                |            |         |          |       |
+                | 5277       |      85 |       10 |     5 |
+                |            |         |          |       |
+                | 5236       |      48 |        8 |     4 |
+                |            |         |          |       |
+                | 5358       |      45 |        6 |     3 |
+                |            |         |          |       |
+                | 5271       |      16 |        3 |     3 |
+                |            |         |          |       |
+                | 5195       |      21 |       12 |     1 |
+                |            |         |          |       |
+                | 5283       |      26 |        5 |     1 |
+                |            |         |          |       |
+                | 5186       |      13 |        4 |     1 |
+                |            |         |          |       |
+                | 5142       |      42 |       14 |     0 |
+                |            |         |          |       |
+                | 5373       |      16 |        4 |     0 |
+                |            |         |          |       |
+                | 5404       |      12 |        3 |     0 |
+                |            |         |          |       |
+                | 5172       |      11 |        2 |     0 |
+                |            |         |          |       |
+                | 5349       |      11 |        1 |     0 |
+                |            |         |          |       |
+                | 5301       |      11 |        3 |     0 |
+                |            |         |          |       |
+                | 5174       |       1 |        1 |     0 |
+                +------------+---------+----------+-------+
+
+
+
+
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 33]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
+
+                +------------+---------+----------+-------+
+                | RFC (1998) | Overall | 98 to 99 | >2018 |
+                +------------+---------+----------+-------+
+                | 2289       |     369 |       13 |    14 |
+                |            |         |          |       |
+                | 2267       |     607 |       13 |     7 |
+                |            |         |          |       |
+                | 2317       |      81 |        9 |     6 |
+                |            |         |          |       |
+                | 2404       |     446 |       20 |     5 |
+                |            |         |          |       |
+                | 2374       |     280 |       18 |     4 |
+                |            |         |          |       |
+                | 2449       |      54 |        6 |     3 |
+                |            |         |          |       |
+                | 2283       |     240 |       25 |     1 |
+                |            |         |          |       |
+                | 2394       |      69 |        4 |     1 |
+                |            |         |          |       |
+                | 2348       |      27 |        2 |     1 |
+                |            |         |          |       |
+                | 2382       |      89 |       30 |     0 |
+                |            |         |          |       |
+                | 2297       |      68 |       21 |     0 |
+                |            |         |          |       |
+                | 2381       |      86 |       20 |     0 |
+                |            |         |          |       |
+                | 2312       |     115 |       18 |     0 |
+                |            |         |          |       |
+                | 2387       |     292 |        8 |     0 |
+                |            |         |          |       |
+                | 2398       |      72 |        7 |     0 |
+                |            |         |          |       |
+                | 2391       |     110 |        5 |     0 |
+                |            |         |          |       |
+                | 2431       |      25 |        4 |     0 |
+                |            |         |          |       |
+                | 2282       |      12 |        3 |     0 |
+                |            |         |          |       |
+                | 2323       |      12 |        1 |     0 |
+                |            |         |          |       |
+                | 2448       |       5 |        1 |     0 |
+                +------------+---------+----------+-------+
+
+   We can compare the median number of references, and the numbers of
+   references for the least and most popular quartiles in the three
+   years:
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 34]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
+
+     +----------------------------+-----------+--------+------------+
+     | References                 | Lower 25% | Median | Higher 25% |
+     +----------------------------+-----------+--------+------------+
+     | RFC (2018)                 |         1 |      2 |          6 |
+     |                            |           |        |            |
+     | RFC (2008)                 |        12 |     26 |         57 |
+     |                            |           |        |            |
+     | RFC (2008), until 2009     |         3 |      6 |         12 |
+     |                            |           |        |            |
+     | RFC (2008), 2018 and after |         0 |      1 |          5 |
+     |                            |           |        |            |
+     | RFC (1998)                 |        47 |     84 |        250 |
+     |                            |           |        |            |
+     | RFC (1998), until 1999     |         4 |      9 |         19 |
+     |                            |           |        |            |
+     | RFC (1998), 2018 and after |         0 |      0 |          3 |
+     +----------------------------+-----------+--------+------------+
+
+   The total numbers shows new documents with fewer references than the
+   older ones.  This can be explained to some degree by the passage of
+   time.  If we restrict the analysis to the number of references
+   accrued in the year of publishing and the year after that, we still
+   see higher reference counts in 1998 than in 2008 or 2018.  For
+   example, the top quartile of RFC published in 1998 had at least 19
+   references by the end of 1999, while the top quartile of RFC
+   published in 2008 only had at least 12 references, which is twice the
+   corresponding number for the RFC of 2018.
+
+   We also see that the number of references to RFC fades over time.
+   Only the most popular of the RFC produced in 1998 are still
+   referenced in 2019.  The overall popularity of the RFC series benefit
+   from a history of publishing relevant documents, but over time the
+   references to historic documents will decrease and the overall
+   popularity will depend on more recent documents.
+
+   We need however to be a bit cautious before asserting that
+   publications with a low citation count have limited impact:
+
+   o  some documents may well accumulate more citations over time.  For
+      example, [RFC8377] updates [RFC6455].  There are more than 1000
+      citations of [RFC6455] on Google Scholar.  We might expect that
+      the citation count of [RFC8377] will increase in the coming years.
+
+   o  citation counts largely come from academic publications, and thus
+      reflect popularity within researchers more than popularity with
+      network operators and vendors.
+
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 35]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
+
+   We should be able to assess the popularity of specifications with
+   vendors, operators and designers by asking questions about deployed
+   services and products.
+
 5.  Next steps
 
    This draft is not really complete.  We have obtained feedback from
    many authors but not all.  We should also get a review from the RFC
    Production Center.  We may want to find a better way of looking at
-   citations than simple queries on Google Scholar.
+   citations than simple queries on Google Scholar, and in any case we
+   want to update the reference counts before publication, as they will
+   keep changing over time.
 
    Even with those limitations, the exercise shows some promise, and
-   also shows the interest of doing more studies.  For example, one of
-   the plausible questions is whether the IETF impact is increasing or
-   decreasing over time.  We could do that by repeating the statistical
-   sampling analysis for previous years, for example 2008 and 1998.
+   also shows the interest of doing more studies.
 
 6.  Security considerations
 
@@ -2010,13 +1991,6 @@ Internet-Draft                  RFC-Eval                     August 2019
 
    Peliminary analysis does not indicate that IANA is causing any
    particular delay in the publication process.
-
-
-
-Huitema                 Expires February 2, 2020               [Page 36]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
 
 8.  Acknowledgements
 
@@ -2035,6 +2009,14 @@ Internet-Draft                  RFC-Eval                     August 2019
               Committee (NomCom) Random Selection", RFC 3797,
               DOI 10.17487/RFC3797, June 2004,
               <https://www.rfc-editor.org/info/rfc3797>.
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 36]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
 
    [RFC6455]  Fette, I. and A. Melnikov, "The WebSocket Protocol",
               RFC 6455, DOI 10.17487/RFC6455, December 2011,
@@ -2063,17 +2045,6 @@ Internet-Draft                  RFC-Eval                     August 2019
               DOI 10.17487/RFC8361, April 2018,
               <https://www.rfc-editor.org/info/rfc8361>.
 
-
-
-
-
-
-
-Huitema                 Expires February 2, 2020               [Page 37]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
-
    [RFC8362]  Lindem, A., Roy, A., Goethals, D., Reddy Vallem, V., and
               F. Baker, "OSPFv3 Link State Advertisement (LSA)
               Extensibility", RFC 8362, DOI 10.17487/RFC8362, April
@@ -2094,6 +2065,14 @@ Internet-Draft                  RFC-Eval                     August 2019
               X.509 Public Key Infrastructure", RFC 8410,
               DOI 10.17487/RFC8410, August 2018,
               <https://www.rfc-editor.org/info/rfc8410>.
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 37]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
 
    [RFC8411]  Schaad, J. and R. Andrews, "IANA Registration for the
               Cryptographic Algorithm Object Identifier Range",
@@ -2123,13 +2102,6 @@ Internet-Draft                  RFC-Eval                     August 2019
               RFC 8455, DOI 10.17487/RFC8455, October 2018,
               <https://www.rfc-editor.org/info/rfc8455>.
 
-
-
-Huitema                 Expires February 2, 2020               [Page 38]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
-
    [RFC8456]  Bhuvaneswaran, V., Basil, A., Tassinari, M., Manral, V.,
               and S. Banks, "Benchmarking Methodology for Software-
               Defined Networking (SDN) Controller Performance",
@@ -2146,6 +2118,17 @@ Internet-Draft                  RFC-Eval                     August 2019
               the IP Performance Metrics (IPPM) Framework", RFC 8468,
               DOI 10.17487/RFC8468, November 2018,
               <https://www.rfc-editor.org/info/rfc8468>.
+
+
+
+
+
+
+
+Huitema                 Expires February 2, 2020               [Page 38]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
 
    [RFC8472]  Popov, A., Ed., Nystroem, M., and D. Balfanz, "Transport
               Layer Security (TLS) Extension for Token Binding Protocol
@@ -2171,11 +2154,28 @@ Author's Address
 
    Christian Huitema
    Private Octopus Inc.
-   Golfcourse Rd
+   427 Golfcourse Rd
    Friday Harbor  WA 98250
    U.S.A
 
    Email: huitema@huitema.net
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
