@@ -773,7 +773,7 @@ Year | Fastest 25% | Median | Slowest 25%
 1998 | 169 | 365 | 442
 
 The IETF takes three to four times more times to produce an RFC in 2018
-than it did in 1998, but about the sametime as it did in 1998. 
+than it did in 1998, but about the sametime as it did in 2008. 
 
 The increased delay does not mean increased work per RFC. 
 The number of RFC published per year remained between 200 and
