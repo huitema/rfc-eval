@@ -27,7 +27,7 @@ author:
 
 --- abstract
 
-This document presents a first attempt at evaluating the production of the IETF.
+This document presents a first attempt at evaluating the recently published RFC.
 We analyze a set of randomly chosen RFC approved in 2018, looking for history
 and delays, and using Google Scholar as a proxy for the RFC popularity. The
 results are interesting, and inform further evaluation efforts.
@@ -39,8 +39,7 @@ results are interesting, and inform further evaluation efforts.
 As stated on the organization's web site, "The IETF is a large open international
 community of network designers, operators, vendors, and researchers concerned with
 the evolution of the Internet architecture and the smooth operation of the Internet."
-In this memo, we start exploring how the IETF could possibly be evaluated, and we
-do so by attempting to evaluate the RFC production process.
+In this memo, we attempt to evaluate the RFC production process.
 
 The IETF data tracker provides information about RFC and drafts, from which we can
 infer statistics about the production system. We can measure how
@@ -48,25 +47,13 @@ long it takes to drive a proposition from initial draft to final publication,
 and how these delays can be split between Working Group discussions, IETF reviews,
 IESG assessment, RFC Editor delays and final reviews by the authors.
 
-Just measuring production delays may be misleading. The IETF
-produces standard proposals and informative memos that get published in the RFC
-series, but that is not its only purpose. Two other purposes would be the
-organization of fruitful discussions between members of the technical community,
-and the filtering of ill-thought proposals so they are not endorsed in
-IETF publications.
-
-To try assess this other purposes, we have to find ways to measure the impact
-of the documents that were published. If the communication between participants
-was efficient, the documents should be easily accepted by the community. If bad
-ideas were filtered, the specifications should lead to deployed product and
-services with good feedback.
-
-A potential failure mode of the IETF is to do too much filtering. After all,
-classifying a proposal as ill-thought or potentially harmful is subjective.
-A comprehensive analysis would look at the fate of proposals that were not
-accepted by the IETF but got developed in other ways and became eventually
-successful. We will not try to assess that in this memo, but further
-studies migh consider the issue.
+Just measuring production delays may be misleading. If the IETF simply rubber-stamped
+draft proposals and published them, the delays would be short but the quality and
+impact might suffer. We hope that most of the RFC that are published are useful,
+but we need a way to measure that usefulness. We try to do that by measuring the
+number of references of the published RFCs in Google Scholar, and also by checking
+whether the protocols and technologies defined in the RFCs were implemented and used on
+the Internet.
 
 # Methodology
 
@@ -92,7 +79,7 @@ because the site does not offer an open API.
 Since our resources are limited, we will only
 perform this analysis for a small sample of RFC, selected at random
 from the list of RFC approved in 2018. Specifically, we will pick
-10 RFC at random between:
+20 RFC at random between:
 
 * RFC 8307, published in January 2018, and
 
@@ -890,7 +877,7 @@ Year | Fastest 25% | Median | Slowest 25%
 1998 | 169 | 365 | 442
 
 The IETF takes three to four times more times to produce an RFC in 2018
-than it did in 1998, but about the sametime as it did in 1998. 
+than it did in 1998, but about the sametime as it did in 2008. 
 
 The increased delay does not mean increased work per RFC. 
 The number of RFC published per year remained between 200 and
@@ -984,11 +971,8 @@ and the production delays. The results are listed in the following table:
 
 Correlation | RFC production | Auth 48 | RFC Edit(total)
  :----- | ----:| ----:| ----:
-Nb pages | 0.5 | -0.04 | 0.21
-Copy-Edit | 0.42 | 0.24 | 0.45
-IANA action requested | -0.13 | 0.26 | 0.15
-Nb drafts | 0.19 | -0.3 | -0.17
-Nb Authors | 0.4 | -0.04 | 0.16
+Nb drafts | 0.19 | -0.30 | -0.17
+Nb Authors | 0.40 | -0.04 | 0.16
 WG delay | 0.03 | -0.16 | -0.15
 
 The results show that there is no simple answer. The number of pages, the
@@ -1076,7 +1060,7 @@ This seems to indicate that the Independent Series is functioning as
 expected.
 
 The authors of these 3 RFC are regular IETF contributors. This
-pbservation motivated a secondary analysis of all the RFC
+observation motivated a secondary analysis of all the RFC
 published in the "independent" stream in 2018. There are 14 such RFC:
 8507, 8494, 8493, 8492, 8483, 8479, 8433, 8409, 8374, 8369, 8367, 8351,
 8328 and 8324. (RFC 8367 and 8369 were
@@ -1232,6 +1216,39 @@ publication, as they will keep changing over time.
 Even with those limitations, the exercise shows some promise, and also
 shows the interest of doing more studies.
 
+It is tempting to go from this exercise on published RFCs to a broader
+evaluation of the IETF productivity, but this would require more than
+just evaluating the RFCs. The IETF produces standard proposals and informative
+memos that get published in the RFC
+series, but that is not its only purpose. Two other purposes would be the
+organization of fruitful discussions between members of the technical community,
+and the filtering of ill-thought proposals so they are not endorsed in
+IETF publications.
+
+We don't have good ideas yet for evaluating the propsagation of ideas, but
+we could perhaps evaluate the filtering: not enough filtering causing bad ideas to
+be published; too much filtering would cause good ideas
+to be rejected. 
+
+Not enough filtering would be visible by analyzing the published RFCs. Successful
+RFC will accrue many references and would drive many implementations. Unsuccessful
+RFCs would lack both. These criterias are hard to predict in advance, so we expect
+a fraction of the published RFCs to be unsuccessful. Too small a fraction would
+indicate a process that is too conservative, too large a fraction would indicate
+a process that's too lax. We can see that in the current analysis.
+
+On the other hand, a reasonable balance between success and lack of it does not
+guarantee that the process is very efficient. It could be that the culling of bad
+also culls good ones, and we would not know by just looking at the publications.
+For that, we would need to look at publication attempts that were abandoned, for
+example drafts that expired without progressing or being replaced. The sampling
+methodology could also be used for that purpose. Pick maybe 20 drafts at random,
+among those abandoned in a target year, and investigate why they were abandoned.
+Was it because better solutions emerged in the working group? Or maybe because
+the authors discovered a flaw in their proposal? Or was it because some factional
+struggle blocked a good idea? Was the idea pursued in a different venue?
+Hopefully, someone will try this kind of investigation.
+
 # Security considerations
 
 This draft does not specify any protocol.
@@ -1275,6 +1292,8 @@ Michiko Short,
 Bhuvaneswaran Vengainathan,
 Lao Weiguo, and
 Li Yizhou.
+
+Many thanks to Adrian Farrel for his useful advices and perspective.
 
 
 
