@@ -1211,7 +1211,9 @@ This draft is not really complete. We have obtained feedback from many authors
 but not all. We should also get a review from the RFC Production Center. We may
 want to find a better way of looking at citations than simple queries on
 Google Scholar, and in any case we want to update the reference counts before
-publication, as they will keep changing over time.
+publication, as they will keep changing over time. When an RFC describes a protocol,
+we may want to also compare the citation counts and the deployment status of
+the protocol.
 
 Even with those limitations, the exercise shows some promise, and also
 shows the interest of doing more studies.
@@ -1225,12 +1227,12 @@ organization of fruitful discussions between members of the technical community,
 and the filtering of ill-thought proposals so they are not endorsed in
 IETF publications.
 
-We don't have good ideas yet for evaluating the propsagation of ideas, but
-we could perhaps evaluate the filtering: not enough filtering causing bad ideas to
+We don't have good ideas yet for evaluating the propagation of ideas, but
+we could perhaps evaluate the filtering: not enough filtering would cause bad ideas to
 be published; too much filtering would cause good ideas
 to be rejected. 
 
-Not enough filtering would be visible by analyzing the published RFCs. Successful
+Not enough filtering should be visible by analyzing the published RFCs. Successful
 RFC will accrue many references and would drive many implementations. Unsuccessful
 RFCs would lack both. These criterias are hard to predict in advance, so we expect
 a fraction of the published RFCs to be unsuccessful. Too small a fraction would
@@ -1239,7 +1241,7 @@ a process that's too lax. We can see that in the current analysis.
 
 On the other hand, a reasonable balance between success and lack of it does not
 guarantee that the process is very efficient. It could be that the culling of bad
-also culls good ones, and we would not know by just looking at the publications.
+ideas also culls good ones, and we would not know by just looking at the publications.
 For that, we would need to look at publication attempts that were abandoned, for
 example drafts that expired without progressing or being replaced. The sampling
 methodology could also be used for that purpose. Pick maybe 20 drafts at random,
@@ -1291,9 +1293,8 @@ Eric Rescorla,
 Michiko Short,
 Bhuvaneswaran Vengainathan,
 Lao Weiguo, and
-Li Yizhou.
-
-Many thanks to Adrian Farrel for his useful advices and perspective.
+Li Yizhou. 
+Many thanks to Adrian Farrel for his useful advice.
 
 
 

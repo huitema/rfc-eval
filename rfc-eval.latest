@@ -4,8 +4,8 @@
 
 Network Working Group                                         C. Huitema
 Internet-Draft                                      Private Octopus Inc.
-Intended status: Informational                            August 2, 2019
-Expires: February 3, 2020
+Intended status: Informational                            August 7, 2019
+Expires: February 8, 2020
 
 
                   RFC Evaluation Project - First Step
@@ -34,7 +34,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on February 3, 2020.
+   This Internet-Draft will expire on February 8, 2020.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Huitema                 Expires February 3, 2020                [Page 1]
+Huitema                 Expires February 8, 2020                [Page 1]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Huitema                 Expires February 3, 2020                [Page 2]
+Huitema                 Expires February 8, 2020                [Page 2]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -165,7 +165,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020                [Page 3]
+Huitema                 Expires February 8, 2020                [Page 3]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -221,7 +221,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020                [Page 4]
+Huitema                 Expires February 8, 2020                [Page 4]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -277,7 +277,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020                [Page 5]
+Huitema                 Expires February 8, 2020                [Page 5]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -333,7 +333,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020                [Page 6]
+Huitema                 Expires February 8, 2020                [Page 6]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -389,7 +389,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020                [Page 7]
+Huitema                 Expires February 8, 2020                [Page 7]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -445,7 +445,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020                [Page 8]
+Huitema                 Expires February 8, 2020                [Page 8]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -501,7 +501,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020                [Page 9]
+Huitema                 Expires February 8, 2020                [Page 9]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -557,7 +557,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 10]
+Huitema                 Expires February 8, 2020               [Page 10]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -613,7 +613,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 11]
+Huitema                 Expires February 8, 2020               [Page 11]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -669,7 +669,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 12]
+Huitema                 Expires February 8, 2020               [Page 12]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -725,7 +725,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 13]
+Huitema                 Expires February 8, 2020               [Page 13]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -781,7 +781,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 14]
+Huitema                 Expires February 8, 2020               [Page 14]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -837,7 +837,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 15]
+Huitema                 Expires February 8, 2020               [Page 15]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -893,7 +893,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 16]
+Huitema                 Expires February 8, 2020               [Page 16]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -949,7 +949,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 17]
+Huitema                 Expires February 8, 2020               [Page 17]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1005,7 +1005,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 18]
+Huitema                 Expires February 8, 2020               [Page 18]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1061,7 +1061,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 19]
+Huitema                 Expires February 8, 2020               [Page 19]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1117,7 +1117,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 20]
+Huitema                 Expires February 8, 2020               [Page 20]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1173,7 +1173,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 21]
+Huitema                 Expires February 8, 2020               [Page 21]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1229,7 +1229,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 22]
+Huitema                 Expires February 8, 2020               [Page 22]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1285,7 +1285,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 23]
+Huitema                 Expires February 8, 2020               [Page 23]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1341,7 +1341,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 24]
+Huitema                 Expires February 8, 2020               [Page 24]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1397,7 +1397,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 25]
+Huitema                 Expires February 8, 2020               [Page 25]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1453,7 +1453,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 26]
+Huitema                 Expires February 8, 2020               [Page 26]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1509,7 +1509,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 27]
+Huitema                 Expires February 8, 2020               [Page 27]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1565,7 +1565,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 28]
+Huitema                 Expires February 8, 2020               [Page 28]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1621,7 +1621,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 29]
+Huitema                 Expires February 8, 2020               [Page 29]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1677,7 +1677,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 30]
+Huitema                 Expires February 8, 2020               [Page 30]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1733,7 +1733,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 31]
+Huitema                 Expires February 8, 2020               [Page 31]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1789,7 +1789,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 32]
+Huitema                 Expires February 8, 2020               [Page 32]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1845,7 +1845,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 33]
+Huitema                 Expires February 8, 2020               [Page 33]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1901,7 +1901,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 34]
+Huitema                 Expires February 8, 2020               [Page 34]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1957,7 +1957,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-Huitema                 Expires February 3, 2020               [Page 35]
+Huitema                 Expires February 8, 2020               [Page 35]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -1973,7 +1973,9 @@ Internet-Draft                  RFC-Eval                     August 2019
    Production Center.  We may want to find a better way of looking at
    citations than simple queries on Google Scholar, and in any case we
    want to update the reference counts before publication, as they will
-   keep changing over time.
+   keep changing over time.  When an RFC describes a protocol, we may
+   want to also compare the citation counts and the deployment status of
+   the protocol.
 
    Even with those limitations, the exercise shows some promise, and
    also shows the interest of doing more studies.
@@ -1987,12 +1989,12 @@ Internet-Draft                  RFC-Eval                     August 2019
    community, and the filtering of ill-thought proposals so they are not
    endorsed in IETF publications.
 
-   We don't have good ideas yet for evaluating the propsagation of
-   ideas, but we could perhaps evaluate the filtering: not enough
-   filtering causing bad ideas to be published; too much filtering would
-   cause good ideas to be rejected.
+   We don't have good ideas yet for evaluating the propagation of ideas,
+   but we could perhaps evaluate the filtering: not enough filtering
+   would cause bad ideas to be published; too much filtering would cause
+   good ideas to be rejected.
 
-   Not enough filtering would be visible by analyzing the published
+   Not enough filtering should be visible by analyzing the published
    RFCs.  Successful RFC will accrue many references and would drive
    many implementations.  Unsuccessful RFCs would lack both.  These
    criterias are hard to predict in advance, so we expect a fraction of
@@ -2003,21 +2005,21 @@ Internet-Draft                  RFC-Eval                     August 2019
 
    On the other hand, a reasonable balance between success and lack of
    it does not guarantee that the process is very efficient.  It could
-   be that the culling of bad also culls good ones, and we would not
-   know by just looking at the publications.  For that, we would need to
-   look at publication attempts that were abandoned, for example drafts
-   that expired without progressing or being replaced.  The sampling
-   methodology could also be used for that purpose.  Pick maybe 20
-   drafts at random, among those abandoned in a target year, and
-   investigate why they were abandoned.  Was it because better solutions
+   be that the culling of bad ideas also culls good ones, and we would
+   not know by just looking at the publications.  For that, we would
+   need to look at publication attempts that were abandoned, for example
+   drafts that expired without progressing or being replaced.  The
+   sampling methodology could also be used for that purpose.  Pick maybe
 
 
 
-Huitema                 Expires February 3, 2020               [Page 36]
+Huitema                 Expires February 8, 2020               [Page 36]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
 
+   20 drafts at random, among those abandoned in a target year, and
+   investigate why they were abandoned.  Was it because better solutions
    emerged in the working group?  Or maybe because the authors
    discovered a flaw in their proposal?  Or was it because some
    factional struggle blocked a good idea?  Was the idea pursued in a
@@ -2047,9 +2049,8 @@ Internet-Draft                  RFC-Eval                     August 2019
    Hegde, Benjamin Kaduk, John Klensin, Acee Lindem, Nikos
    Mavrogiannopoulos, Patrick McManus, Victor Moreno, Al Morton, Andrei
    Popov, Eric Rescorla, Michiko Short, Bhuvaneswaran Vengainathan, Lao
-   Weiguo, and Li Yizhou.
-
-   Many thanks to Adrian Farrel for his useful advices and perspective.
+   Weiguo, and Li Yizhou.  Many thanks to Adrian Farrel for his useful
+   advice.
 
 9.  Informative References
 
@@ -2062,17 +2063,21 @@ Internet-Draft                  RFC-Eval                     August 2019
               RFC 6455, DOI 10.17487/RFC6455, December 2011,
               <https://www.rfc-editor.org/info/rfc6455>.
 
+
+
+
+
+
+
+Huitema                 Expires February 8, 2020               [Page 37]
+
+Internet-Draft                  RFC-Eval                     August 2019
+
+
    [RFC8312]  Rhee, I., Xu, L., Ha, S., Zimmermann, A., Eggert, L., and
               R. Scheffenegger, "CUBIC for Fast Long-Distance Networks",
               RFC 8312, DOI 10.17487/RFC8312, February 2018,
               <https://www.rfc-editor.org/info/rfc8312>.
-
-
-
-Huitema                 Expires February 3, 2020               [Page 37]
-
-Internet-Draft                  RFC-Eval                     August 2019
-
 
    [RFC8324]  Klensin, J., "DNS Privacy, Authorization, Special Uses,
               Encoding, Characters, Matching, and Root Structure: Time
@@ -2118,17 +2123,16 @@ Internet-Draft                  RFC-Eval                     August 2019
               RFC 8411, DOI 10.17487/RFC8411, August 2018,
               <https://www.rfc-editor.org/info/rfc8411>.
 
-   [RFC8429]  Kaduk, B. and M. Short, "Deprecate Triple-DES (3DES) and
-              RC4 in Kerberos", BCP 218, RFC 8429, DOI 10.17487/RFC8429,
-              October 2018, <https://www.rfc-editor.org/info/rfc8429>.
 
 
-
-
-Huitema                 Expires February 3, 2020               [Page 38]
+Huitema                 Expires February 8, 2020               [Page 38]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
+
+   [RFC8429]  Kaduk, B. and M. Short, "Deprecate Triple-DES (3DES) and
+              RC4 in Kerberos", BCP 218, RFC 8429, DOI 10.17487/RFC8429,
+              October 2018, <https://www.rfc-editor.org/info/rfc8429>.
 
    [RFC8441]  McManus, P., "Bootstrapping WebSockets with HTTP/2",
               RFC 8441, DOI 10.17487/RFC8441, September 2018,
@@ -2177,11 +2181,7 @@ Internet-Draft                  RFC-Eval                     August 2019
 
 
 
-
-
-
-
-Huitema                 Expires February 3, 2020               [Page 39]
+Huitema                 Expires February 8, 2020               [Page 39]
 
 Internet-Draft                  RFC-Eval                     August 2019
 
@@ -2237,4 +2237,4 @@ Author's Address
 
 
 
-Huitema                 Expires February 3, 2020               [Page 40]
+Huitema                 Expires February 8, 2020               [Page 40]
