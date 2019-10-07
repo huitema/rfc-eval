@@ -29,7 +29,8 @@ author:
 
 This document presents a first attempt at evaluating the recently published RFC.
 We analyze a set of randomly chosen RFC approved in 2018, looking for history
-and delays, and using Google Scholar as a proxy for the RFC popularity. The
+and delays. We also measure the number of citations of the chosen RFC using Semantic
+Scholar, and compare citation counts with what we know about deployment. The
 results are interesting, and inform further evaluation efforts.
 
 --- middle
@@ -51,32 +52,18 @@ Just measuring production delays may be misleading. If the IETF simply rubber-st
 draft proposals and published them, the delays would be short but the quality and
 impact might suffer. We hope that most of the RFC that are published are useful,
 but we need a way to measure that usefulness. We try to do that by measuring the
-number of references of the published RFCs in Google Scholar, and also by checking
+number of references of the published RFCs in Semantic Scholar, and also by checking
 whether the protocols and technologies defined in the RFCs were implemented and used on
 the Internet.
 
-# Methodology
+In order to limit the resource required for this study, we will selected at random 20
+RFC published in 2018, as explained in (#sample-selection).
 
-In this exploration, we want to evaluate not just the mechanics of the RFC
-production, but also the quality and impact of the results. This evaluation of
-quality and impact is subjective. We start with two ideas:
-
-1- Use Google Scholar to assess the citation counts of published documents
-
-2- Ask the RFC authors whether the specifications resulted in the
-   deployment of products or services
-
-When accessing Google Scholar, we search for quoted strings of the
-form "RFC xxxx". This is an arbitrary choice, we could for example 
-have chosen to search for "RFCxxx" or a combination of the two forms.
-We retained the simpler alternative, because we don't believe that
-picking one or the other would introduce a significant bias.
+## Selecting a random sample of RFC {#sample-selection}
 
 Basic production mechanisms could be evaluated by processing data from
 the IETF tracker, but subjective data requires manual assessment of results,
-which can be time consuming. Google Scholar also requires manual access
-because the site does not offer an open API.
-Since our resources are limited, we will only
+which can be time consuming. Since our resources are limited, we will only
 perform this analysis for a small sample of RFC, selected at random
 from the list of RFC approved in 2018. Specifically, we will pick
 20 RFC at random between:
@@ -85,7 +72,7 @@ from the list of RFC approved in 2018. Specifically, we will pick
 
 * RFC 8511, published December 2018.
 
-In order to avoid injecting personal bias in the random selecton, we use
+In order to avoid injecting personal bias in the random selection, we use
 a random selection process similar to the Nomination Committee selection
 process defined in {{?RFC3797}}. The process is seeded with the text string
 "vanitas vanitatum et omnia vanitas", and the results are:
@@ -181,7 +168,7 @@ Rank 19: 2297 -- md5=78ee7e128436c969c80900fef80c075c
 Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
 ~~~
 
-# Analysis of 20 selected RFC
+# Analysis of 20 selected RFC {#sample-rfc-analysis}
 
 We review each of the RFC listed in (#methodology) for the year 2018, trying 
 both to answer the known questions and to gather insight for further analyzes.
@@ -207,8 +194,6 @@ The draft underwent minor copy edit before publication.
 
 The long delay in Auth48 is probaby due to clustering with {{?RFC8410}}, which entered
 AUTH 48 on 06/05. The MISSREF tracker code was cleared then.
-
-2 references on Google Scholar.
 
 ## 8456
 Benchmarking Methodology for Software-Defined Networking (SDN) 
@@ -236,7 +221,7 @@ a bit longer than the average draft.
 
 The RFC was part of cluster with {{?RFC8455}}.
 
-Google Scholar shows 3 references.  BMWG publishes informational RFCs centered around benchmarking,
+BMWG publishes informational RFCs centered around benchmarking,
 and the methodologies in RFC 8456 have been implemented in benchmarking products.
 
 ## 8446
@@ -278,7 +263,7 @@ any change in a complex specification might affect a protocol that was extensive
 reviewed in the working group, but of course these reviews added time to the
 Aouth48 delays. 
 
-The RFC has 123 references in Google Scholar. There are 21 implementations listed
+There are 21 implementations listed
 in the Wiki of the TLS 1.3 project. It has been deployed on major browsers, and
 is already used in a large fraction of TLS connections.
 
@@ -300,7 +285,7 @@ Published 2018-03-28
 
 Minor set of copy edit, mostly for style.
 
-9 references on Google Scholar. No implementation of the RFC itself, but the technology behind it such as
+No implementation of the RFC itself, but the technology behind it such as
 Segment Routing (architecture RFC 8402, TI-LFA draft-ietf-rtgwg-segment-routing-ti-lfa) is widely implemented
 and deployment is ongoing.
 
@@ -330,8 +315,6 @@ includes many charts and graphs that were very difficult to format
 correctly in the author's production process that involve conversions
 from markdown to XML, and then from XML to text. The author had to
 get substantial help from the RFC editor.
-
-No references on Google Scholar. (RFC 6455 had over 1000 results)
 
 There are several implementations, including Firefox and Chrome,
 making RFC 8441 a very successful standard.
@@ -367,8 +350,6 @@ and approved during Last Call and IESG review incorporated
 rather than expecting the Production Center to operate off of
 notes about changed to be made.
 
-2 references on Google Scholar.
-
 ## 8377
 Transparent Interconnection of Lots of Links (TRILL): Multi-Topology {{?RFC8377}}
 
@@ -385,9 +366,6 @@ IANA Table, table entries
 ~~~
 
 Minor set of copy edit, mostly for style, also clarity.
-
-1 reference on Google Scholar.
-
 
 
 ## 8498
@@ -407,8 +385,6 @@ IANA Action, table rows added.
 ~~~
 
 Copy edit for style, but also clarification of ambiguous sentences.
-
-No references on Google Scholar.
 
 ## 8479
 Storing Validation Parameters in PKCS#8 {{?RFC8479}}
@@ -437,8 +413,6 @@ Independent Stream.
 
 Very minor set of copy edit, moving some references from normative to informative.
 
-No reference on Google Scholar.
-
 The author is not aware of other implementations than gnutls relying on this RFC.
 
 ## 8453
@@ -459,8 +433,6 @@ IANA Action, table rows added.
 ~~~
 
 Minor copy editing.
-
-8 references on Google Scholar.
 
 ## 8429
 Deprecate Triple-DES (3DES) and RC4 in Kerberos {{?RFC8429}}
@@ -496,8 +468,6 @@ duties ended up taking precedence over reviewing this document.
 
 Minor copy editing, for style.
 
-1 reference on Google Scholar.
-
 The implementation of the draft would be the actual removal of support for 3DES and RC4
 in major implementations. This is happening, but very slowly.
 
@@ -517,8 +487,6 @@ IANA Action, table rows added.
 ~~~
 
 Minor copy editing, for style.
-
-9 references on Google Scholar.
 
 The TCP congestion control algorithm Cubic was defined first in 2005, was implemented
 in Linux soon after, and was implemented in major OSes after that. After some debates
@@ -568,8 +536,6 @@ was changed to just use it.
 Changes in AUTH48 include added reference to TLS 1.3, copy-editing for style,
 some added requirements, added paragraphs, and changes in algorithms specification.
 
-2 references on Google Scholar. Only the author implemented the specification.
-
 ## 8378
 Signal-Free Locator/ID Separation Protocol (LISP) Multicast {{?RFC8378}} is
 an experimental RFC, defining how to implement Multicast in the LISP
@@ -592,7 +558,7 @@ it. They also did implementations during that time.
 
 Minor copy editing, for style.
 
-1 reference on Google Scholar. The RFC was implemented by lispers.net and cisco,
+The RFC was implemented by lispers.net and cisco,
 and was used in doing IPv6 multicast over IPv4 unicast/multicast at the Olympics
 in PyeungChang. The plan is to work on a proposedstandard once the
 experiment concludes.
@@ -618,8 +584,6 @@ due to a slow uptake of the technology in the industry.
 
 Minor copy editing, for style.
 
-1 reference on Google Scholar.
-
 There was at least 1 partial implementation.
 
 ## 8472
@@ -644,8 +608,6 @@ through the WG creation process, including running a BOF.
 
 Minor copy editing, for style, with the addition of a reference to TLS 1.3.
 
-5 references on Google Scholar.
-
 Perhaps partially due to the delays, some of the implementers lost interest in supporting this RFC.
 
 ## 8466
@@ -663,8 +625,6 @@ Published 2018-10-12
 ~~~
 
 Copy editing for style and clarity, with also corrections to the yang model.
-
-2 references on Google Scholar.
 
 ## 8362
 OSPFv3 Link State Advertisement (LSA) Extensibility {{?RFC8362}} is a major extension to the
@@ -692,7 +652,7 @@ due to the complexity.
 
 Copy editing for style and clarity.
 
-7 references on Google Scholar. It either was or will be implemented by all the router vendors.
+This specification either was or will be implemented by all the router vendors.
 
 ## 8468
 IPv4, IPv6, and IPv4-IPv6 Coexistence: Updates for the IP
@@ -748,12 +708,7 @@ The differences between the final draft and the publish RFC show copy editing fo
 and clarity, but do not account for the back and forth between authors and editors
 mentioned by the authors.
 
-2 references on Google Scholar. In contrast, RFC 2330 has more than 3000 references,
-including over 70 that are more recent than RFC 8468.
-The authors believe that many of these references include IPv6 work that should formally
-reference RFC 8468 in addition to RFC 2330, but do not.
-
-# Observations
+# Analysis of process and delays
 
 We examine the 20 RFC in the sample, measuring various characteristics such
 as delay and citation counts, in an attempt to identify patterns in the
@@ -877,7 +832,7 @@ Year | Fastest 25% | Median | Slowest 25%
 1998 | 169 | 365 | 442
 
 The IETF takes three to four times more times to produce an RFC in 2018
-than it did in 1998, but about the sametime as it did in 2008. 
+than it did in 1998, but about the same time as it did in 2008. 
 
 The increased delay does not mean increased work per RFC. 
 The number of RFC published per year remained between 200 and
@@ -1072,39 +1027,69 @@ involved in the IETF, many of them with a prominent track record. There
 are just 2 exceptions, a single RFC in which only 3 of the 5 authors are
 well associated with the IETF.
 
-## Citation Counts
+# Citation Counts
 
-Part of the exercise is to test whether citation counts provide a useful
-measure of the popularity of the IETF production. These citation counts
-vary widely:
+In this exploration, we want to assess whether citation counts provide a
+meaningful assessment of the popularity of RFC. We obtain the citation
+counts through the Semantic Scholar API, using queries of the form:
+~~~
+http://api.semanticscholar.org/
+     v1/paper/10.17487/rfc8446?include_unknown_references=true
+~~~
+In these queries, the RFC is uniquely identified by its DOI reference,
+which is composed of the RFC Series prefix 10.17487 and the rfc identifier.
+The queries return a series of properties, including a list of citations
+for the RFC. Based on that list of citations, we compute three numbers:
 
-| RFC | Status | Scholar |
-| ---:| ----- | -----:|
-| 8411 | Info | 2 |
-| 8456 | Info | 3 |
-| 8446 | PS | 123 |
-| 8355 | Info | 9 |
-| 8441 | PS | 0 |
-| 8324 | ISE | 2 |
-| 8377 | PS | 1 |
-| 8498 | Info | 0 |
-| 8479 | ISE | 0 |
-| 8453 | Info | 8 |
-| 8429 | BCP | 1 |
-| 8312 | Info | 9 |
-| 8492 | ISE | 2 |
-| 8378 | Exp | 1 |
-| 8361 | PS | 1 |
-| 8472 | PS | 5 |
-| 8466 | PS | 2 |
-| 8362 | PS | 7 |
-| 8468 | Info | 2 |
+* The total number of citations
+* The number of citations in the year of publication and the year after
+  that
+* For the RFC published in 1998 or 2008 that we use for comparison, the
+  number of citations in the years 2018 and 2019.
 
+All the numbers were retrieved on October 6, 2019.
 
-The results indicate that {{?RFC8446}} is by far the most popular of the 20
+## Citation Numbers {#citation-numbers}
+
+As measured on October 6, 2019, the citation counts for the RFC in
+our sample set were:
+
+RFC(2018) | Status | Total | 2018-2019
+---- | ---- | ----:| ----:
+8411|Info|1|0
+8456|Info|1|1
+8446|PS|418|204
+8355|Info|3|3
+8441|PS|1|1|
+8324|ISE|0|0
+8377|PS|0|0
+8498|Info|0|0
+8479|ISE|0|0
+8453|Info|3|3
+8429|BCP|0|0
+8312|Info|25|16
+8492|ISE|4|4
+8378|Exp|1|1
+8361|PS|0|0
+8472|PS|1|1
+8466|PS|0|0
+8362|PS|1|1
+8468|Info|1|1
+
+The results indicate that {{?RFC8446}} is by far the most cited of the 20
 RFC in our sample. This is not surprising, since TLS is a key Internet Protocol.
-Of the other publications, only 4 have 5 to 9 citations, and the others have
-three or less.
+The TLS 1.3 protocol was also the subject of extensive studies by researchers,
+and thus was mentioned in a number of published papers. 
+Surprisingly, the Semantic Scholar mentions a number of citations that predate
+the publication date. These are probably citations of the various draft
+versions of the protocol.
+
+The next most cited RFC in the sample is {{?RFC8312}} which describes the
+Cubic congestion control algorithm for TCP. That protocol was also the
+target of a large number of academic publications.The other RFC in the
+sample only have a small number of citations.
+
+## Comparison to 1998 and 2008
 
 In order to get a baseline, we can look at the number of references for the
 RFC published in 2008 and 1998. However, we need totake time into account.
@@ -1114,98 +1099,133 @@ overall number of references over the document's lifetime, the number of
 references obtained in the year following publication, and the number of
 references observed since 2018: 
 
-RFC (2008) | Overall | 08 to 09 | >2018 
----- | ----:| ----:| ----:
-5326 | 234 | 27 | 26 
-5348 | 364 | 34 | 13 
-5281 | 182 | 27 | 12 
-5354 | 30 | 15 | 7 
-5227 | 81 | 9 | 7 
-5329 | 57 | 11 | 5 
-5277 | 85 | 10 | 5 
-5236 | 48 | 8 | 4 
-5358 | 45 | 6 | 3 
-5271 | 16 | 3 | 3 
-5195 | 21 | 12 | 1 
-5283 | 26 | 5 | 1 
-5186 | 13 | 4 | 1 
-5142 | 42 | 14 | 0 
-5373 | 16 | 4 | 0 
-5404 | 12 | 3 | 0 
-5172 | 11 | 2 | 0 
-5349 | 11 | 1 | 0 
-5301 | 11 | 3 | 0 
-5174 | 1 | 1 | 0 
 
-RFC (1998) | Overall | 98 to 99 | >2018
- ---- | ----:| ----:| ----:| 
- 2289 | 369 | 13 | 14
- 2267 | 607 | 13 | 7
- 2317 | 81 | 9 | 6
- 2404 | 446 | 20 | 5
- 2374 | 280 | 18 | 4
- 2449 | 54 | 6 | 3
- 2283 | 240 | 25 | 1
- 2394 | 69 | 4 | 1
- 2348 | 27 | 2 | 1
- 2382 | 89 | 30 | 0
- 2297 | 68 | 21 | 0
- 2381 | 86 | 20 | 0
- 2312 | 115 | 18 | 0
- 2387 | 292 | 8 | 0
- 2398 | 72 | 7 | 0
- 2391 | 110 | 5 | 0
- 2431 | 25 | 4 | 0
- 2282 | 12 | 3 | 0
- 2323 | 12 | 1 | 0
- 2448 | 5 | 1 | 0
+RFC(2008) | Status | Total | 2008-2009 | 2018-2019
+---- | ---- | ----:| ----:| ----:
+5326|Exp|138|14|15
+5348|PS|14|3|0
+5281|Info|69|15|7
+5354|Exp|17|13|0
+5227|PS|19|1|2
+5329|PS|24|6|1
+5277|PS|32|3|2
+5236|ISE|25|5|4
+5358|BCP|21|2|0
+5271|Info|7|2|0
+5195|PS|7|4|2
+5283|PS|8|1|0
+5186|Info|14|4|2
+5142|PS|8|4|0
+5373|PS|5|2|0
+5404|PS|1|1|0
+5172|PS|2|0|0
+5349|Info|8|0|2
+5301|PS|5|1|0
+5174|Info|0|0|0
 
-We can compare the median number of references, and the numbers of references
+RFC(1998) | Status | Total | 1998-1999 | 2018-2019
+---- | ---- | ----:| ----:| ----:
+2289|PS|2|0|1
+2267|Info|982|5|61
+2317|BCP|9|1|2
+2404|PS|137|6|1
+2374|PS|42|4|0
+2449|PS|7|2|0
+2283|PS|17|3|2
+2394|Info|13|2|1
+2348|DS|5|0|0
+2382|Info|17|12|0
+2297|ISE|36|11|0
+2381|PS|39|12|0
+2312|Info|14|3|0
+2387|PS|4|1|0
+2398|Info|17|0|1
+2391|PS|31|3|0
+2431|PS|3|0|0
+2282|Info|8|0|0
+2323|ISE|1|0|0
+2448|ISE|0|0|0
+
+
+
+We can compare the median number of citations and the numbers of citations
 for the least and most popular quartiles in the three years:
 
 References | Lower 25% | Median | Higher 25%
 ------ | ----:|----:|----:
-RFC (2018) | 1 | 2 | 6
-RFC (2008) | 12 | 26 | 57
-RFC (2008), until 2009 | 3 | 6 | 12
-RFC (2008), 2018 and after | 0 | 1 | 5
-RFC (1998) | 47 | 84 | 250
-RFC (1998), until 1999 | 4 | 9 | 19
-RFC (1998), 2018 and after | 0 | 0 | 3
+RFC (2018) | 0 | 1 | 3
+RFC (2008) | 6.5 | 11 | 21.75
+RFC (2008), until 2009 | 1 | 2.5 | 4.5
+RFC (2008), 2018 and after | 0 | 0 | 2
+RFC (1998) | 4.75 | 13.5 | 32.25
+RFC (1998), until 1999 | 0 | 2 | 4.25
+RFC (1998), 2018 and after | 0 | 0 | 1
 
-The total numbers shows new documents with fewer references than the older ones.
+The total numbers shows new documents with fewer citations than the older ones.
 This can be explained to some degree by the passage of time. If we
-restrict the analysis to the number of references accrued in the year of
-publishing and the year after that, we still see higher reference counts in
-1998 than in 2008 or 2018. For example,
-the top quartile of RFC published in 1998 had at least 19 references by the
-end of 1999, while the top quartile of RFC published in 2008 only had at
-least 12 references, which is twice the corresponding number for the RFC
-of 2018. 
+restrict the analysis to the number of citations accrued in the year of
+publishing and the year after that, we still see about the same distribution
+for the three samples.
 
 We also see that the number of references to RFC fades over time. Only the
-most popular of the RFC produced in 1998 are still referenced in 2019. The
-overall popularity of the RFC series benefit from a history of publishing
-relevant documents, but over time the references to historic
-documents will decrease and the overall popularity will depend on more
-recent documents.
+most popular of the RFC produced in 1998 are still cited in 2019.
 
-We need however to be a bit cautious before asserting that publications with
-a low citation count have limited impact:
+## Citations versus deployments
 
-* some documents may well accumulate more citations over time. For example,
-  {{?RFC8377}} updates {{?RFC6455}}. There are more than 1000 citations of
-  {{?RFC6455}} on Google Scholar. We might expect that the citation count
-  of {{?RFC8377}} will increase in the coming years.
+The following table shows
+side by side the number of citations as measured in (#citation-numbers) and
+the estimation of deployment as indicated in (#sample-rfc-analysis). 
 
-* citation counts largely come from academic publications, and thus reflect
-  popularity within researchers more than popularity with network operators
-  and vendors.
+RFC(2018) | Status | Citations | Deployment
+---- | ---- | ----:| ----:
+8411|Info|1|medium
+8456|Info|1|medium
+8446|PS|418|high
+8355|Info|3|medium
+8441|PS|1|high
+8324|ISE|0|N/A
+8377|PS|0| unknown
+8498|Info|0|unknown
+8479|ISE|0|one
+8453|Info|3|unknown
+8429|BCP|0|some
+8312|Info|25|high
+8492|ISE|4| one
+8378|Exp|1|some
+8361|PS|0|one
+8472|PS|1|medium
+8466|PS|0|unknown
+8362|PS|1|medium
+8468|Info|1|some
 
-We should be able to assess the popularity of specifications with vendors,
-operators and designers by asking questions about deployed services and products.
+From looking at these results, it is fairly obvious that citation counts
+cannot be used as proxies for the "value" of an RFC. In our sample, the two
+RFC that have high citation counts were both widely deployed, and can certainly be 
+described as successful, but we also see many RFC that saw significant deployment
+without garnering a high level of citations.
 
-# Next steps
+There is some evidence that citation counts are driven by academic interest,
+but are only loosely correlated with actual deployment. We saw that {{?RFC8446}}
+was widely cited in part because the standardization process involved many
+researchers, and that the high citation count of {{?RFC8312}} is
+largely due to the academic interest in evaluating congestion control protocols.
+If we look at previous years, the most cited RFC in the 2008 sample is {{?RFC5326}}, an
+experimental RFC defining security extensions to an
+experimental delay tolerant transport protocol. This protocol does not
+carry a significant proportion of Internet traffic, but has been the object
+of a fair number of academic studies.
+
+The citation process tends to privilege the first expression of a concept.
+We see that with the most cited RFC in the 1998 set is {{?RFC2267}}, an informational
+RFC defining Network Ingress Filtering that was obsoleted in May
+2000 by {{?RFC2827}}. It is still cited frequently in 2018 and
+2019, regardless of its formal status in
+the RFC series. We see the same effect at work with {{?RFC8441}}, which
+garners very few citations although it obsoletes {{?RFC6455}} that has
+a large number of citations. The same goes for {{?RFC8468}}, which is
+sparsely cited while the {{?RFC2330}} is widely cited.
+
+# Observations and Next Steps
 
 This draft is not really complete. We have obtained feedback from many authors
 but not all. We should also get a review from the RFC Production Center. We may
