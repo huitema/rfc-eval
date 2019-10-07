@@ -1,7 +1,7 @@
 ---
-title: RFC Evaluation Project - First Step
-abbrev: RFC-Eval
-docname: draft-huitema-rfc-eval-project-01
+title: Evaluation of a Sample of RFC Produced in 2018
+abbrev: RFC-Eval-2018
+docname: draft-huitema-rfc-eval-project-02
 category: info
 date: 2019
 
@@ -29,9 +29,21 @@ author:
 
 This document presents a first attempt at evaluating the recently published RFC.
 We analyze a set of randomly chosen RFC approved in 2018, looking for history
-and delays. We also measure the number of citations of the chosen RFC using Semantic
-Scholar, and compare citation counts with what we know about deployment. The
-results are interesting, and inform further evaluation efforts.
+and delays. The average RFC was produced in 3 years and 4 months,
+of which 2 years and 10 months were spent in the working group,
+3 to 4 months for IETF consensus and IESG review, and 3 to 4 months in RFC
+production. The main variation in RFC production delays comes from
+the AUTH48 phase.
+
+We also measure the number of citations of the chosen RFC using Semantic
+Scholar, and compare citation counts with what we know about deployment.
+We show that citation counts indicate academic interest, but
+correlate only loosely with deployment or usage of the specifications.
+
+The measurement of delays could be automated by processing dates and
+events recorded in the data tracker. The measurement of published
+RFC could be complemented by statistics on abandoned drafts, which
+would measure the efficiency of the IETF triaging process.
 
 --- middle
 
@@ -56,10 +68,19 @@ number of references of the published RFCs in Semantic Scholar, and also by chec
 whether the protocols and technologies defined in the RFCs were implemented and used on
 the Internet.
 
-In order to limit the resource required for this study, we will selected at random 20
-RFC published in 2018, as explained in (#sample-selection).
+In order to limit the resource required for this study, we selected at random 20
+RFC published in 2018, as explained in (#sample-selection). For comparison purposes,
+we also selected at random 20 RFC published in 1998 and 20 published in 2008.
+The information gathered for every RFC in the sample is presented in
+(#sample-rfc-analysis). In (#process-analysis) we analyze the production process
+and the sources of delays, comparing the 2018 sample to the selected samples for 1998
+and 2018. In (#citation-numbers) we present citation counts for the RFC in the samples,
+and analyze whether citation counts could be used to evaluate the quality of RFC.
+Finally, we present the conclusion of the study and propose next steps in
+(#conclusion).
 
-## Selecting a random sample of RFC {#sample-selection}
+
+# Selecting a random sample of RFC {#sample-selection}
 
 Basic production mechanisms could be evaluated by processing data from
 the IETF tracker, but subjective data requires manual assessment of results,
@@ -288,6 +309,10 @@ Minor set of copy edit, mostly for style.
 No implementation of the RFC itself, but the technology behind it such as
 Segment Routing (architecture RFC 8402, TI-LFA draft-ietf-rtgwg-segment-routing-ti-lfa) is widely implemented
 and deployment is ongoing.
+
+According to participants in the discussion, the process of adoption of the source packet routing
+standards was very contentious. The establishment of consensus at both the working group level
+and the IETF level was difficult and time consuming.
 
 ## 8441
 Bootstrapping WebSockets with HTTP/2 {{?RFC8441}}
@@ -708,7 +733,7 @@ The differences between the final draft and the publish RFC show copy editing fo
 and clarity, but do not account for the back and forth between authors and editors
 mentioned by the authors.
 
-# Analysis of process and delays
+# Analysis of process and delays {#process-analysis}
 
 We examine the 20 RFC in the sample, measuring various characteristics such
 as delay and citation counts, in an attempt to identify patterns in the
@@ -760,11 +785,15 @@ shows the delays for the 20 RFC in the sample:
 | 8468 | Info | 15 | 1196 | 979 | 90 | 127 |
 | ---:| ----  | ----:| -----:| ---:| ---:| ---:|
 | | average | 35 | 1161 | 928 | 110 | 123 |
+| | average(not ISE) | 37 | 1188 | 978 | 101 | 109 |
+
+
 
 The average delay from first draft to publication is about 3 years, but this
 varies widely. Excluding the independent stream submissions, the average
-delay from start to finish is 3 years and 3 months, of which on average
-2 years and 8 months are spent getting consensus in the working group.
+delay from start to finish is 3 years and 4 months, of which on average
+2 years and 10 months are spent getting consensus in the working group,
+and 3 to 4 months each for IETF consensus and for RFC production.
 
 The longest delay is found for {{?RFC8492}}, 6.5 years from start to finish.
 This is however a very special case, a draft that was prepared for
@@ -1027,7 +1056,7 @@ involved in the IETF, many of them with a prominent track record. There
 are just 2 exceptions, a single RFC in which only 3 of the 5 authors are
 well associated with the IETF.
 
-# Citation Counts
+# Citation Counts {#citations}
 
 In this exploration, we want to assess whether citation counts provide a
 meaningful assessment of the popularity of RFC. We obtain the citation
@@ -1204,7 +1233,7 @@ RFC that have high citation counts were both widely deployed, and can certainly 
 described as successful, but we also see many RFC that saw significant deployment
 without garnering a high level of citations.
 
-There is some evidence that citation counts are driven by academic interest,
+Citation counts are driven by academic interest,
 but are only loosely correlated with actual deployment. We saw that {{?RFC8446}}
 was widely cited in part because the standardization process involved many
 researchers, and that the high citation count of {{?RFC8312}} is
@@ -1223,46 +1252,53 @@ RFC defining Network Ingress Filtering that was obsoleted in May
 the RFC series. We see the same effect at work with {{?RFC8441}}, which
 garners very few citations although it obsoletes {{?RFC6455}} that has
 a large number of citations. The same goes for {{?RFC8468}}, which is
-sparsely cited while the {{?RFC2330}} is widely cited.
+sparsely cited while the {{?RFC2330}} is widely cited. Just counting citations
+will not indicate whether developers still use an old specification or
+have adopted the revised RFC.
 
-# Observations and Next Steps
+# Observations and Next Steps {#conclusion}
 
-This draft is not really complete. We have obtained feedback from many authors
-but not all. We should also get a review from the RFC Production Center. We may
-want to find a better way of looking at citations than simple queries on
-Google Scholar, and in any case we want to update the reference counts before
-publication, as they will keep changing over time. When an RFC describes a protocol,
-we may want to also compare the citation counts and the deployment status of
-the protocol.
+The goal of this study was to evaluate how the IETF produces standards,
+from working group processing to RFC production. As shown in
+(#process-analysis), the average RFC was produced in 3 years and 4 months, 
+which is similar to what was found in the
+2008 sample, but more than three times larger than the delays for the
+1998 sample.
 
-Even with those limitations, the exercise shows some promise, and also
-shows the interest of doing more studies.
+The Working group process appears to be the main source of delays. Efforts
+to diminish delays should probably focus there, instead of on the
+IETF and IESG reviews of the RFC production. For the RFC production
+phase, most of the variability originates in the AUTH48 process,
+which is influenced by a variety of factors such as number of
+authors or level of engagement of these authors.
 
-It is tempting to go from this exercise on published RFCs to a broader
-evaluation of the IETF productivity, but this would require more than
-just evaluating the RFCs. The IETF produces standard proposals and informative
-memos that get published in the RFC
-series, but that is not its only purpose. Two other purposes would be the
-organization of fruitful discussions between members of the technical community,
-and the filtering of ill-thought proposals so they are not endorsed in
-IETF publications.
+The Independent Submission stream operates as expected. The authors of
+the independent RFC appear to be mostly IETF insiders.
 
-We don't have good ideas yet for evaluating the propagation of ideas, but
-we could perhaps evaluate the filtering: not enough filtering would cause bad ideas to
-be published; too much filtering would cause good ideas
-to be rejected. 
+The analysis of citations in (#citation-numbers) shows that citation
+numbers are a very poor indication of the "value" of an RFC. Citation
+numbers measure the engagement of academic researchers with specific
+topics, but have little correlation with the level of adoption and
+deployment of a specific RFC.
 
-Not enough filtering should be visible by analyzing the published RFCs. Successful
-RFC will accrue many references and would drive many implementations. Unsuccessful
-RFCs would lack both. These criterias are hard to predict in advance, so we expect
-a fraction of the published RFCs to be unsuccessful. Too small a fraction would
-indicate a process that is too conservative, too large a fraction would indicate
-a process that's too lax. We can see that in the current analysis.
+This document analyses a small sample of RFC "in depth". This allowed
+gathering of detailed feedback on the process and the deployments. On
+the other hand, much of the data on delays is available from the
+data tracker. It may be worth considering adding an automated
+reporting of delay metrics in the data tracker.
 
-On the other hand, a reasonable balance between success and lack of it does not
-guarantee that the process is very efficient. It could be that the culling of bad
-ideas also culls good ones, and we would not know by just looking at the publications.
-For that, we would need to look at publication attempts that were abandoned, for
+This document only considers the RFC that were published in a given
+year. This approach can be criticized as introducing a form of
+"survivor bias". There are many drafts proposed to the IETF, and only
+a fraction of them end up being published as RFC. 
+On one hand this is expected,
+because part of the process is to triage between ideas that can gather
+consensus and those that don't. On the other hand, we don't know
+whether that triage is too drastic and discouraged progress on good
+ideas.
+
+One way to evaluate the triage process would be to 
+look at publication attempts that were abandoned, for
 example drafts that expired without progressing or being replaced. The sampling
 methodology could also be used for that purpose. Pick maybe 20 drafts at random,
 among those abandoned in a target year, and investigate why they were abandoned.
@@ -1283,7 +1319,7 @@ publication of specific standards.
 This draft does not require any IANA action.
 
 Peliminary analysis does not indicate that IANA is causing any particular
-delay in the publication process.
+delay in the RFC publication process.
 
 # Acknowledgements
 
@@ -1314,7 +1350,8 @@ Michiko Short,
 Bhuvaneswaran Vengainathan,
 Lao Weiguo, and
 Li Yizhou. 
-Many thanks to Adrian Farrel for his useful advice.
+Many thanks to Adrian Farrel for his useful advice, and to Stephen Farrel and Colin Perkins
+for their guidance on the use of citations.
 
 
 
