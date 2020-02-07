@@ -3,7 +3,7 @@ title: Evaluation of a Sample of RFC Produced in 2018
 abbrev: RFC-Eval-2018
 docname: draft-huitema-rfc-eval-project-02
 category: info
-date: 2019
+date: 2020
 
 stand_alone: yes
 
@@ -25,12 +25,29 @@ author:
         country: U.S.A
         email: huitema@huitema.net
 
+informative:
+    TRKR:
+        target: https://datatracker.ietf.org/
+        title: IETF Data Tracker
+        author:
+            org: IETF
+        date: 2020
+
+    SSCH:
+        target: https://www.semanticscholar.org/
+        title: Sematic Scholar
+        author:
+            org: Allen Institute for AI
+        date: 2020
+        
+
+
 --- abstract
 
 This document presents a first attempt at evaluating the recently published RFC.
 We analyze a set of randomly chosen RFC approved in 2018, looking for history
-and delays. We also use randomly chosen sets of RFc published in 2008 and 1998
-in order to compare delays seen in 2018 to those observed 10 or 20 years ago.  
+and delays. We also use two randomly chosen sets of RFC published in 2008 and 1998
+for comparing delays seen in 2018 to those observed 10 or 20 years ago.  
 The average RFC in the 2018 sample was produced in 3 years and 4 months,
 of which 2 years and 10 months were spent in the working group,
 3 to 4 months for IETF consensus and IESG review, and 3 to 4 months in RFC
@@ -61,6 +78,8 @@ In this memo, the author attempts to evaluate the RFC production process. This i
 an individual effort, and the author's conclusions presented here did not reach
 any kind of IETF consensus.
 
+The IETF keeps records of documents and process actions
+in the IETF data tracker {{TRKR}}.
 The IETF data tracker provides information about RFC and drafts, from which we can
 infer statistics about the production system. We can measure how
 long it takes to drive a proposition from initial draft to final publication,
@@ -73,34 +92,35 @@ Just measuring production delays may be misleading. If the IETF simply rubber-st
 draft proposals and published them, the delays would be short but the quality and
 impact might suffer. We hope that most of the RFC that are published are useful,
 but we need a way to measure that usefulness. We try to do that by measuring the
-number of references of the published RFCs in Semantic Scholar, and also by checking
+number of references of the published RFCs in Semantic Scholar {{SSCH}}, and
+also by asking the authors of each RFC in the sample
 whether the protocols and technologies defined in the RFCs were implemented and used on
 the Internet.
 
 In order to limit the resource required for this study, we selected at random 20
-RFC published in 2018, as explained in (#sample-selection). For comparison purposes,
+RFC published in 2018, as explained in {{sample-selection}}. For comparison purposes,
 we also selected at random 20 RFC published in 1998 and 20 published in 2008.
 Limiting the sample to 20 out of 209 RFCs published in 2018 allows for in depth
 analysis of each RFC, but readers should be reminded that the samll sample size limits 
 the statistical significance of the results.
 
 The information gathered for every RFC in the sample is presented in
-(#sample-rfc-analysis). In (#process-analysis) we analyze the production process
+{{sample-rfc-analysis}}. In {{process-analysis}} we analyze the production process
 and the sources of delays, comparing the 2018 sample to the selected samples for 1998
-and 2018. In (#citation-numbers) we present citation counts for the RFC in the samples,
+and 2018. In {{citation-numbers}} we present citation counts for the RFC in the samples,
 and analyze whether citation counts could be used to evaluate the quality of RFC.
 
 The measurement of delays could be automated by processing dates and
 events recorded in the data tracker. The measurement of published
 RFC could be complemented by statistics on abandoned drafts, which
 would measure the efficiency of the IETF triaging process. These potential
-next steps are developed in (#conclusion).
+next steps are developed in {{conclusion}}.
 
 
-# Selecting a random sample of RFC {#sample-selection}
+# Selecting a Random Sample of RFC {#sample-selection}
 
 Basic production mechanisms could be evaluated by processing data from
-the IETF tracker, but subjective data requires manual assessment of results,
+the IETF data tracker, but subjective data requires manual assessment of results,
 which can be time consuming. Since our resources are limited, we will only
 perform this analysis for a small sample of RFC, selected at random
 from the list of RFC approved in 2018. Specifically, we will pick
@@ -206,9 +226,9 @@ Rank 19: 2297 -- md5=78ee7e128436c969c80900fef80c075c
 Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
 ~~~
 
-# Analysis of 20 selected RFC {#sample-rfc-analysis}
+# Analysis of 20 Selected RFC {#sample-rfc-analysis}
 
-We review each of the RFC listed in (#methodology) for the year 2018, trying 
+We review each of the RFC listed in {{sample-selection}} for the year 2018, trying 
 both to answer the known questions and to gather insight for further analyzes.
 In many cases, the analysis of the data is complemented by direct feedback
 from the RFC authors.
@@ -231,7 +251,7 @@ IANA action: create table
 The draft underwent minor copy edit before publication. 
 
 The long delay in Auth48 is probaby due to clustering with {{?RFC8410}}, which entered
-AUTH 48 on 06/05. The MISSREF tracker code was cleared then.
+AUTH 48 on 06/05. The MISSREF code was cleared then in the IETF data tracker.
 
 ## 8456
 Benchmarking Methodology for Software-Defined Networking (SDN) 
@@ -264,7 +284,7 @@ and the methodologies in RFC 8456 have been implemented in benchmarking products
 
 ## 8446
 The Transport Layer Security (TLS) Protocol Version 1.3 {{?RFC8446}}, as the title
-indicates, defines the new version of the TLS protocol. From the datatracker, we extract
+indicates, defines the new version of the TLS protocol. From the IETF data tracker, we extract
 the following:
 
 ~~~
@@ -750,13 +770,13 @@ The differences between the final draft and the publish RFC show copy editing fo
 and clarity, but do not account for the back and forth between authors and editors
 mentioned by the authors.
 
-# Analysis of process and delays {#process-analysis}
+# Analysis of Process and Delays {#process-analysis}
 
 We examine the 20 RFC in the sample, measuring various characteristics such
 as delay and citation counts, in an attempt to identify patterns in the
 IETF processes.
 
-## Publication delays
+## Publication Delays
 
 We look at the distribution of delays between the submission of the first
 draft and the publication of the RFC. We break out the total delay in three
@@ -890,7 +910,7 @@ more on each RFC now than they were 20 years ago, but the same amount
 of work is stretched over a much longer period.
 
 
-## Preparation and Publication delays
+## Preparation and Publication Delays
 
 The preparation and publication delays include three components: 
 
@@ -941,7 +961,7 @@ delay, we compute the correlation factor between the observed delays and 4
 plausible explanation factors:
 
 * The number of pages in the document,
-* The amount of copy edit, as discussed in (#copy-editing),
+* The amount of copy edit, as discussed in {{copy-editing}},
 * Whether or not an IANA action was required.
 
 We find the following values:
@@ -1000,7 +1020,7 @@ a long time, and we got three explanations:
 As mentioned above, we were not able to verify these hypotheses by looking at
 the data.
 
-## Copy editing
+## Copy Editing
 
 We can assess the amount of copy editing applied to each published RFC by
 comparing the text of the draft approved for publication and the text of the
@@ -1216,11 +1236,11 @@ for the three samples.
 We also see that the number of references to RFC fades over time. Only the
 most popular of the RFC produced in 1998 are still cited in 2019.
 
-## Citations versus deployments
+## Citations Versus Deployments
 
 The following table shows
-side by side the number of citations as measured in (#citation-numbers) and
-the estimation of deployment as indicated in (#sample-rfc-analysis). 
+side by side the number of citations as measured in {{citation-numbers}} and
+the estimation of deployment as indicated in {{sample-rfc-analysis}}. 
 
 RFC(2018) | Status | Citations | Deployment
 ---- | ---- | ----:| ----:
@@ -1277,7 +1297,7 @@ have adopted the revised RFC.
 
 The goal of this study was to evaluate how the IETF produces standards,
 from working group processing to RFC production. As shown in
-(#process-analysis), the average RFC was produced in 3 years and 4 months, 
+{{process-analysis}}, the average RFC was produced in 3 years and 4 months, 
 which is similar to what was found in the
 2008 sample, but more than three times larger than the delays for the
 1998 sample.
@@ -1292,7 +1312,7 @@ authors or level of engagement of these authors.
 The Independent Submission stream operates as expected. The authors of
 the independent RFC appear to be mostly IETF insiders.
 
-The analysis of citations in (#citation-numbers) shows that citation
+The analysis of citations in {{citation-numbers}} shows that citation
 numbers are a very poor indication of the "value" of an RFC. Citation
 numbers measure the engagement of academic researchers with specific
 topics, but have little correlation with the level of adoption and
@@ -1301,8 +1321,8 @@ deployment of a specific RFC.
 This document analyses a small sample of RFC "in depth". This allowed
 gathering of detailed feedback on the process and the deployments. On
 the other hand, much of the data on delays is available from the
-data tracker. It may be worth considering adding an automated
-reporting of delay metrics in the data tracker.
+IETF data tracker. It may be worth considering adding an automated
+reporting of delay metrics in the IETF data tracker.
 
 This document only considers the RFC that were published in a given
 year. This approach can be criticized as introducing a form of
@@ -1324,7 +1344,7 @@ the authors discovered a flaw in their proposal? Or was it because some factiona
 struggle blocked a good idea? Was the idea pursued in a different venue?
 Hopefully, someone will try this kind of investigation.
 
-# Security considerations
+# Security Considerations
 
 This draft does not specify any protocol.
 
@@ -1367,7 +1387,7 @@ Michiko Short,
 Bhuvaneswaran Vengainathan,
 Lao Weiguo, and
 Li Yizhou. 
-Many thanks to Adrian Farrel for his useful advice, and to Stephen Farrel and Colin Perkins
+Many thanks to Adrian Farrel for his useful advice, and to Stephen Farrell and Colin Perkins
 for their guidance on the use of citations.
 
 
