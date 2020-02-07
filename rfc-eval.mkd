@@ -40,15 +40,26 @@ informative:
             org: Allen Institute for AI
         date: 2020
 
-    
     TLS13IMP:
         target: https://github.com/tlswg/tlswg-wiki/blob/master/IMPLEMENTATIONS.md
         title: TLS 1.3 Implementations
         author:
             org: TLS WG
         date: 2020
-        
 
+    RFCYEAR:
+        target: https://www.rfc-editor.org/rfcs-per-year/
+        title: Number of RFC Published per YEAR
+        author:
+            org: RFC Editor
+        date: 2020
+
+    IETFCOUNT:
+        target: https://www.ietf.org/how/meetings/past/
+        title: Past IETF Meetings
+        author:
+            org: IETF
+        date: 2020
 
 --- abstract
 
@@ -412,7 +423,8 @@ Published 2018-02-27
 
 This RFC took only 9 months from first draft to publication, which is the shortest in
 the 2018 sample set. In part, this is because the text was privately circulated
-and reviewed before the first draft was published. The nature of the document is
+and reviewed by ISE designated experts before the first draft was published.
+The nature of the document is
 another reason for the short delay. It is an opinion piece, and does not require
 the same type of consensus building and reviews than a protocol specification.
 
@@ -442,6 +454,8 @@ IANA Table, table entries
 
 Minor set of copy edits, mostly for style, also clarity.
 
+TODO: something about the history of TRILL, explaining the initial delays.
+
 
 ## 8498
 A P-Served-User Header Field Parameter for an Originating Call Diversion (CDIV)
@@ -467,7 +481,7 @@ Storing Validation Parameters in PKCS#8 {{?RFC8479}}
 ~~~
 Informational, 8 pages. Independent stream.
 5 personal drafts (personal), first August 8, 2017.
-ISE review started 2018-03-29, draft 02
+ISE review started 2018-12-10, draft 00
 IETF conflict review and IESG review started 2018-03-29
 Approved 2018-08-20, draft 03
 AUTH-48 2018-09-20, draft 04
@@ -479,7 +493,7 @@ The goal of the draft was to document what the
 gnutls implementation was using for storing provably generated RSA keys.
 This is a short RFC that was published relatively quickly, although
 discussion between the author, the Independent Series Editor and the
-IESG lasted several months. In the initial conflict review, Tthe IESG asked
+IESG lasted several months. In the initial conflict review, The IESG asked
 the ISE to not publish this document before IETF working groups had
 an opportunity to pick up the work. The author met that requirement by
 a presentation to the SECDISPATCH WG in IETF 102. Since no WG was
@@ -911,17 +925,32 @@ Year | Fastest 25% | Median | Slowest 25%
 1998 | 169 | 365 | 442
 
 The IETF takes three to four times more times to produce an RFC in 2018
-than it did in 1998, but about the same time as it did in 2008. 
+than it did in 1998, but about the same time as it did in 2008.
+We can get a rough estimate of how this translates in term of
+"level of attention" per RFC by comparing the number of participants
+in the IETF meetings of 2018, 2008 and 1998 {{IETFCOUNT}} to the number of RFC
+published these years {{RFCYEAR}}. 
 
-The increased delay does not mean increased work per RFC. 
-The number of RFC published per year remained between 200 and
-300 all those years, and the number of participants is not greater now
-than in 1998. If we estimated the "level of attention" by dividing the
-number of participants by the number of RFC produced, we would see
-a number that remains stable. People are probably not working much
-more on each RFC now than they were 20 years ago, but the same amount
-of work is stretched over a much longer period.
+Year | Nb RFC | Spring P. | Summer P. | Fall | Average P. | Attendees/RFC
+---- | ----:| ----:|----:| ----:|----:
+2018 | 208 | 1235 | 1078 | 879 | 1064 | 5.1
+2008 | 290 | 1128 | 1181 | 962 | 1090 | 3.8
+1998 | 234 | 1775 | 2106 | 1705 | 1862 | 9.0
 
+The last column in the table provides the ratio of average number
+of participants by number of RFC produced. If the IETF was a centralized
+organization, if all participants and documents were equivalent, this
+ratio would be the number of participants dedicated to produce an RFC
+on a given year. This is of course a completely abstract figure because
+none of the hypotheses above is true, but it still gives a vague
+indication of the "level of attention" applied to documents. We see
+that this ratio has increased from 2008 to 2018, as the number of
+participants was about the same for these two years but the number of
+published RFC decreased. However, that ratio was much higher in 1998.
+The IETF had many more participants, and there were probably
+many more eyes available to review any given draft. If we applied the
+ratios of 1998, the IETF would be producing 119 documents in 2018
+instead of 208.
 
 ## Preparation and Publication Delays
 
