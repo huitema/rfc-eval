@@ -29,7 +29,9 @@ author:
 
 This document presents a first attempt at evaluating the recently published RFC.
 We analyze a set of randomly chosen RFC approved in 2018, looking for history
-and delays. The average RFC was produced in 3 years and 4 months,
+and delays. We also use randomly chosen sets of RFc published in 2008 and 1998
+in order to compare delays seen in 2018 to those observed 10 or 20 years ago.  
+The average RFC in the 2018 sample was produced in 3 years and 4 months,
 of which 2 years and 10 months were spent in the working group,
 3 to 4 months for IETF consensus and IESG review, and 3 to 4 months in RFC
 production. The main variation in RFC production delays comes from
@@ -40,25 +42,32 @@ Scholar, and compare citation counts with what we know about deployment.
 We show that citation counts indicate academic interest, but
 correlate only loosely with deployment or usage of the specifications.
 
-The measurement of delays could be automated by processing dates and
-events recorded in the data tracker. The measurement of published
-RFC could be complemented by statistics on abandoned drafts, which
-would measure the efficiency of the IETF triaging process.
+The RFCs selected for this survey were chosen at random and represent
+a small sample of all RFCs produced, and only approximately 10% of
+the RFCs produced in each of 1998, 2008, and 2018.  It is possible
+that different samples would produce different results.  Furthermore,
+the conclusions drawn from the observations made in this document
+represent the author's  opinions and do not have consensus of the
+IETF.
 
 --- middle
 
-# RFC Evaluation project
+# Introduction
 
 As stated on the organization's web site, "The IETF is a large open international
 community of network designers, operators, vendors, and researchers concerned with
 the evolution of the Internet architecture and the smooth operation of the Internet."
-In this memo, we attempt to evaluate the RFC production process.
+In this memo, the author attempts to evaluate the RFC production process. This is
+an individual effort, and the author's conclusions presented here did not reach
+any kind of IETF consensus.
 
 The IETF data tracker provides information about RFC and drafts, from which we can
 infer statistics about the production system. We can measure how
 long it takes to drive a proposition from initial draft to final publication,
 and how these delays can be split between Working Group discussions, IETF reviews,
 IESG assessment, RFC Editor delays and final reviews by the authors.
+
+TODO: Need to write something here about the start date!
 
 Just measuring production delays may be misleading. If the IETF simply rubber-stamped
 draft proposals and published them, the delays would be short but the quality and
@@ -71,13 +80,21 @@ the Internet.
 In order to limit the resource required for this study, we selected at random 20
 RFC published in 2018, as explained in (#sample-selection). For comparison purposes,
 we also selected at random 20 RFC published in 1998 and 20 published in 2008.
+Limiting the sample to 20 out of 209 RFCs published in 2018 allows for in depth
+analysis of each RFC, but readers should be reminded that the samll sample size limits 
+the statistical significance of the results.
+
 The information gathered for every RFC in the sample is presented in
 (#sample-rfc-analysis). In (#process-analysis) we analyze the production process
 and the sources of delays, comparing the 2018 sample to the selected samples for 1998
 and 2018. In (#citation-numbers) we present citation counts for the RFC in the samples,
 and analyze whether citation counts could be used to evaluate the quality of RFC.
-Finally, we present the conclusion of the study and propose next steps in
-(#conclusion).
+
+The measurement of delays could be automated by processing dates and
+events recorded in the data tracker. The measurement of published
+RFC could be complemented by statistics on abandoned drafts, which
+would measure the efficiency of the IETF triaging process. These potential
+next steps are developed in (#conclusion).
 
 
 # Selecting a random sample of RFC {#sample-selection}
