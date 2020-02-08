@@ -1,7 +1,7 @@
 ---
 title: Evaluation of a Sample of RFC Produced in 2018
 abbrev: RFC-Eval-2018
-docname: draft-huitema-rfc-eval-project-02
+docname: draft-huitema-rfc-eval-project-03
 category: info
 date: 2020
 
@@ -105,8 +105,6 @@ long it takes to drive a proposition from initial draft to final publication,
 and how these delays can be split between Working Group discussions, IETF reviews,
 IESG assessment, RFC Editor delays and final reviews by the authors.
 
-TODO: Need to write something here about the start date!
-
 Just measuring production delays may be misleading. If the IETF simply rubber-stamped
 draft proposals and published them, the delays would be short but the quality and
 impact might suffer. We hope that most of the RFC that are published are useful,
@@ -135,8 +133,63 @@ RFC could be complemented by statistics on abandoned drafts, which
 would measure the efficiency of the IETF triaging process. These potential
 next steps are developed in {{conclusion}}.
 
+# Methodology
 
-# Selecting a Random Sample of RFC {#sample-selection}
+The study reported here started with a simple idea: take a sample of RFC, and
+perform an in-depth analysis of the path from the first presentation of the idea
+to its publication, while also trying to access the success of the resulting
+specification. This requires defining the key milestones that we want to track,
+and drawing a random sample using an unbiased process.
+
+## Defining the Important Milestones {#milestones}
+
+The IETF data tracker records a list of events for each document processed by IETF
+working groups. This has a high granularity, and also a high variability. Most documents
+start life as an individual draft, are adopted by a working group, undergo a
+working group last call, are submitted to the IESG, undergo an IETF last call
+and an IESG review, get eventually approved by the IESG, and are processed
+for publication by the RFC Editor, but there are exceptions. Some documents
+are first submitted to one working group and then moved to another. Some documents
+are published through the Independent Stream, and are submitted to the
+Independent Stream Editor instead of the IESG. 
+
+In order to simplify tabulation, 
+we break the delay from between the submission of the first
+draft and the publication of the RFC in three big components:
+
+* The working group delay, from the first draft to the start of the IETF
+  last call;
+
+* The IETF delay, which lasts from the beginning of the IETF last call to
+  the approval by the IESG, including the reviews by
+  various directorates;
+
+* The RFC production, from approval by the IESG to publication, including
+  the AUTH-48 reviews.
+
+For submissions to the independent stream, we don't have a working group.
+We consider instead the progression of the individual draft until the
+adoption by the ISE as the equivalent of the "working group" period, 
+and the delay from adoption by the ISE until submission to the RFC Editor
+as the equivalent of the IETF delay. 
+
+We measure the staring point of the process using the date of submission
+of the first draft listed on that RFC page in the IETF data tracker. In most
+case, this first draft is an individual draft that then resubmitted as a
+working group draft, or maybe resubmitted with a new name as the draft was
+searching for a home in an IETF working group, or before deciding for
+submission on the independent stream.
+
+The IETF Data Tracker entries for RFC and drafts do not list working group
+events like Working Group Last Call. The only intermediate event that we list
+between the first draft and the submission to the IESG is the Working Group
+Adoption. For that, we use the date of submission of the version 00 of the
+draft eventually published as RFC. We use the same definition for drafts
+submitted to the Independent Stream.
+
+ 
+
+## Selecting a Random Sample of RFC {#sample-selection}
 
 Basic production mechanisms could be evaluated by processing data from
 the IETF data tracker, but subjective data requires manual assessment of results,
@@ -257,15 +310,18 @@ IANA Registration for the Cryptographic Algorithm Object Identifier Range {{?RFC
 
 ~~~ 
 Informational, 5 pages
-4 drafts (personal), first May 8, 2017. Published August 2018.
-Last call announced 2017/10/09
-IESG evaluation starts 2017/12/28
-Approved 2018/02/26, draft 03
-AUTH-48 2018/04/20
-AUTH-48 complete 2018/07/17
-Published 2018/08/06
+4 drafts (personal), first 2017-05-08.
+Last call announced 2017-10-09
+IESG evaluation starts 2017-12-28
+Approved 2018-02-26, draft 03
+AUTH-48 2018-04-20
+AUTH-48 complete 2018-07-17
+Published 2018-08-06
 IANA action: create table
 ~~~
+
+This RFC was published from the individual draft, which was not resubmitted
+as a working group draft.
 
 The draft underwent minor copy edit before publication. 
 
@@ -283,7 +339,8 @@ Controller Performance {{?RFC8456}}:
 
 ~~~
 Informational, 64 pages
-2 personal drafts, 9 WG drafts, first in March 2015
+2 personal drafts, 9 WG drafts, first 2015-03-23
+WG adoption on 2015-10-18
 Last call announced 2018-01-19
 IESG evaluation starts 2018-02-27
 IESG approved 2018-05-25
@@ -314,14 +371,15 @@ the following:
 ~~~
 Proposed standard
 160 pages
-29 WG drafts first April 17, 2014.
-Last call announced 2018/02/15
-IESG evaluation starts 2018/03/02
-Approved 2018/03/21, draft 28
-AUTH-48 2018/06/14
-AUTH-48 complete 2018/08/10
-Published 2018/08/10
+29 WG drafts first 2014-04-17.
+Last call announced 2018-02-15
+IESG evaluation starts 2018-03-02
+Approved 2018-03-21, draft 28
+AUTH-48 2018-06-14
+AUTH-48 complete 2018-08-10
+Published 2018-08-10
 ~~~
+This draft started as a WG effort.
 
 The RFC was a major effort in the IETF. Working group members developed and tested
 several implementations. Researchers analyzed the specifications and performed 
@@ -356,7 +414,8 @@ drive initial work/evolutions from the WG.
 
 ~~~
 Informational, 13 pages.
-2 personal drafts (personal), first January 31, 2014. 13 WG drafts.
+2 personal drafts (personal), first 2014-01-31. 13 WG drafts.
+WG adoption on 2014-05-13
 Last call announced 2017-04-20
 IESG evaluation starts 2017-05-04, draft 09
 Approved 2017-12-19, draft 12
@@ -380,7 +439,8 @@ Bootstrapping WebSockets with HTTP/2 {{?RFC8441}}
 
 ~~~
 Proposed standard, 8 pages. Updates RFC 6455.
-3 personal drafts (personal), first 10/15/2017. 8 WG drafts.
+3 personal drafts (personal), first 2017-10-15. 8 WG drafts.
+WG adoption on 2017-12-19
 Last call announced 2018-05-07, draft 05
 IESG evaluation starts 2018-05-29, draft 06
 Approved 2018-06-07, draft 07
@@ -412,7 +472,7 @@ published on the Independent Stream.
 
 ~~~
 Informational, 29 pages. Independent stream.
-5 personal drafts (personal), first June 2, 2017.
+5 personal drafts (personal), first 2017-06-02.
 ISE review started 2017-07-10, draft 03
 IETF conflict review and IESG review started 2017-10-29 
 Approved 2017-12-18, draft 04
@@ -442,7 +502,8 @@ Transparent Interconnection of Lots of Links (TRILL): Multi-Topology {{?RFC8377}
 
 ~~~
 Proposed standard, 20 pages. Updates RFC 6325, 7177.
-3 personal drafts (personal), first September 3, 2013. 7 WG drafts.
+3 personal drafts (personal), first 2013-09-03. 7 WG drafts.
+WG adoption on 2015-09-01
 Last call announced 2018-02-19, draft 05
 IESG evaluation starts 2018-03-02, draft 06
 Approved 2018-03-12, draft 05
@@ -454,8 +515,6 @@ IANA Table, table entries
 
 Minor set of copy edits, mostly for style, also clarity.
 
-TODO: something about the history of TRILL, explaining the initial delays.
-
 
 ## 8498
 A P-Served-User Header Field Parameter for an Originating Call Diversion (CDIV)
@@ -463,7 +522,8 @@ Session Case in the Session Initiation Protocol (SIP) {{?RFC8498}}.
 
 ~~~
 Informational, 15 pages.
-5 personal drafts (personal), first March 21, 2016. 9 WG drafts.
+5 personal drafts (personal), first 2016-03-21. 9 WG drafts.
+WG adoption on 2017-05-15
 Last call announced 2018-10-12, draft 05
 IESG evaluation starts 2018-11-28, draft 07
 Approved 2018-12-10, draft 08
@@ -480,7 +540,7 @@ Storing Validation Parameters in PKCS#8 {{?RFC8479}}
 
 ~~~
 Informational, 8 pages. Independent stream.
-5 personal drafts (personal), first August 8, 2017.
+5 personal drafts (personal), first 2017-08-08.
 ISE review started 2018-12-10, draft 00
 IETF conflict review and IESG review started 2018-03-29
 Approved 2018-08-20, draft 03
@@ -509,7 +569,8 @@ Framework for Abstraction and Control of TE Networks (ACTN) {{?RFC8453}}
 
 ~~~
 Informational, 42 pages.
-3 personal drafts, first June 15, 2015. 16 WG drafts.
+3 personal drafts, first 2015-06-15. 16 WG drafts.
+WG adoption on 2016-07-15
 Out of WG 2018-01-26, draft 11
 Expert review requested, 2018-02-13
 Last call announced 2018-04-16, draft 13
@@ -528,15 +589,17 @@ Deprecate Triple-DES (3DES) and RC4 in Kerberos {{?RFC8429}}
 
 ~~~
 BCP, 10 pages.
-6 WG drafts, first 5/1/2017.
-Last call announced 7/16/2017, draft 03
-IESG evaluation starts 8/18/2017, draft 04
-Approved 5/25/2018, draft 05
-AUTH-48 7/24/2018
-AUTH-48 complete 10/31/2018
-Published 10/31/2018
+6 WG drafts, first 2017-05-01.
+Last call announced 2017-07-16, draft 03
+IESG evaluation starts 2017-08-18, draft 04
+Approved 2018-05-25, draft 05
+AUTH-48 2018-07-24
+AUTH-48 complete 2018-10-31
+Published 2018-10-31
 IANA Action, table rows added.
 ~~~
+
+This draft started as a working group effort.
 
 This RFC recommends to deprecate two encryption algorithms that are now considered
 obsolete and possibly broken. The document was sent back to the WG after the first last call,
@@ -565,8 +628,9 @@ CUBIC for Fast Long-Distance Networks {{?RFC8312}}
 
 ~~~
 Informational, 18 pages.
-2 personal drafts, first 9/1/2014. 8 WG drafts
-Last call announced 9/18/2017, draft 06
+2 personal drafts, first 2014-09-01. 8 WG drafts
+WG adoption on 2015-06-08
+Last call announced 2017-09-18, draft 06
 IESG evaluation starts 2017-11-14
 Approved 2017-10-04, draft 07
 AUTH-48 2018-01-08
@@ -594,13 +658,14 @@ Secure Password Ciphersuites for Transport Layer Security (TLS) {{?RFC8492}}
 
 ~~~
 Informational, 40 pages. (Independent Stream)
-10 personal drafts, first 9/2/2012. 8 WG drafts
+10 personal drafts, first 2012-09-07. 8 WG drafts
+Targeted to ISE stream 2016-08-05
 ISE review started 2017-05-10, draft 01
 IETF conflict review and IESG review started 2017-09-04
 Approved 2017-10-29, draft 04
-AUTH-48 10/19/2018, draft 05
-AUTH-48 complete 2/19/2019
-Published 2/21/2019
+AUTH-48 2018-10-19, draft 05
+AUTH-48 complete 2019-02-19
+Published 2019-02-21
 IANA Action, table rows added.
 ~~~
 
@@ -632,7 +697,8 @@ architecture.
 
 ~~~
 Experimental, 21 pages.
-5 personal drafts, first 2/28/2014. 10 WG drafts
+5 personal drafts, first 2014-02-28. 10 WG drafts
+WG adoption on 2015-12-21
 Last call announced 2018-02-13, draft 07
 IESG evaluation starts 2018-02-28, draft 08
 Approved 2018-03-12, draft 09
@@ -659,13 +725,14 @@ Unknown Unicast, and Multicast (BUM) Traffic {{?RFC8361}}
 
 ~~~
 Proposed Standard, 17 pages.
-3 personal drafts, first 11/12/2013. 14 WG drafts
+3 personal drafts, first 2013-11-12. 14 WG drafts
+WG adoption on 2014-12-16
 Last call announced 2017-11-28, draft 10
 IESG evaluation starts 2017-12-18, draft 11
 Approved 2018-01-29, draft 13
-AUTH-48 2018-09-17
-AUTH-48 complete 4/9/2018
-Published 2018-10-08
+AUTH-48 2018-03-09
+AUTH-48 complete 2018-04-09
+Published 2018-04-12
 ~~~
 
 According to the authors, the long delays in producing this RFC was
@@ -680,7 +747,8 @@ Transport Layer Security (TLS) Extension for Token Binding Protocol Negotiation 
 
 ~~~
 Proposed Standard, 8 pages.
-1 personal drafts, first 5/29/2015. 15 WG drafts
+1 personal drafts, 2015-05-29. 15 WG drafts
+WG adoption on 2015-09-11
 Last call announced 2017-11-13, draft 10
 IESG evaluation starts 2018-03-19
 Approved 2018-07-20, draft 14
@@ -704,7 +772,8 @@ A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service Delivery {
 
 ~~~
 Proposed Standard, 158 pages.
-5 personal drafts, first 9/1/2016. 11 WG drafts
+5 personal drafts, first 2016-09-01. 11 WG drafts
+WG adoption on 2017-02-26
 Last call announced 2018-02-21, draft 07
 IESG evaluation starts 2018-03-14, draft 08
 Approved 2018-06-25, draft 10
@@ -721,7 +790,8 @@ OSPF protocol. It makes OSPFv3 fully extensible.
 
 ~~~
 Proposed Standard, 33 pages.
-4 personal drafts, first February 17, 2013. 24 WG drafts
+4 personal drafts, first 2013-02-17. 24 WG drafts
+WG adoption on 2013-10-15
 Last call announced 2017-12-19, draft 19
 IESG evaluation starts 2018-01-18, draft 20
 Approved 2018-01-29, draft 23
@@ -749,7 +819,8 @@ Performance Metrics (IPPM) Framework {{?rfc8468}}.
 
 ~~~
 Informational, 15 pages.
-3 personal drafts, first August 6, 2015. 7 WG drafts
+3 personal drafts, first 2015-08-06. 7 WG drafts
+WG adoption on 2016-07-04
 Last call announced 2018-04-11, draft 04
 IESG evaluation starts 2018-05-24, draft 05
 Approved 2018-07-10, draft 06
@@ -803,33 +874,18 @@ We examine the 20 RFC in the sample, measuring various characteristics such
 as delay and citation counts, in an attempt to identify patterns in the
 IETF processes.
 
-## Publication Delays
+## First Draft to RFC Delays
 
 We look at the distribution of delays between the submission of the first
-draft and the publication of the RFC. We break out the total delay in three
-components:
-
-* The working group delay, from the first draft to the start of the IETF
-  last call;
-
-* The IETF delay, which lasts from the beginning of the IETF last call to
-  the approval by the IESG, including the reviews by
-  various directorates;
-
-* The RFC production, from approval by the IESG to publication, including
-  the AUTH-48 reviews.
-
-For submissions to the independent stream, we don't have a working group.
-We consider instead the progression of the individual draft until the
-adoption by the ISE as the equivalent of the "working group" period, 
-and the delay from adoption by the ISE until submission to the RFC Editor
-as the equivalent of the IETF delay. The following table
+draft and the publication of the RFC, using the three big milestones defined
+in {{milestones}}: delay in the Working Group, IETF delay, and publication
+delay. The following table
 shows the delays for the 20 RFC in the sample:
 
 | RFC | Status | Pages | Overall | WG | IETF | Edit |
 | ---:| ----  | ----:| -----:| ---:| ---:| ---:|
 | 8411 | Info | 5 | 455 | 154 | 140 | 161 |
-| 8456 | Info | 64 | 1107 | 823 | 126 | 158 |
+| 8456 | Info | 64 | 1317 | 1033 | 126 | 158 |
 | 8446 | PS | 160 | 1576 | 1400 | 34 | 142 |
 | 8355 | Info | 13 | 1517 | 1175 | 243 | 99 |
 | 8441 | PS | 8 | 341 | 204 | 31 | 106 |
@@ -848,15 +904,14 @@ shows the delays for the 20 RFC in the sample:
 | 8362 | PS | 33 | 1871 | 1766 | 41 | 64 |
 | 8468 | Info | 15 | 1196 | 979 | 90 | 127 |
 | ---:| ----  | ----:| -----:| ---:| ---:| ---:|
-| | average | 35 | 1161 | 928 | 110 | 123 |
-| | average(not ISE) | 37 | 1188 | 978 | 101 | 109 |
+| | average | 35 | 1172 | 939 | 110 | 123 |
+| | average(not ISE) | 35 | 1202 | 991 | 101 | 109 |
 
 
-
-The average delay from first draft to publication is about 3 years, but this
+The average delay from first draft to publication is about 3 years and 2 months, but this
 varies widely. Excluding the independent stream submissions, the average
-delay from start to finish is 3 years and 4 months, of which on average
-2 years and 10 months are spent getting consensus in the working group,
+delay from start to finish is 3 years and 3 months, of which on average
+2 years and 9 months are spent getting consensus in the working group,
 and 3 to 4 months each for IETF consensus and for RFC production.
 
 The longest delay is found for {{?RFC8492}}, 6.5 years from start to finish.
@@ -951,6 +1006,47 @@ The IETF had many more participants, and there were probably
 many more eyes available to review any given draft. If we applied the
 ratios of 1998, the IETF would be producing 119 documents in 2018
 instead of 208.
+
+## Working Group Delays
+
+The largest part of the delays is spent in the working groups, before
+the draft is submitted to the IESG for IETF review. As mentioned in
+{{milestones}}, the only intermediate milestone that we can extract
+from the IETF data tracker is the date at which the document was
+adopted by the working group, or targeted for independent submission.
+The breakdown of the delays for the documents in our sample is:
+
+RFC | Status | WG | Until adoption | After adoption
+--- | --- | ---: | ---: | ---: 
+8411 | Info | 154 | 0 | 154
+8456 | Info | 1033 | 209 | 824
+8446 | PS | 1400 | 0 | 1400
+8355 | Info | 1175 | 102 | 1073
+8441 | PS | 204 | 65 | 139
+8324 | ISE | 38 | 0 | 38
+8377 | PS | 1630 | 728 | 902
+8498 | Info | 935 | 420 | 515
+8479 | ISE | 233 | 0 | 233
+8453 | Info | 1036 | 396 | 640
+8429 | BCP | 76 | 0 | 76
+8312 | Info | 1113 | 280 | 833
+8492 | ISE | 1706 | 1428 | 278
+8378 | Exp | 1446 | 661 | 785
+8361 | PS | 1477 | 399 | 1078
+8472 | PS | 899 | 105 | 794
+8466 | PS | 538 | 178 | 360
+8362 | PS | 1766 | 240 | 1526
+8468 | Info | 979 | 333 | 646
+--- | --- | ---: | ---: | ---: 
+ | Average | 939 | 292 | 647
+
+The delay before working group adoption average to a bit less than 10 months,
+compared to 1 years and a bit more than 9 months for delays after adoption.
+We see that RFC 8492 stands out, with long delays spent attempting publication through
+a working group before submission to the independent editor. There are a few
+documents that started immediately as working group efforts, or were immediately targeted
+for publication in the independent series. Those documents tend to see short delays,
+with the exception of RFC 8446 on which the TLS working groupspent a long time working.
 
 ## Preparation and Publication Delays
 
@@ -1127,23 +1223,26 @@ observation motivated a secondary analysis of all the RFC
 published in the "independent" stream in 2018. There are 14 such RFC:
 8507, 8494, 8493, 8492, 8483, 8479, 8433, 8409, 8374, 8369, 8367, 8351,
 8328 and 8324. (RFC 8367 and 8369 were
-published on 1 April 2018.) We can ask whether the authors of
-these RFC are these outsiders, part of a "wider community" or are
-people who are also contributing to the IETF. The overwhelming
-response is, "insiders". Pretty much all the authors are or were
-involved in the IETF, many of them with a prominent track record. There
-are just 2 exceptions, a single RFC in which only 3 of the 5 authors are
-well associated with the IETF.
+published on 1 April 2018.) The majority of
+the documents were published by regular IETF participants, but
+two of them were not. One describes "The BagIt File Packaging Format (V1.0)"
+{{?RFC8493}}, and the other the "Yeti DNS Testbed" {{?RFC8483}}. They
+document a data format and a system developed outside the IETF, and illustrate
+the outreach function of the Independent Stream. In both cases, the
+authors include one experienced IETF participant, who presumably helped
+outsiders navigate the publication process.
 
 # Citation Counts {#citations}
 
 In this exploration, we want to assess whether citation counts provide a
 meaningful assessment of the popularity of RFC. We obtain the citation
 counts through the Semantic Scholar API, using queries of the form:
+
 ~~~
 http://api.semanticscholar.org/
      v1/paper/10.17487/rfc8446?include_unknown_references=true
 ~~~
+
 In these queries, the RFC is uniquely identified by its DOI reference,
 which is composed of the RFC Series prefix 10.17487 and the rfc identifier.
 The queries return a series of properties, including a list of citations
@@ -1196,6 +1295,14 @@ The next most cited RFC in the sample is {{?RFC8312}} which describes the
 Cubic congestion control algorithm for TCP. That protocol was also the
 target of a large number of academic publications.The other RFC in the
 sample only have a small number of citations.
+
+There is probably a small bias when measuring citations at a fixed date.
+An RFC published in January 2018 would have more time to accrue citations than
+one published in December. That may be true to some extent, as the second most
+cited RFC in the set was published in January. However, the effect has to be
+limited. The most cited RFC was published in August, and the second most cited
+was published in 2019. (That RFC got an RFC number in 2018, but publication
+was slowed by long AUTH-48 delays.)
 
 ## Comparison to 1998 and 2008
 
@@ -1349,10 +1456,20 @@ to diminish delays should probably focus there, instead of on the
 IETF and IESG reviews of the RFC production. For the RFC production
 phase, most of the variability originates in the AUTH-48 process,
 which is influenced by a variety of factors such as number of
-authors or level of engagement of these authors.
+authors or level of engagement of these authors. 
 
-The Independent Submission stream operates as expected. The authors of
-the independent RFC appear to be mostly IETF insiders.
+Most of the delay is spent in the working group, but the IETF data
+tracker does not hold much information about what happens inside
+the working groups. For example, events like Working Group Last Calls
+are not recorded in the history of the drafts available in the
+datatracker. Such information would have been interesting. Of course,
+requiring that information would create an administrative burden, so
+there is clearly a trade-off between requiring more work from working
+group chairs and providing better data for process analysis.
+
+The Independent Submission stream operates as expected. The majority
+of the authors of the independent RFC appear to be in IETF insiders,
+but there is some amount of engagement by outside parties.
 
 The analysis of citations in {{citation-numbers}} shows that citation
 numbers are a very poor indication of the "value" of an RFC. Citation
