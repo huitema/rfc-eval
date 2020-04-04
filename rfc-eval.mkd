@@ -1,7 +1,7 @@
 ---
 title: Evaluation of a Sample of RFC Produced in 2018
 abbrev: RFC-Eval-2018
-docname: draft-huitema-rfc-eval-project-03
+docname: draft-huitema-rfc-eval-project-04
 category: info
 date: 2020
 
@@ -93,19 +93,25 @@ IETF.
 As stated on the organization's web site, "The IETF is a large open international
 community of network designers, operators, vendors, and researchers concerned with
 the evolution of the Internet architecture and the smooth operation of the Internet."
+The specifications produced by the IETF are published in the RFC series, along with
+independent submissions, research papers and IAB documents.
 In this memo, the author attempts to evaluate the RFC production process. This is
 an individual effort, and the author's conclusions presented here did not reach
 any kind of IETF consensus.
 
 The IETF keeps records of documents and process actions
-in the IETF data tracker {{TRKR}}.
+in the IETF data tracker {{TRKR}}. 
 The IETF data tracker provides information about RFC and drafts, from which we can
 infer statistics about the production system. We can measure how
 long it takes to drive a proposition from initial draft to final publication,
 and how these delays can be split between Working Group discussions, IETF reviews,
-IESG assessment, RFC Editor delays and final reviews by the authors.
+IESG assessment, RFC Editor delays and final reviews by the authors -- or, for
+independent stream RFCs, draft production, reviews by the Independent Stream Editor,
+conflict reviews, RFC Editor delays and final reviews. 
+Tracker data is available for all RFCs, not just IETF stream RFCs. 
 
-Just measuring production delays may be misleading. If the IETF simply rubber-stamped
+Just measuring production delays may be misleading. If the IETF or the editors of
+the other series simply rubber-stamped
 draft proposals and published them, the delays would be short but the quality and
 impact might suffer. We hope that most of the RFC that are published are useful,
 but we need a way to measure that usefulness. We try to do that by measuring the
@@ -115,11 +121,16 @@ whether the protocols and technologies defined in the RFCs were implemented and 
 the Internet.
 
 In order to limit the resource required for this study, we selected at random 20
-RFC published in 2018, as explained in {{sample-selection}}. For comparison purposes,
+RFC published in 2018, as explained in {{sample-selection}}. The statistical
+sampling picked both IETF stream and Independent stream documents.
+For comparison purposes,
 we also selected at random 20 RFC published in 1998 and 20 published in 2008.
 Limiting the sample to 20 out of 209 RFCs published in 2018 allows for in depth
-analysis of each RFC, but readers should be reminded that the samll sample size limits 
-the statistical significance of the results.
+analysis of each RFC, but readers should be reminded that the this is a small sample.
+The sample is too small to apply general statistical techniques and
+quantify specific ratios, and discussions of correlation techniques would be inappropriate.
+Instead, the purpose is to identify trends, spot issues and document future
+work. 
 
 The information gathered for every RFC in the sample is presented in
 {{sample-rfc-analysis}}. In {{process-analysis}} we analyze the production process
@@ -130,8 +141,9 @@ and analyze whether citation counts could be used to evaluate the quality of RFC
 The measurement of delays could be automated by processing dates and
 events recorded in the data tracker. The measurement of published
 RFC could be complemented by statistics on abandoned drafts, which
-would measure the efficiency of the IETF triaging process. These potential
-next steps are developed in {{conclusion}}.
+would measure the efficiency of the IETF triaging process. More instrumentation would
+help understanding how large delays happen during working group processes.
+These potential next steps are developed in {{conclusion}}.
 
 # Methodology
 
@@ -186,8 +198,6 @@ between the first draft and the submission to the IESG is the Working Group
 Adoption. For that, we use the date of submission of the version 00 of the
 draft eventually published as RFC. We use the same definition for drafts
 submitted to the Independent Stream.
-
- 
 
 ## Selecting a Random Sample of RFC {#sample-selection}
 
@@ -465,7 +475,7 @@ get substantial help from the RFC editor.
 There are several implementations, including Firefox and Chrome,
 making RFC 8441 a very successful specification.
 
-## 8324
+## 8324 {#analyse-8324}
 DNS Privacy, Authorization, Special Uses, Encoding, Characters, Matching, and Root Structure:
 Time for Another Look? {{?RFC8324}}. This is an opinion piece on DNS development,
 published on the Independent Stream.
@@ -921,8 +931,16 @@ resubmitted to the ISE, and incurred atypical production delays.
 
 On average, we see that 80% of the delay is incurred in WG processing,
 10% in IETF review, and 10% for edition and publication.
-We can compare these delays to those observed 10 years ago and 20 years
-ago:
+
+For IETF stream RFC, it appears that the delays for informational documents
+are slightly shorter than those for protocol specifications, maybe six months
+shorter on average. However, there are lots of differences between
+individual documents. The delays range from less than a year to more than 5 years for
+protocol specifications, and from a year and 3 months to a bit more than 4 years for
+informational documents. 
+
+We can compare the delays in the 2018 samples to those observed 10 years ago and 20 years
+before:
 
 RFC (2008) | Status | Pages | Delay 
  ----- | ----- | -----:| -----:
@@ -1115,6 +1133,12 @@ tend to increase the preparation delay, but it does not appear to impact the
 AUTH-48 delay at all. The amount of copy editing also tend to increase the
 the preparation delay somewhat and the AUTH-48 delay a little. The presence or
 absence of IANA action has very ittle correlation with the delays.
+
+The analysis of RFC 8324 in {{analyse-8324}} explains its short
+editing delays by the experience of the author. This makes sense: if a document
+needs less editing, the editing delays would be shorter. This is partially
+confirmed by the relation between the amount of copy editing and the
+publication delay.
 
 We also observe that the AUTH-48 delay varies much more than the preparation
 delay, with a standard deviation of 20 days for AUTH-48 versus 10 days for
@@ -1444,7 +1468,7 @@ have adopted the revised RFC.
 
 # Observations and Next Steps {#conclusion}
 
-The goal of this study was to evaluate how the IETF produces standards,
+The goal of this study was to evaluate how the IETF produces documents,
 from working group processing to RFC production. As shown in
 {{process-analysis}}, the average RFC was produced in 3 years and 4 months, 
 which is similar to what was found in the
@@ -1469,7 +1493,7 @@ group chairs and providing better data for process analysis.
 
 The Independent Submission stream operates as expected. The majority
 of the authors of the independent RFC appear to be in IETF insiders,
-but there is some amount of engagement by outside parties.
+but there is significant amount of engagement by outside parties.
 
 The analysis of citations in {{citation-numbers}} shows that citation
 numbers are a very poor indication of the "value" of an RFC. Citation
