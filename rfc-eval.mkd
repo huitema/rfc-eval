@@ -1,7 +1,7 @@
 ---
 title: Evaluation of a Sample of RFC Produced in 2018
 abbrev: RFC-Eval-2018
-docname: draft-huitema-rfc-eval-project-03
+docname: draft-huitema-rfc-eval-project-05
 category: info
 date: 2020
 
@@ -63,7 +63,9 @@ informative:
 
 --- abstract
 
-This document presents a first attempt at evaluating the recently published RFC.
+This document presents the author's effort to understand the delays involved
+in publishing an idea in the IETF, from the first individual draft to the
+publication of the RFC.
 We analyze a set of randomly chosen RFC approved in 2018, looking for history
 and delays. We also use two randomly chosen sets of RFC published in 2008 and 1998
 for comparing delays seen in 2018 to those observed 10 or 20 years ago.  
@@ -77,6 +79,7 @@ We also measure the number of citations of the chosen RFC using Semantic
 Scholar, and compare citation counts with what we know about deployment.
 We show that citation counts indicate academic interest, but
 correlate only loosely with deployment or usage of the specifications.
+Counting web references could complement that.
 
 The RFCs selected for this survey were chosen at random and represent
 a small sample of all RFCs produced, and only approximately 10% of
@@ -93,33 +96,48 @@ IETF.
 As stated on the organization's web site, "The IETF is a large open international
 community of network designers, operators, vendors, and researchers concerned with
 the evolution of the Internet architecture and the smooth operation of the Internet."
-In this memo, the author attempts to evaluate the RFC production process. This is
-an individual effort, and the author's conclusions presented here did not reach
-any kind of IETF consensus.
+The specifications produced by the IETF are published in the RFC series, along with
+independent submissions, research papers and IAB documents.
+In this memo, the author attempts to understand the delays involved
+in publishing an idea in the IETF, from the first individual draft to the
+publication of the RFC. This is
+an individual effort, and the author's conclusions presented here are personal.
+There was no attempt to seek IETF consensus.
 
 The IETF keeps records of documents and process actions
-in the IETF data tracker {{TRKR}}.
+in the IETF data tracker {{TRKR}}. 
 The IETF data tracker provides information about RFC and drafts, from which we can
 infer statistics about the production system. We can measure how
 long it takes to drive a proposition from initial draft to final publication,
 and how these delays can be split between Working Group discussions, IETF reviews,
-IESG assessment, RFC Editor delays and final reviews by the authors.
+IESG assessment, RFC Editor delays and final reviews by the authors -- or, for
+independent stream RFCs, draft production, reviews by the Independent Stream Editor,
+conflict reviews, RFC Editor delays and final reviews. 
+Tracker data is available for all RFCs, not just IETF stream RFCs. 
 
-Just measuring production delays may be misleading. If the IETF simply rubber-stamped
+Just measuring production delays may be misleading. If the IETF or the editors of
+the other series simply rubber-stamped
 draft proposals and published them, the delays would be short but the quality and
 impact might suffer. We hope that most of the RFC that are published are useful,
 but we need a way to measure that usefulness. We try to do that by measuring the
 number of references of the published RFCs in Semantic Scholar {{SSCH}}, and
 also by asking the authors of each RFC in the sample
 whether the protocols and technologies defined in the RFCs were implemented and used on
-the Internet.
+the Internet. The citations measured by the Semantic Scholar include citations in
+other RFC and in Internet drafts. We also measure the number of
+references on the web, which provides some results but would be hard to automate.
 
 In order to limit the resource required for this study, we selected at random 20
-RFC published in 2018, as explained in {{sample-selection}}. For comparison purposes,
+RFC published in 2018, as explained in {{sample-selection}}. The statistical
+sampling picked both IETF stream and Independent stream documents.
+For comparison purposes,
 we also selected at random 20 RFC published in 1998 and 20 published in 2008.
 Limiting the sample to 20 out of 209 RFCs published in 2018 allows for in depth
-analysis of each RFC, but readers should be reminded that the samll sample size limits 
-the statistical significance of the results.
+analysis of each RFC, but readers should be reminded that the this is a small sample.
+The sample is too small to apply general statistical techniques and
+quantify specific ratios, and discussions of correlation techniques would be inappropriate.
+Instead, the purpose is to identify trends, spot issues and document future
+work. 
 
 The information gathered for every RFC in the sample is presented in
 {{sample-rfc-analysis}}. In {{process-analysis}} we analyze the production process
@@ -130,8 +148,9 @@ and analyze whether citation counts could be used to evaluate the quality of RFC
 The measurement of delays could be automated by processing dates and
 events recorded in the data tracker. The measurement of published
 RFC could be complemented by statistics on abandoned drafts, which
-would measure the efficiency of the IETF triaging process. These potential
-next steps are developed in {{conclusion}}.
+would measure the efficiency of the IETF triaging process. More instrumentation would
+help understanding how large delays happen during working group processes.
+These potential next steps are developed in {{conclusion}}.
 
 # Methodology
 
@@ -157,10 +176,10 @@ In order to simplify tabulation,
 we break the delay from between the submission of the first
 draft and the publication of the RFC in three big components:
 
-* The working group delay, from the first draft to the start of the IETF
+* The working group processing time, from the first draft to the start of the IETF
   last call;
 
-* The IETF delay, which lasts from the beginning of the IETF last call to
+* The IETF processing time, which lasts from the beginning of the IETF last call to
   the approval by the IESG, including the reviews by
   various directorates;
 
@@ -187,8 +206,6 @@ Adoption. For that, we use the date of submission of the version 00 of the
 draft eventually published as RFC. We use the same definition for drafts
 submitted to the Independent Stream.
 
- 
-
 ## Selecting a Random Sample of RFC {#sample-selection}
 
 Basic production mechanisms could be evaluated by processing data from
@@ -196,107 +213,27 @@ the IETF data tracker, but subjective data requires manual assessment of results
 which can be time consuming. Since our resources are limited, we will only
 perform this analysis for a small sample of RFC, selected at random
 from the list of RFC approved in 2018. Specifically, we will pick
-20 RFC at random between:
+20 RFC numbers at random between:
 
 * RFC 8307, published in January 2018, and
 
 * RFC 8511, published December 2018.
 
-In order to avoid injecting personal bias in the random selection, we use
-a random selection process similar to the Nomination Committee selection
-process defined in {{?RFC3797}}. The process is seeded with the text string
-"vanitas vanitatum et omnia vanitas", and the results are:
-
-~~~ 
-Picking 20 numbers between 8307 and 8511,
-using MD5(vanitas vanitatum et omnia vanitas)
-Rank 1: 8411 -- md5=daba041224a879199b698748808f917d
-Rank 2: 8456 -- md5=f5570484d91ada6a672edbdca61d808c
-Rank 3: 8446 -- md5=8340e918bb8faf69d197f79c9a58d7b8
-Rank 4: 8355 -- md5=19474df74efd9917cf3fe8acce2ac374
-Rank 5: 8441 -- md5=5acce2b730f3c24a4a91a5fc1921d1cd
-Rank 6: 8324 -- md5=411c11a1cf4c292f83458865599c6921
-Rank 7: 8377 -- md5=ac16a89192c0f0727febd35aacbc1f24
-Rank 8: 8498 -- md5=bba44f2ba1ab240a1265a82ab71f7e02
-Rank 9: 8479 -- md5=1653606b0af95d529a473a8f85ffaea4
-Rank 10: 8453 -- md5=0cbfe105667c5a83b027dcfa85062f98
-Rank 11: 8429 -- md5=fa51d7738562d990926a0d199fb060b8
-Rank 12: 8312 -- md5=96d061523b1a57343356ae7a1e498ca5
-Rank 13: 8492 -- md5=1b72b746eb05f79af40ed2bd3faccbe8
-Rank 14: 8378 -- md5=645833b936d36cdcc797256518d7c483
-Rank 15: 8361 -- md5=2064622c868e410beb0d9c18d0cb522c
-Rank 16: 8472 -- md5=ca8a823072a21df011d0ea8b96a6aa47
-Rank 17: 8471 -- md5=01b293a7dd0793e6f3297f2a973cd7e3
-Rank 18: 8466 -- md5=8e411babe271557fe83bcdececc1643f
-Rank 19: 8362 -- md5=8a1ba3efd82856a12b2b35fc5237e1b7
-Rank 20: 8468 -- md5=57ae50ee0e1e0708d356d96d116dbfe1
-~~~
+The list of 20 selected RFC is: RFC 8411, RFC 8456, RFC 8446, RFC 8355, RFC 8441, RFC 8324,
+RFC 8377, RFC 8498, RFC 8479, RFC 8453, RFC 8429, RFC 8312, RFC 8492 , RFC 8378, RFC 8361,
+RFC 8472, RFC 8471, RFC 8466, RFC 8362, and RFC 8468.
 
 When evaluating delays and impact, we will compare the year 2018 to 2008 and
 1998, 10 and 20 years ago. To drive this comparison, we pick 20 RFC at random
 among those published in 2008, and another 20 among those published in 1998.
-We use the same nomcom-like methodology.
 
-For 2008, we picking random RFC numbers between RFC 5134
-(January 2008) and RFC 5405 (December 2008), using the sentence "sed fugit interea
-fugit irreparabile tempus" as a seed. We actually list here 21 numbers, because
-the random draw place RFC 5315 in 20th position, but that RFC was never issued.
-We replace it by RFC 5301, which came in 21st position.
+The list of the 20 randomly selected RFC from 2008 is: RFC 5227, RFC 5174, RFC 5172, RFC 5354,
+RFC 5195, RFC 5236, RFC 5348, RFC 5281, RFC 5186, RFC 5326, RFC 5277, RFC 5373, RFC 5404,
+RFC 5329, RFC 5283, RFC 5358, RFC 5142, RFC 5271, RFC 5349, and RFC 5301.
 
-~~~
-Picking 21 numbers between 5134 and 5405,
-using MD5(sed fugit interea fugit irreparabile tempus)
-Rank 1: 5227 -- md5=61e5b3cd97fda4e75450e93df0744b6d
-Rank 2: 5174 -- md5=eed49542394e9d392bcd756ee0f5beed
-Rank 3: 5172 -- md5=72055ca953d6a8ee0d60a9fca0b8d738
-Rank 4: 5354 -- md5=7a00ef15897479d1d15255159f6d8674
-Rank 5: 5195 -- md5=54813be7bb56f48a05af8c894799b51f
-Rank 6: 5236 -- md5=153263bbd8c0349501b75a33f3d66f6c
-Rank 7: 5348 -- md5=b2d19aa9c1250ef2ddf169045f6e99d7
-Rank 8: 5281 -- md5=1c3e61643d46d1da4ba16f0fd7a0aff5
-Rank 9: 5186 -- md5=5e87001b830183b1a9427d479a7b0e42
-Rank 10: 5326 -- md5=024347839f83d8082549c08bdfa1b43e
-Rank 11: 5277 -- md5=049a83016ab08552841c59400480cd9d
-Rank 12: 5373 -- md5=a1ce374aaebdacca2e7d6eeff039d970
-Rank 13: 5404 -- md5=fb0d6b582a27ce34175e39de33598556
-Rank 14: 5329 -- md5=df043ef1f9d42ba12a03a84434d26ead
-Rank 15: 5283 -- md5=c40d3f966bc7800d6508d3d82df2371d
-Rank 16: 5358 -- md5=6fea5bdb26b19e68befd409a09cb335d
-Rank 17: 5142 -- md5=a8844b73287781762e6548fc6f533508
-Rank 18: 5271 -- md5=c19eb02984265ecfe4ca076f2c160cfa
-Rank 19: 5349 -- md5=33d756f81bf6e40ff344cf6ccaf29f13
-Rank 20: 5315 -- md5=d4c30875f88328d72c9f78def2d1dde5
-Rank 21: 5301 -- md5=3356419e5560901f0d31309b39d14a80
-~~~
-
-For 1998 we picking random RFC numbers between RFC 2257
-(January 1998) and RFC 2479 (December 1998), using the sentence
-"pulvis et umbra sumus" as a seed.
-
-~~~
-Picking 20 numbers between 2257 and 2479,
-using MD5(pulvis et umbra sumus)
-Rank 1: 2431 -- md5=6eba444bb3349339fcde7e2be726f0f0
-Rank 2: 2381 -- md5=0ce53f69f1a49a49309054af1e9a1d42
-Rank 3: 2387 -- md5=53726e77ffeed903d244155d28e30f10
-Rank 4: 2348 -- md5=69fcab2d2085555bac9eb0e0f4346523
-Rank 5: 2391 -- md5=93358a26a7fce9fa9d61a31cdfdb87b7
-Rank 6: 2267 -- md5=652dcab91bd9d5c58f98bdab21b23d80
-Rank 7: 2312 -- md5=2505b0bed4af0a00ee663891c6f294d8
-Rank 8: 2448 -- md5=6ede4b0dfa935f6ca656a5104b8dc5d0
-Rank 9: 2374 -- md5=5312bfe5a9ca45563eb0bf35510d8daa
-Rank 10: 2398 -- md5=7748a6deec3860898678f992b0b22792
-Rank 11: 2283 -- md5=d73ff67466eb42d971a0e134b9284f83
-Rank 12: 2382 -- md5=de1f667ac3e4c64aa529872e08823dff
-Rank 13: 2289 -- md5=37773c2569dc25fdd0ab400ea401d5c7
-Rank 14: 2282 -- md5=6b3df671a0a0becf9e42d203b59acd08
-Rank 15: 2404 -- md5=e1b6819e5355924f456eb79f93beb8fd
-Rank 16: 2449 -- md5=4f057df7c226efea773e7013c9c62081
-Rank 17: 2317 -- md5=40eee3b536abe4afdb8834a0650c0a04
-Rank 18: 2394 -- md5=044f09c53fc9fd1c50fe6bd0c39318e1
-Rank 19: 2297 -- md5=78ee7e128436c969c80900fef80c075c
-Rank 20: 2323 -- md5=ea6935bbda5f6d97756d3df5c3e2fdfb
-~~~
+The list of the 20 randomly selected RFC from 2008 is: RFC 2431, RFC 2381, RFC 2387, RFC 2348,
+RFC 2391, RFC 2267, RFC 2312, RFC 2448, RFC 2374, RFC 2398, RFC 2283, RFC 2382, RFC 2289,
+RFC 2282, RFC 2404, RFC 2449, RFC 2317, RFC 2394, RFC 2297, and RFC 2323.
 
 # Analysis of 20 Selected RFC {#sample-rfc-analysis}
 
@@ -465,7 +402,7 @@ get substantial help from the RFC editor.
 There are several implementations, including Firefox and Chrome,
 making RFC 8441 a very successful specification.
 
-## 8324
+## 8324 {#analyse-8324}
 DNS Privacy, Authorization, Special Uses, Encoding, Characters, Matching, and Root Structure:
 Time for Another Look? {{?RFC8324}}. This is an opinion piece on DNS development,
 published on the Independent Stream.
@@ -767,6 +704,28 @@ Minor copy editing, for style, with the addition of a reference to TLS 1.3.
 
 Perhaps partially due to the delays, some of the implementers lost interest in supporting this RFC.
 
+## 8471
+The Token Binding Protocol Version 1.0  {{?RFC8471}}
+
+~~~
+Proposed Standard, 18 pages.
+1 personal drafts, 2014-10-13. 19 WG drafts
+WG adoption on 2015-03-15
+Last call announced 2017-11-13, draft 16
+IESG evaluation starts 2018-03-19
+Approved 2018-07-20, draft 19
+AUTH-48 2018-09-17
+AUTH-48 complete 2018-09-25
+Published 2018-10-08
+~~~
+Presentation of a Token Binding Protocol for TLS. We can notice a delay of 5 months before adoption of
+the draft by the WG. That explains in part the overall delay of almost 4 years from first draft to
+publication.
+
+Minor copy editing, for style.
+
+The web references indicates adoption in multiple development projects.
+
 ## 8466
 A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service Delivery {{?RFC8466}}
 
@@ -878,8 +837,8 @@ IETF processes.
 
 We look at the distribution of delays between the submission of the first
 draft and the publication of the RFC, using the three big milestones defined
-in {{milestones}}: delay in the Working Group, IETF delay, and publication
-delay. The following table
+in {{milestones}}: processing time in the Working Group, IETF processing time,
+and publication delay. The following table
 shows the delays for the 20 RFC in the sample:
 
 | RFC | Status | Pages | Overall | WG | IETF | Edit |
@@ -900,17 +859,18 @@ shows the delays for the 20 RFC in the sample:
 | 8378 | Exp | 21 | 1524 | 1446 | 27 | 51 |
 | 8361 | PS | 17 | 1612 | 1477 | 62 | 73 |
 | 8472 | PS | 8 | 1228 | 899 | 249 | 80 |
+| 8471 | PS | 18 | 1228 | 899 | 249 | 80 |
 | 8466 | PS | 158 | 771 | 538 | 124 | 109 |
 | 8362 | PS | 33 | 1871 | 1766 | 41 | 64 |
 | 8468 | Info | 15 | 1196 | 979 | 90 | 127 |
 | ---:| ----  | ----:| -----:| ---:| ---:| ---:|
-| | average | 35 | 1172 | 939 | 110 | 123 |
-| | average(not ISE) | 35 | 1202 | 991 | 101 | 109 |
+| | average | 35 | 1186 | 948 | 117 | 121 |
+| | average(not ISE) | 36 | 1217 | 999 | 110 | 107 |
 
 
-The average delay from first draft to publication is about 3 years and 2 months, but this
+The average delay from first draft to publication is about 3 years and 3 months, but this
 varies widely. Excluding the independent stream submissions, the average
-delay from start to finish is 3 years and 3 months, of which on average
+delay from start to finish is 3 years and 4 months, of which on average
 2 years and 9 months are spent getting consensus in the working group,
 and 3 to 4 months each for IETF consensus and for RFC production.
 
@@ -921,8 +881,16 @@ resubmitted to the ISE, and incurred atypical production delays.
 
 On average, we see that 80% of the delay is incurred in WG processing,
 10% in IETF review, and 10% for edition and publication.
-We can compare these delays to those observed 10 years ago and 20 years
-ago:
+
+For IETF stream RFC, it appears that the delays for informational documents
+are slightly shorter than those for protocol specifications, maybe six months
+shorter on average. However, there are lots of differences between
+individual documents. The delays range from less than a year to more than 5 years for
+protocol specifications, and from a year and 3 months to a bit more than 4 years for
+informational documents. 
+
+We can compare the delays in the 2018 samples to those observed 10 years ago and 20 years
+before:
 
 RFC (2008) | Status | Pages | Delay 
  ----- | ----- | -----:| -----:
@@ -1007,7 +975,7 @@ many more eyes available to review any given draft. If we applied the
 ratios of 1998, the IETF would be producing 119 documents in 2018
 instead of 208.
 
-## Working Group Delays
+## Working Group Processing Time
 
 The largest part of the delays is spent in the working groups, before
 the draft is submitted to the IESG for IETF review. As mentioned in
@@ -1034,19 +1002,24 @@ RFC | Status | WG | Until adoption | After adoption
 8378 | Exp | 1446 | 661 | 785
 8361 | PS | 1477 | 399 | 1078
 8472 | PS | 899 | 105 | 794
+8471 | PS | 1127 | 153 | 794
 8466 | PS | 538 | 178 | 360
 8362 | PS | 1766 | 240 | 1526
 8468 | Info | 979 | 333 | 646
 --- | --- | ---: | ---: | ---: 
- | Average | 939 | 292 | 647
+ | Average | 948 | 285 | 663
 
-The delay before working group adoption average to a bit less than 10 months,
-compared to 1 years and a bit more than 9 months for delays after adoption.
+The time before working group adoption average to a bit more than 9 months,
+compared to 1 years and almost 10 months for processing time after adoption.
 We see that RFC 8492 stands out, with long delays spent attempting publication through
-a working group before submission to the independent editor. There are a few
+a working group before submission to the independent editor. If we removed RFC
+8492 from the list, the average time until adoption drops to just over 7 months,
+and becomes just 25% of the total processing time in the WG.
+
+There are a few
 documents that started immediately as working group efforts, or were immediately targeted
-for publication in the independent series. Those documents tend to see short delays,
-with the exception of RFC 8446 on which the TLS working groupspent a long time working.
+for publication in the independent series. Those documents tend to see short processing times,
+with the exception of RFC 8446 on which the TLS working group spent a long time working.
 
 ## Preparation and Publication Delays
 
@@ -1082,25 +1055,29 @@ following table.
 | 8378 | Exp | 21 | 42 | 9 | 0 | 51 |
 | 8361 | PS | 17 | 39 | 31 | 3 | 73 |
 | 8472 | PS | 8 | 59 | 8 | 13 | 80 |
+| 8471 | PS | 18 | 59 | 8 | 13 | 80 |
 | 8466 | PS | 158 | 84 | 22 | 3 | 109 |
 | 8362 | PS | 33 | 49 | 11 | 4 | 64 |
 | 8468 | Info | 15 | 65 | 53 | 9 | 127 |
-|  | Average |  | 77.3 | 41.2 | 4.2 | 122.7 |
-|-8492  | Average |  | 62 | 37 | 4 | 103 |
+|  | Average |  | 76 | 40 | 5 | 121 |
+|-8492  | Average |  | 62 | 35 | 5 | 102 |
 
-On average, the total delay appears to be a bit more than four month, but the
+On average, the total delay appears to be about four months, but the
 average is skewed by the extreme values encountered for {{?RFC8492}}. If we
 exclude that RFC from the computations, the average delay drops to a just a bit
 more than 3 months: about 2 months for the preparation, a bit more than one
-month for the AUTH-48 phase, and 4 days for the publishing. 
+month for the AUTH-48 phase, and 5 days for the publishing. 
 
 Of course, these delays vary from RFC to RFC. To try explain the causes of the
-delay, we compute the correlation factor between the observed delays and 4
+delay, we compute the correlation factor between the observed delays and several
 plausible explanation factors:
 
 * The number of pages in the document,
 * The amount of copy edit, as discussed in {{copy-editing}},
-* Whether or not an IANA action was required.
+* Whether or not an IANA action was required,
+* The number of authors,
+* The number of drafts revisions,
+* The working group delay.
 
 We find the following values:
 
@@ -1108,15 +1085,24 @@ We find the following values:
 | ----- | -----:| -----:| -----:| -----:|
 | Nb pages | 0.50 | -0.04 | 0.21 |
 | Copy-Edit | 0.42 | 0.24 | 0.45 |
-| IANA | -0.13 | 0.26 | 0.15 |
+| IANA | -0.14 | -0.21 | 0.12 |
+| Nb Authors | 0.39 | -0.07 | 0.18
+| Nb drafts | 0.18 | -0.33 | -0.19
+| WG delay | 0.03 | -0.16 | -0.15
 
-None of these indicate strong correlations. The greater number of pages will
-tend to increase the preparation delay, but it does not appear to impact the
-AUTH-48 delay at all. The amount of copy editing also tend to increase the
-the preparation delay somewhat and the AUTH-48 delay a little. The presence or
-absence of IANA action has very ittle correlation with the delays.
+We see some plausible explanations for the production delay. It will be somewhat longer for
+longer documents, or for documents that require a lot of copy editing (see {{copy-editing}}).
+Somewhat surprisingly, it also tend to increase with the number of authors. It does
+not appear significantly correlated with the presence or absence of IANA action.
 
-We also observe that the AUTH-48 delay varies much more than the preparation
+The analysis of RFC 8324 in {{analyse-8324}} explains its short
+editing delays by the experience of the author. This makes sense: if a document
+needs less editing, the editing delays would be shorter. This is partially
+confirmed by the relation between the amount of copy editing and the
+publication delay.
+
+We see fewer plausible explanations for the AUTH48 delays. These delays
+vary much more than the preparation
 delay, with a standard deviation of 20 days for AUTH-48 versus 10 days for
 the preparation delay. In theory, AUTH-48 is just a final
 verification: the authors receive the document prepared by the RFC production center,
@@ -1124,23 +1110,11 @@ and just have to give their approval, or maybe request a last minute
 correction. The name indicates that this is expected to last just two days, but
 in average it lasts more than a month.
 
-We tested a variety of hypotheses that might explain the duration of AUTH-48
-by computing the correlation coefficients between various properties of the RFC
-and the production delays. The results are listed in the following table:
-
-Correlation | RFC production | AUTH-48 | RFC Edit(total)
- :----- | ----:| ----:| ----:
-Nb drafts | 0.19 | -0.30 | -0.17
-Nb Authors | 0.40 | -0.04 | 0.16
-WG delay | 0.03 | -0.16 | -0.15
-
-The results show that there is no simple answer. The number of pages, the
-required amount of copy editing and to a very small extent the number of drafts
-can help predict the production delay, but there is no obvious predictor for
-the AUTH-48 delay. In particular, there is no numerical evidence that the
+We often hypothesize that the
 number of authors influences the AUTH-48 delay, or that authors who have spent
-a long time working on the document in the working group somehow spend
-even longer to answer questions during AUTH-48 -- if anything, the numerical
+a long time working on the document in the working group somehow get demotivated
+and spend even longer to answer questions during AUTH-48. This may happen
+sometimes, but our statistics don't show that  -- if anything, the numerical
 results point in the opposite direction.
 
 After asking the authors of the RFC in the sample why the AUTH-48 phase took
@@ -1198,6 +1172,7 @@ editing for style, and the other half at least some editing for clarity.
 | 8378 | Exp | 2 |
 | 8361 | PS | 2 |
 | 8472 | PS | 2 |
+| 8471 | PS | 2 |
 | 8466 | PS | 3 |
 | 8362 | PS | 3 |
 | 8468 | Info | 3 |
@@ -1215,8 +1190,6 @@ One is an independent opinion, another a description of a non-IETF protocol
 format, and the third was {{?RFC8492}}, which is a special case. Apart from
 this special case, the publication delays were significantly shorter 
 for the Independent Stream than for the IETF stream.
-This seems to indicate that the Independent Series is functioning as 
-expected.
 
 The authors of these 3 RFC are regular IETF contributors. This
 observation motivated a secondary analysis of all the RFC
@@ -1279,6 +1252,7 @@ RFC(2018) | Status | Total | 2018-2019
 8378|Exp|1|1
 8361|PS|0|0
 8472|PS|1|1
+8471|PS|1|1
 8466|PS|0|0
 8362|PS|1|1
 8468|Info|1|1
@@ -1409,6 +1383,7 @@ RFC(2018) | Status | Citations | Deployment
 8378|Exp|1|some
 8361|PS|0|one
 8472|PS|1|medium
+8471|PS|1|medium
 8466|PS|0|unknown
 8362|PS|1|medium
 8468|Info|1|some
@@ -1442,10 +1417,72 @@ sparsely cited while the {{?RFC2330}} is widely cited. Just counting citations
 will not indicate whether developers still use an old specification or
 have adopted the revised RFC.
 
+## Citations versus web references
+
+Web references might be another indiactor of the popularity of an RFC.
+In order to evaluate these references, we list here the number of results
+returned by searches on Google and Bing, looking for the search term "RFCnnnn"
+(e.g., RFC8411), and copying the number of results returned by the
+search engines. The table below presents the results of these searches,
+performed on April 4, 2020.
+
+RFC(2018) | Status | Citations | Google | Bing
+---- | ---- | ----:| ----:| ----:
+8411|Info|1|301|94
+8456|Info|1|266|8456
+8446|PS|418|25900|47800
+8355|Info|3|521|114
+8441|PS|1|2430|59500
+8324|ISE|0|393|138
+8377|PS|0|264|10900
+8498|Info|0|335|10100
+8479|ISE|0|564|11000
+8453|Info|3|817|11400
+8429|BCP|0|391|41600
+8312|Info|25|1620|2820
+8492|ISE|4|323|9400
+8378|Exp|1|418|11600
+8361|PS|0|499|92
+8472|PS|1|496|169
+8471|PS|1|1510|11600
+8466|PS|0|766|173
+8362|PS|1|67|147
+8468|Info|1|453|127
+
+The results counts from Bing are sometimes surprising. Why would RFC 8441 gather
+59,500 web references? Looking at the results in detail, we find a mix of data.
+Some of them are logs of development projects implementing Web Sockets, which
+is exactly what we are looking for, but others appear spurious. For example,
+a shop selling rugby jerseys is listed because its phone number ends with "8441".
+Other pages were listed because street numbers or product numbers matched the
+RFC number.
+The same type of collision may explain the large reference counts on Bing for
+RFC 8377, 8498, 8479, 8453, 8429, 8378, and 8471. The result counts on Bing
+do not appear to provide a good metric.
+
+On Google, all RFC garner at least a 250 references, largely because the whole
+RFC catalog is replicated on a large number of web servers. Deviations from that
+base line are largely correlated with the number of citations in the Semantic
+Scholar, with a couple of exception: RFC 8441, and 8471 garner more
+references than the low citation counts would predict. Looking at the
+results, we find many references in development databases explaining
+how these protocols are implemented in various code bases and open source
+projects. This means that counting Google results would give some indication
+about an RFC's popularity, complementing the citation counts.
+
+There are some practical problems in using the counts of Google
+results. Google searches are personalized, the results depend
+on the source of the queries, and the counts may vary as well. The
+search result depend on the search algorithm, and there is no guarantee
+that counts will not change when the algorithm changes. On the other
+hand, the results do indicate that some of the RFC in our sample
+are beeing used by developers or in deployments.
+
 # Observations and Next Steps {#conclusion}
 
-The goal of this study was to evaluate how the IETF produces standards,
-from working group processing to RFC production. As shown in
+The author's goal was to get a personal understanding of the "chain
+of production" of the RFCs, and in particular to look at the various
+causes of delays in the process. As shown in
 {{process-analysis}}, the average RFC was produced in 3 years and 4 months, 
 which is similar to what was found in the
 2008 sample, but more than three times larger than the delays for the
@@ -1469,13 +1506,16 @@ group chairs and providing better data for process analysis.
 
 The Independent Submission stream operates as expected. The majority
 of the authors of the independent RFC appear to be in IETF insiders,
-but there is some amount of engagement by outside parties.
+but there is significant amount of engagement by outside parties.
 
 The analysis of citations in {{citation-numbers}} shows that citation
 numbers are a very poor indication of the "value" of an RFC. Citation
 numbers measure the engagement of academic researchers with specific
 topics, but have little correlation with the level of adoption and
-deployment of a specific RFC.
+deployment of a specific RFC. The result counts of Google searches
+do capture references outside academia, such as logs of development
+projects. This might be informative, but it is not clear that the counts
+would not change over time due to algorithm changes or personaliztion.
 
 This document analyses a small sample of RFC "in depth". This allowed
 gathering of detailed feedback on the process and the deployments. On
@@ -1546,8 +1586,9 @@ Michiko Short,
 Bhuvaneswaran Vengainathan,
 Lao Weiguo, and
 Li Yizhou. 
-Many thanks to Adrian Farrel for his useful advice, and to Stephen Farrell and Colin Perkins
-for their guidance on the use of citations.
+Many thanks to Adrian Farrel for his useful advice, to Stephen Farrell and Colin Perkins
+for their guidance on the use of citations, and to Dave Crocker for a comprehensive
+review.
 
 
 
