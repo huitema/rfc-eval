@@ -8,7 +8,7 @@ import urllib.request as request
 import json
 
 def getRfcRef(rfc):
-    url = "http://api.semanticscholar.org/v1/paper/10.17487/rfc" + rfc + "?include_unknown_references=true"
+    url = "http://api.semanticscholar.org/paper/10.17487/rfc" + rfc + "?include_unknown_references=true"
     with request.urlopen(url) as response:
         if response.getcode() == 200:
             source = response.read()
@@ -68,6 +68,7 @@ rfc_2018 = [["8411","Info"],
 ["8378","Exp"],
 ["8361","PS"],
 ["8472","PS"],
+["8471","PS"],
 ["8466","PS"],
 ["8362","PS"],
 ["8468","Info"]]
